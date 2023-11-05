@@ -38,6 +38,57 @@ body {
     background-size: cover;
 }
 
+/*---------------------------------------------Game board*/
+
+.game-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid red;
+    width: 60%;
+    margin: 50px auto 100px;
+}
+
+#book {
+    width: 100%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+#page1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid blue;
+    width: 85%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 1 / 1;
+    z-index: 1;
+    margin: 5% 8% 10% 7%;
+}
+
+#page2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid blue;
+    width: 85%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 2 / 2;
+    z-index: 1;
+    margin: 5% 5% 10% 10%;
+}
+
+.game-item {
+    border: 1px solid green;
+    width: 100%;
+    height: auto;
+}
+
+/*---------------------------------------------Footer*/
+
 .cauldron {
     background-color: #404040;
     height: 250px;
@@ -59,11 +110,4 @@ body {
     max-height: 150px;
     position: absolute;
     top: -50px;
-}
-
-#book {
-    width: 60%;
-    height: auto;
-    display: block;
-    margin: 50px auto 100px auto;
 }
