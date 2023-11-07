@@ -171,6 +171,37 @@ h1 {
     border-color: #6fff48;
 }
 
+#how-page1 {
+    position: relative;
+    border: 1px solid blue;
+    width: 95%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 1 / 1;
+    z-index: 1;
+    margin: 5% 8% 10% 5%;
+}
+
+#how-page2 {
+    position: relative;
+    border: 1px solid blue;
+    width: 89%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 2 / 2;
+    z-index: 1;
+    margin: 5% 5% 10% 8%;
+}
+
+.how-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
 /*---------------------------------------------Footer*/
 
 .cauldron {
@@ -182,7 +213,7 @@ h1 {
 
 .rim-shadow {
     background-color: #1b1b1b;
-    height: 20px;
+    height: 15px;
     width: 100%;
     position: absolute;
     top: 50px;
