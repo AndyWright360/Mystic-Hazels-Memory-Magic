@@ -41,6 +41,42 @@ h1 {
     -moz-text-fill-color: transparent;
 }
 
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*---------------------------------------------Lists*/
+
+.list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.bullet {
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+}
+
+.li-text {
+    display: inline-block;
+    width: calc(100% - 20px);
+}
+
+li {
+    padding-top: 10px;
+    padding-left: 0;
+}
+
 /*---------------------------------------------Game board*/
 
 .game-board {
