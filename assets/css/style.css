@@ -12,7 +12,7 @@ body {
     font-family: "Fondamento", cursive, sans-serif;
 }
 
-/*---------------------------------------------Containers*/
+/*---------------------------------------------Title*/
 
 .title-container {
     display: grid;
@@ -23,6 +23,31 @@ body {
     margin: 50px auto;
     position: relative;
 }
+
+h1 {
+    font-family: "blackpearl", "Fondamento", cursive, sans-serif;
+    font-size: 5.2vw;
+    margin-bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    width: 100%;
+
+    /*The below code was obtained from 'fossheim.io' to apply the text colour gradient. */
+    text-stroke: 1px #4a0b6e;
+    -webkit-text-stroke: 1px #4a0b6e;
+    background-color: black;
+    background-image: linear-gradient(yellow, orange, yellow);
+    background-size: 100% 30%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+/*---------------------------------------------Scoreboard*/
 
 .scoreboard {
     display: grid;
@@ -80,29 +105,6 @@ body {
 }
 
 /*---------------------------------------------Text*/
-
-h1 {
-    font-family: "blackpearl", "Fondamento", cursive, sans-serif;
-    font-size: 5.2vw;
-    margin-bottom: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 25%;
-    width: 100%;
-
-    /*The below code was obtained from 'fossheim.io' to apply the text colour gradient. */
-    text-stroke: 1px #4a0b6e;
-    -webkit-text-stroke: 1px #4a0b6e;
-    background-color: black;
-    background-image: linear-gradient(yellow, orange, yellow);
-    background-size: 100% 30%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-}
 
 h2 {
     font-weight: bold;
@@ -174,13 +176,50 @@ ul li {
     margin: 5% 5% 10% 10%;
 }
 
-.game-item {
-    display: grid;
-    align-items: center;
-    justify-items: center;
+/*---------------------------------------------Cards*/
+
+/*The below code was obtained from 'youtube.com' to apply the card flip animation. */
+
+.card-container {
     border: 1px solid green;
-    width: auto;
+    width: 100%;
     height: 100%;
+    perspective: 400px;
+}
+
+.card-container:hover>.game-card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.game-card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.card-back,
+.card-front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.back,
+.front {
+    height: auto;
+    width: 80%;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.3);
 }
 
 /*---------------------------------------------Home page*/
@@ -348,13 +387,6 @@ ol {
     height: auto;
     grid-row: 1;
     grid-column: 1 / -1;
-}
-
-.card-back {
-    height: auto;
-    max-width: 80%;
-    justify-self: center;
-    align-self: center;
 }
 
 .hazel {
