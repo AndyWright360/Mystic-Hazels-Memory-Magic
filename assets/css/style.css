@@ -159,7 +159,7 @@ ul li {
     height: auto;
     grid-row: 1;
     grid-column: 1 / 1;
-    z-index: 1;
+    perspective: 600px;
     margin: 5% 8% 10% 7%;
 }
 
@@ -172,7 +172,7 @@ ul li {
     height: auto;
     grid-row: 1;
     grid-column: 2 / 2;
-    z-index: 1;
+    perspective: 600px;
     margin: 5% 5% 10% 10%;
 }
 
