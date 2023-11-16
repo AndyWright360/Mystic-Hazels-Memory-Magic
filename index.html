@@ -1,312 +1,314 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Mystic Hazel's Memory Magic is a memory game. Aid Hazel in her quest to imptove her memory and perhaps improve yours along the way."
-    />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+          name="description"
+          content="Mystic Hazel's Memory Magic is a memory game. Aid Hazel in her quest to imptove her memory and perhaps improve yours along the way."
+        />
 
-    <!--google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap"
-      rel="stylesheet"
-    />
+        <!--google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap"
+          rel="stylesheet"
+        />
 
-    <!--bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
+        <!--bootstrap-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous"
+        />
 
-    <!--external CSS file-->
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+        <!--external CSS file-->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 
-    <!--font awesome-->
-    <script
-      src="https://kit.fontawesome.com/bdde0c9132.js"
-      crossorigin="anonymous"
-    ></script>
+        <!--font awesome-->
+        <script
+          src="https://kit.fontawesome.com/bdde0c9132.js"
+          crossorigin="anonymous">
+        </script>
 
-    <!--page title-->
-    <title>Mystic Hazel's Memory Magic</title>
-  </head>
+        <!--page title-->
+        <title>Mystic Hazel's Memory Magic</title>
+    </head>
 
-  <body>
-    <header>
-      <div class="title-container">
-        <img src="assets/images/scroll.png" id="scroll" />
-        <h1>Mystic Hazel's<br />Memory Magic</h1>
-      </div>
-    </header>
-    <main>
-      <div class="scoreboard">
-        <img src="assets/images/hourglass.png" id="hourglass" />
-        <span id="timer">0:00</span>
-        <img src="assets/images/crystal-ball.png" id="crystal-ball" />
-        <span id="turns">00</span>
-        <img src="assets/images/3star.png" id="star" />
-      </div>
-      <!--container for the game board-->
-      <div class="game-board">
-        <img src="assets/images/book.png" id="book" />
-        <div id="page1">
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/clover.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/crystal.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/feather.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/frog.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/moth.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/mushroom.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/pouch.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/snake.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/spider.png" />
-          </div>
-        </div>
-        <div id="page2">
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/clover.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/crystal.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/feather.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/frog.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/moth.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/mushroom.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/pouch.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/snake.png" />
-          </div>
-          <div class="card-container">
-              <img class="back" src="assets/images/card-back.png" />
-              <img class="front" src="assets/images/spider.png" />
-          </div>
-        </div>
-      </div>
-      <div class="game-board">
-        <img src="assets/images/book.png" id="book" />
-        <div id="page1-test">
-          <div class="top-page1">
-            <h2>Mystic Hazel's Memory Magic</h2>
-            <p>
-              In a whimsical forest nestled deep within an enchanted realm,
-              there lived a charming and thoughtful witch named Hazel. She was
-              known far and wide for her heartwarming spells and ever-present
-              smile, but there was one little problem. Hazel had a memory like a
-              leaky bucket.
-            </p>
-            <p>
-              As a talented potion maker, she decided to fix her poor memory
-              once and for all by creating a memory-boosting elixir! But Hazel
-              can't remember the ingredients to make it. Can you help her find
-              the matching ingredients scattered around her workshop?
-            </p>
-          </div>
-          <div class="btm-page1">
-            <button class="button">How To Play</button>
-          </div>
-        </div>
-        <div id="page2-test">
-          <div class="top-page2">
-            <img class="hazel" src="assets/images/hazel.png" />
-          </div>
-          <div class="btm-page2">
-            <button class="button">New Game</button>
-            <button class="button">High Scores</button>
-          </div>
-        </div>
-      </div>
-      <div class="game-board">
-        <img src="assets/images/book.png" id="book" />
-        <div id="how-page1">
-          <div class="how-content">
-            <h3>How to Play</h3>
-            <ul class="list">
-              <li>
-                <span class="bullet"
-                  ><i
-                    class="fa-solid fa-splotch fa-rotate-270 fa-2xs"
-                  ></i></span
-                ><span class="li-text"
-                  >The game board consists of a grid of facedown cards, each
-                  hiding an ingredient.</span
-                >
-              </li>
-              <li>
-                <span class="bullet"
-                  ><i
-                    class="fa-solid fa-splotch fa-rotate-270 fa-2xs"
-                  ></i></span
-                ><span class="li-text"
-                  >To play, click on any two cards to reveal what's hidden
-                  beneath.</span
-                >
-              </li>
-              <li>
-                <span class="bullet"
-                  ><i
-                    class="fa-solid fa-splotch fa-rotate-270 fa-2xs"
-                  ></i></span
-                ><span class="li-text"
-                  >If the two cards you've chosen reveal matching ingredients,
-                  congratulations! You've found a pair.</span
-                >
-              </li>
-              <li>
-                <span class="bullet"
-                  ><i
-                    class="fa-solid fa-splotch fa-rotate-270 fa-2xs"
-                  ></i></span
-                ><span class="li-text"
-                  >If the cards don't match, don't worry. The cards will
-                  automatically flip back face-down, and you can continue your
-                  search for pairs.</span
-                >
-              </li>
-              <li>
-                <span class="bullet"
-                  ><i
-                    class="fa-solid fa-splotch fa-rotate-270 fa-2xs"
-                  ></i></span
-                ><span class="li-text"
-                  >Continue revealing cards and trying to match pairs. The more
-                  pairs you find, the closer Hazel becomes to improving her
-                  memory.</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="how-page2">
-          <div class="how-content">
-            <h3>Winning the Game</h3>
-            <ul class="list">
-              <li>
-                <span class="bullet"
-                  ><i
-                    class="fa-solid fa-splotch fa-rotate-270 fa-2xs"
-                  ></i></span
-                ><span class="li-text"
-                  >Once you've successfully matched all the pairs of
-                  ingredients, Hazel will be able to create her memory-enhancing
-                  potion, and you win the game!</span
-                >
-              </li>
-            </ul>
-            <h3>Tips</h3>
-            <ul class="list">
-              <li>
-                <span class="bullet"
-                  ><i
-                    class="fa-solid fa-splotch fa-rotate-270 fa-2xs"
-                  ></i></span
-                ><span class="li-text"
-                  >Concentration is key. Pay attention to the cards you've
-                  already revealed and where you saw matching ingredients.</span
-                >
-              </li>
-              <li>
-                <span class="bullet"
-                  ><i
-                    class="fa-solid fa-splotch fa-rotate-270 fa-2xs"
-                  ></i></span
-                ><span class="li-text"
-                  >Keep an eye on the number of moves you make. Try to find all
-                  the pairs in as few moves as possible.</span
-                >
-              </li>
-              <li>
-                <span class="bullet"
-                  ><i
-                    class="fa-solid fa-splotch fa-rotate-270 fa-2xs"
-                  ></i></span
-                ><span class="li-text"
-                  >Challenge yourself to improve your time and earn yourself
-                  three stars.</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="game-board">
-        <img src="assets/images/book.png" id="book" />
-        <div id="score-page1">
-          <h3>Highest Scores</h3>
-          <ol>
-            <li>Player Name</li>
-            <li>Player Name</li>
-            <li>Player Name</li>
-            <li>Player Name</li>
-            <li>Player Name</li>
-          </ol>
-        </div>
-        <div id="score-page2">
-          <h3>Player Name</h3>
-          <p>Score<span class="player-score">***</span></p>
-          <p>Time<span class="player-score">0:00</span></p>
-          <p>Turns<span class="player-score">0</span></p>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div class="cauldron">
-        <div class="rim-shadow">
-          <img id="slime" src="assets/images/slime.png" />
-        </div>
-      </div>
-    </footer>
-    <!--external javascript file-->
-    <script src="assets/js/script.js"></script>
-  </body>
+    <body>
+        <header>
+            <div class="title">
+                <img src="assets/images/scroll.png" id="scroll" />
+                <h1>Mystic Hazel's<br>Memory Magic</h1>
+            </div>
+        </header>
+        <main>
+            <!--score board-->
+            <div id="scoreboard">
+                <img src="assets/images/hourglass.png" id="hourglass" />
+                <span id="timer">0:00</span>
+                <img src="assets/images/crystal-ball.png" id="crystal-ball" />
+                <span id="turns">00</span>
+                <img src="assets/images/3star.png" id="star" />
+            </div>
+            <!--game board-->
+            <div id="game" class="book-container">
+                <img src="assets/images/book.png" class="book" />
+                <div id="game-page1">
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/clover.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/crystal.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/feather.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/frog.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/moth.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/mushroom.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/pouch.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/snake.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/spider.png" />
+                    </div>
+                </div>
+                <div id="game-page2">
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/clover.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/crystal.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/feather.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/frog.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/moth.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/mushroom.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/pouch.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/snake.png" />
+                    </div>
+                    <div class="card-container">
+                        <img class="game-card" src="assets/images/card-back.png" />
+                        <img class="game-card front" src="assets/images/spider.png" />
+                    </div>
+                </div>
+            </div>
+            <!--home board-->
+            <div id="home" class="book-container">
+                <img src="assets/images/book.png" class="book" />
+                <div id="home-page1">
+                    <div class="top-page1">
+                        <h2>Mystic Hazel's Memory Magic</h2>
+                        <p>
+                            In a whimsical forest nestled deep within an enchanted realm,
+                            there lived a charming and thoughtful witch named Hazel. She was
+                            known far and wide for her heartwarming spells and ever-present
+                            smile, but there was one little problem. Hazel had a memory like a
+                            leaky bucket.
+                        </p>
+                        <p>
+                            As a talented potion maker, she decided to fix her poor memory
+                            once and for all by creating a memory-boosting elixir! But Hazel
+                            can't remember the ingredients to make it. Can you help her find
+                            the matching ingredients scattered around her workshop?
+                        </p>
+                    </div>
+                    <div class="btm-page1">
+                        <button class="button">How To Play</button>
+                    </div>
+                </div>
+                <div id="home-page2">
+                    <div class="top-page2">
+                        <img class="hazel" src="assets/images/hazel.png" />
+                    </div>
+                    <div class="btm-page2">
+                        <button class="button">New Game</button>
+                        <button class="button">High Scores</button>
+                    </div>
+                </div>
+            </div>
+            <div class="book-container">
+                <img src="assets/images/book.png" class="book" />
+                <div id="how-page1">
+                    <div class="how-content">
+                        <h3>How to Play</h3>
+                        <ul class="list">
+                            <li>
+                                <span class="bullet">
+                                    <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs">
+                                    </i>
+                                </span>
+                                <span class="li-text">
+                                    The game board consists of a grid of facedown cards, each
+                                    hiding an ingredient.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="bullet">
+                                    <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs">
+                                    </i>
+                                </span>
+                                <span class="li-text">
+                                    To play, click on any two cards to reveal what's hidden
+                                    beneath.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="bullet">
+                                    <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs">
+                                    </i>
+                                </span>
+                                <span class="li-text">
+                                    If the two cards you've chosen reveal matching ingredients,
+                                    congratulations! You've found a pair.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="bullet">
+                                    <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs">
+                                    </i>
+                                </span>
+                                <span class="li-text">
+                                    If the cards don't match, don't worry. The cards will
+                                    automatically flip back face-down, and you can continue your
+                                    search for pairs.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="bullet">
+                                    <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs">
+                                    </i>
+                                </span>
+                                <span class="li-text">
+                                    Continue revealing cards and trying to match pairs. The more
+                                    pairs you find, the closer Hazel becomes to improving her
+                                    memory.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="how-page2">
+                    <div class="how-content">
+                        <h3>Winning the Game</h3>
+                        <ul class="list">
+                            <li>
+                                <span class="bullet">
+                                    <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs">
+                                    </i>
+                                </span>
+                                <span class="li-text">
+                                    Once you've successfully matched all the pairs of
+                                    ingredients, Hazel will be able to create her memory-enhancing
+                                    potion, and you win the game!
+                                </span>
+                            </li>
+                        </ul>
+                        <h3>Tips</h3>
+                        <ul class="list">
+                            <li>
+                                <span class="bullet">
+                                    <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs">
+                                    </i>
+                                </span>
+                                <span class="li-text">
+                                    Concentration is key. Pay attention to the cards you've
+                                    already revealed and where you saw matching ingredients.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="bullet">
+                                    <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs">
+                                    </i>
+                                </span>
+                                <span class="li-text">
+                                    Keep an eye on the number of moves you make. Try to find all
+                                    the pairs in as few moves as possible.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="bullet">
+                                    <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs">
+                                    </i>
+                                </span>
+                                <span class="li-text">
+                                    Challenge yourself to improve your time and earn yourself
+                                    three stars.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="book-container">
+                <img src="assets/images/book.png" class="book" />
+                <div id="score-page1">
+                    <h3>Highest Scores</h3>
+                    <ol>
+                        <li>Player Name</li>
+                        <li>Player Name</li>
+                        <li>Player Name</li>
+                        <li>Player Name</li>
+                        <li>Player Name</li>
+                    </ol>
+                </div>
+                <div id="score-page2">
+                    <h3>Player Name</h3>
+                    <p>Score<span class="player-score">***</span></p>
+                    <p>Time<span class="player-score">0:00</span></p>
+                    <p>Turns<span class="player-score">0</span></p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="cauldron">
+                <div class="rim-shadow">
+                    <img id="slime" src="assets/images/slime.png" />
+                </div>
+            </div>
+        </footer>
+        <!--external javascript file-->
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>

@@ -5,6 +5,11 @@
     src: url("../fonts/blackpearl.ttf") format("truetype");
 }
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     background-image: url("../images/background.png");
     background-color: #907860;
@@ -14,7 +19,7 @@ body {
 
 /*---------------------------------------------Title*/
 
-.title-container {
+.title {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
@@ -49,7 +54,7 @@ h1 {
 
 /*---------------------------------------------Scoreboard*/
 
-.scoreboard {
+#scoreboard {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 65%;
@@ -140,9 +145,17 @@ ul li {
     padding-left: 0;
 }
 
+ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
 /*---------------------------------------------Game board*/
 
-.game-board {
+.book-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 1px solid red;
@@ -150,79 +163,75 @@ ul li {
     margin: 50px auto 100px;
 }
 
-#page1 {
+#game-page1,
+#game-page2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     border: 1px solid blue;
     width: 85%;
     height: auto;
-    grid-row: 1;
-    grid-column: 1 / 1;
     perspective: 600px;
+    grid-row: 1;
+}
+
+#game-page1 {
+    grid-column: 1 / 1;
     margin: 5% 8% 10% 7%;
 }
 
-#page2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    border: 1px solid blue;
-    width: 85%;
-    height: auto;
-    grid-row: 1;
+#game-page2 {
     grid-column: 2 / 2;
-    perspective: 600px;
     margin: 5% 5% 10% 10%;
 }
 
 /*---------------------------------------------Cards*/
 
-/*The below code was obtained from 'https://3dtransforms.desandro.com/card-flip' to apply the card flip animation. */
+/*The below code was modified from 'https://3dtransforms.desandro.com/card-flip' to apply the card flip animation. */
 
 .card-container {
-  width: 80%;
-  height: 80%;
-  transition: transform 1s, height 0.6s ease-in-out, width 0.3s ease-in-out;
-  transform-style: preserve-3d;
-  position: relative;
-  align-self: center;
-  justify-self: center;
-  border: 1px solid green;
+    width: 80%;
+    height: 80%;
+    transition: transform 1s, height 0.6s ease-in-out, width 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid green;
 }
 
 .card-container.flip {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-.front,
-.back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: box-shadow 0.5s ease-in-out;
+.game-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: box-shadow 0.5s ease-in-out;
 }
 
 .front {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
+
+/*-------------------------*/
 
 .card-container:hover {
-  width: 90%;
-  height: 90%;
+    width: 90%;
+    height: 90%;
 }
 
-.card-container:hover > .back,
-.card-container:hover > .front {
-  box-shadow: 0.8vw 0.8vw 1vw #B79959;
+.card-container:hover > .game-card {
+    box-shadow: 0.8vw 0.8vw 1vw #B69756;
 }
 
 /*---------------------------------------------Home page*/
 
-#page1-test {
+#home-page1 {
     position: relative;
     border: 1px solid blue;
     width: 95%;
@@ -231,6 +240,16 @@ ul li {
     grid-column: 1 / 1;
     z-index: 1;
     margin: 5% 8% 10% 5%;
+}
+
+#home-page2 {
+    border: 1px solid blue;
+    width: 85%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 2 / 2;
+    z-index: 1;
+    margin: 5% 5% 10% 10%;
 }
 
 .top-page1 {
@@ -263,16 +282,6 @@ ul li {
     align-items: flex-end;
     width: 100%;
     height: 20%;
-}
-
-#page2-test {
-    border: 1px solid blue;
-    width: 85%;
-    height: auto;
-    grid-row: 1;
-    grid-column: 2 / 2;
-    z-index: 1;
-    margin: 5% 5% 10% 10%;
 }
 
 /*---------------------------------------------How to play page*/
@@ -340,14 +349,6 @@ ul li {
     font-size: 20px;
 }
 
-ol {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-bottom: 0;
-    flex-grow: 1;
-}
-
 .player-score {
     display: block;
     font-weight: normal;
@@ -361,7 +362,7 @@ ol {
     color: #baff42;
     border-radius: 50px;
     padding: 5px 10px;
-    transition: color 0.1s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
     font-size: 1.75vw;
 }
 
@@ -373,7 +374,7 @@ ol {
 
 /*---------------------------------------------Images*/
 
-#book {
+.book {
     width: 100%;
     height: auto;
     grid-row: 1;
