@@ -2,7 +2,7 @@ const cardContainers = document.getElementsByClassName("card-container");
 const cards = ["clover", "crystal", "feather", "frog", "moth", "mushroom", "pouch", "snake", "spider"];
 const allCards = [...cards, ...cards];
 
-// loop through each card-container div to toggle the flip class on click.
+// Loop through each card-container div to toggle the flip class on click.
 for (let i = 0; i < cardContainers.length; i++) {
     cardContainers[i].addEventListener('click', function() {
         this.classList.toggle('flip');
@@ -20,11 +20,18 @@ function shuffleCards(array) {
     return array;
 }
 
-// append a new front card image inside each card-container div.
+// Append a new front card image inside each card-container div.
 const addCards = () => {
     shuffleCards(allCards);
 
     for (i = 0; i < cardContainers.length; i++) {
+        // Create the card back image.
+        let cardBack = document.createElement("img");
+        cardBack.setAttribute("class", "game-card");
+        cardBack.setAttribute("src", "assets/images/card-back.png");
+        cardContainers[i].appendChild(cardBack);
+
+        // Create the card front image.
         let cardFront = document.createElement("img");
         cardFront.setAttribute("class", "game-card front");
         cardFront.setAttribute("src", `assets/images/${allCards[i]}.png`);
