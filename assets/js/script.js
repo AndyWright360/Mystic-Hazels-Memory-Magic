@@ -109,10 +109,14 @@ const flipCard = function (clicked) {
     };
 };
 
-// Loop through each card-container div to toggle the flip class on click.
+// Loop through each card-container div to add flip on click, and float on mouse hover.
 for (let i = 0; i < cardContainers.length; i++) {
-    cardContainers[i].addEventListener('click', function () {
-        this.classList.toggle('flip');
+    cardContainers[i].addEventListener('click', flipCard);
+    cardContainers[i].addEventListener('mouseenter', () => {
+        cardContainers[i].classList.add('float');
+    });
+    cardContainers[i].addEventListener('mouseleave', () => {
+        cardContainers[i].classList.remove('float');
     });
 };
 
