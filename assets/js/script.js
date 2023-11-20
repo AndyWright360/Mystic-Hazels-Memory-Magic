@@ -7,98 +7,54 @@ let cardsToCheck = [];
 let checkingCards = false;
 
 // Array of card attribute information.
-const cards = [
+const cardInfo = [
     {
-        id: "clover-1",
+        name: "clover",
         src: "assets/images/clover.png",
         alt: "A green potion with a clover inside on a card."
     },
     {
-        id: "crystal-1",
+        name: "crystal",
         src: "assets/images/crystal.png",
         alt: "A cluster of purple crystals on a card."
     },
     {
-        id: "feather-1",
+        name: "feather",
         src: "assets/images/feather.png",
         alt: "A single crow feather on a card."
     },
     {
-        id: "frog-1",
+        name: "frog",
         src: "assets/images/frog.png",
         alt: "A blue frog with a white underbelly on a card."
     },
     {
-        id: "moth-1",
+        name: "moth",
         src: "assets/images/moth.png",
         alt: "A blush pink moth on a card."
     },
     {
-        id: "mushroom-1",
+        name: "mushroom",
         src: "assets/images/mushroom.png",
         alt: "Four purple tipped mushrooms with blue stems on a card."
     },
     {
-        id: "pouch-1",
+        name: "pouch",
         src: "assets/images/pouch.png",
         alt: "A small green fabric pouch on a card."
     },
     {
-        id: "snake-1",
+        name: "snake",
         src: "assets/images/snake.png",
         alt: "A brown snake inside a glass bottle on a card."
     },
     {
-        id: "spider-1",
-        src: "assets/images/spider.png",
-        alt: "A red spider on a card."
-    },
-    {
-        id: "clover-2",
-        src: "assets/images/clover.png",
-        alt: "A green potion with a clover inside on a card."
-    },
-    {
-        id: "crystal-2",
-        src: "assets/images/crystal.png",
-        alt: "A cluster of purple crystals on a card."
-    },
-    {
-        id: "feather-2",
-        src: "assets/images/feather.png",
-        alt: "A single crow feather on a card."
-    },
-    {
-        id: "frog-2",
-        src: "assets/images/frog.png",
-        alt: "A blue frog with a white underbelly on a card."
-    },
-    {
-        id: "moth-2",
-        src: "assets/images/moth.png",
-        alt: "A blush pink moth on a card."
-    },
-    {
-        id: "mushroom-2",
-        src: "assets/images/mushroom.png",
-        alt: "Four purple tipped mushrooms with blue stems on a card."
-    },
-    {
-        id: "pouch-2",
-        src: "assets/images/pouch.png",
-        alt: "A small green fabric pouch on a card."
-    },
-    {
-        id: "snake-2",
-        src: "assets/images/snake.png",
-        alt: "A brown snake inside a glass bottle on a card."
-    },
-    {
-        id: "spider-2",
+        name: "spider",
         src: "assets/images/spider.png",
         alt: "A red spider on a card."
     }
 ];
+const cards = [...cardInfo, ...cardInfo];
 
 // Toggle flip class and pass card through the checkCards function.
 const flipCard = function (clicked) {
@@ -194,11 +150,9 @@ const checkCards = event => {
     // Check to see if the cards are a matching pair.
     if (cardsToCheck.length === 2) {
         checkingCards = true;
-        if (firstCard.getAttribute("src") === secondCard.getAttribute("src") && firstCard.getAttribute("id") !== secondCard.getAttribute("id")) {
-            // Match found.
+        if (firstCard.getAttribute("src") === secondCard.getAttribute("src")) {
             cardsMatch();
         } else {
-            // Not a match.
             noMatch();
         };
     };
@@ -230,7 +184,6 @@ const addCards = () => {
         // Create the card front image.
         let cardFront = document.createElement("img");
         cardFront.setAttribute("class", "game-card front");
-        cardFront.setAttribute("id", cards[i].id);
         cardFront.setAttribute("src", cards[i].src);
         cardFront.setAttribute("alt", cards[i].alt);
         cardContainers[i].appendChild(cardFront);
