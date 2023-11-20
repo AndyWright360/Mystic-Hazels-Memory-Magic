@@ -115,7 +115,7 @@ const cardsMatch = () => {
         if (pairsFound === 9) {
             alert("You Win!");
         };
-    }, 1500);
+    }, 1000);
 };
 
 const noMatch = () => {
@@ -140,7 +140,7 @@ const noMatch = () => {
         firstCard = null;
         secondCard = null;
         checkingCards = false;
-    }, 1500);
+    }, 1000);
 };
 
 // Add two cards to the cardsToCheck array and check for a matching pair.
