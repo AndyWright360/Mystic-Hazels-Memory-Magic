@@ -83,27 +83,29 @@ for (let i = 0; i < cardContainers.length; i++) {
 };
 
 const cardsMatch = () => {
-    // Remove interactive elements from cards.
-    firstCard.parentElement.addEventListener('mouseleave', lowerCard);
-    secondCard.parentElement.removeEventListener('click', flipCard);
-    secondCard.parentElement.removeEventListener('mouseenter', floatCard);
-    firstCard.parentElement.removeEventListener('mouseenter', floatCard);
-    firstCard.style.cursor = 'default';
-    secondCard.style.cursor = 'default';
+    setTimeout(function () {
+        // Remove interactive elements from cards.
+        firstCard.parentElement.addEventListener('mouseleave', lowerCard);
+        secondCard.parentElement.removeEventListener('click', flipCard);
+        secondCard.parentElement.removeEventListener('mouseenter', floatCard);
+        firstCard.parentElement.removeEventListener('mouseenter', floatCard);
+        firstCard.style.cursor = 'default';
+        secondCard.style.cursor = 'default';
 
-    // Remove 'float' class if present on either card.
-    if (firstCard.parentElement.classList.contains('float')) {
-        firstCard.parentElement.classList.remove('float');
-    }
-    if (secondCard.parentElement.classList.contains('float')) {
-        secondCard.parentElement.classList.remove('float');
-    };
+        // Remove 'float' class if present on either card.
+        if (firstCard.parentElement.classList.contains('float')) {
+            firstCard.parentElement.classList.remove('float');
+        }
+        if (secondCard.parentElement.classList.contains('float')) {
+            secondCard.parentElement.classList.remove('float');
+        };
 
-    // Reset card data.
-    cardsToCheck = [];
-    firstCard = null;
-    secondCard = null;
-    checkingCards = false;
+        // Reset card data.
+        cardsToCheck = [];
+        firstCard = null;
+        secondCard = null;
+        checkingCards = false;
+    }, 1500);
 };
 
 const noMatch = () => {
