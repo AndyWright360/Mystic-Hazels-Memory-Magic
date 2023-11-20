@@ -202,4 +202,20 @@ const addCards = () => {
     };
 };
 
+const startTimer = () => {
+    const timer = document.getElementById("timer");
+    let seconds = 120;
+    timer.textContent = seconds;
+    const countDown = setInterval(() => {
+        seconds--;
+        timer.textContent = seconds;
+
+        if (seconds === 0) {
+            clearInterval(countDown);
+            alert("Time's up!");
+        };
+    }, 1000);
+};
+
 addCards();
+startTimer();
