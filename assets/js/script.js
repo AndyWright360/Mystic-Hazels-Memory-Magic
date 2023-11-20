@@ -126,16 +126,20 @@ for (let i = 0; i < cardContainers.length; i++) {
     cardContainers[i].addEventListener('mouseleave', lowerCard);
 };
 
+// Add two cards to the cardsToCheck array and check for a matching pair.
 const checkCards = event => {
     const clickedCard = event.target.parentElement.lastElementChild;
+
     // Check if firstCard and secondCard have data and store them in cardsToCheck array.
     if (!firstCard) {
         firstCard = clickedCard;
         cardsToCheck.push(firstCard);
         firstCard.parentElement.removeEventListener('click', flipCard);
+        firstCard.parentElement.removeEventListener('mouseleave', lowerCard);
     } else {
         secondCard = clickedCard;
         cardsToCheck.push(secondCard);
+        secondCard.parentElement.removeEventListener('mouseleave', lowerCard);
     };
 
     // Check to see if the cards are a matching pair.
@@ -144,9 +148,20 @@ const checkCards = event => {
         if (firstCard.getAttribute("src") === secondCard.getAttribute("src") && firstCard.getAttribute("id") !== secondCard.getAttribute("id")) {
             // Match found.
             console.log("It's a match!");
+            firstCard.parentElement.addEventListener('mouseleave', lowerCard);
             secondCard.parentElement.removeEventListener('click', flipCard);
             secondCard.parentElement.removeEventListener('mouseenter', floatCard);
             firstCard.parentElement.removeEventListener('mouseenter', floatCard);
+            firstCard.style.cursor = 'default';
+            secondCard.style.cursor = 'default';
+
+            // Remove 'float' class if present on either card
+            if (firstCard.parentElement.classList.contains('float')) {
+                firstCard.parentElement.classList.remove('float');
+            }
+            if (secondCard.parentElement.classList.contains('float')) {
+                secondCard.parentElement.classList.remove('float');
+            };
             cardsToCheck = [];
             firstCard = null;
             secondCard = null;
@@ -155,15 +170,25 @@ const checkCards = event => {
             // Not a match.
             console.log("Not a match.");
             firstCard.parentElement.addEventListener('click', flipCard);
+            firstCard.parentElement.addEventListener('mouseleave', lowerCard);
             // Reset firstCard and secondCard.
             setTimeout(function () {
                 firstCard.parentElement.classList.toggle('flip');
                 secondCard.parentElement.classList.toggle('flip');
+
+                // Remove 'float' class if present on either card
+                if (firstCard.parentElement.classList.contains('float')) {
+                    firstCard.parentElement.classList.remove('float');
+                };
+                if (secondCard.parentElement.classList.contains('float')) {
+                    secondCard.parentElement.classList.remove('float');
+                };
+                secondCard.parentElement.addEventListener('mouseleave', lowerCard);
                 cardsToCheck = [];
                 firstCard = null;
                 secondCard = null;
                 checkingCards = false;
-            }, 1000);
+            }, 1500);
         };
     };
 };
