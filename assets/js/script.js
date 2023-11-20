@@ -1,10 +1,102 @@
 const cardContainers = document.getElementsByClassName("card-container");
-const cards = ["clover", "crystal", "feather", "frog", "moth", "mushroom", "pouch", "snake", "spider"];
-const allCards = [...cards, ...cards];
+
+// Array of card attribute information.
+const cards = [
+    {
+        id: "clover-1",
+        src: "assets/images/clover.png",
+        alt: "A green potion with a clover inside on a card."
+    },
+    {
+        id: "crystal-1",
+        src: "assets/images/crystal.png",
+        alt: "A cluster of purple crystals on a card."
+    },
+    {
+        id: "feather-1",
+        src: "assets/images/feather.png",
+        alt: "A single crow feather on a card."
+    },
+    {
+        id: "frog-1",
+        src: "assets/images/frog.png",
+        alt: "A blue frog with a white underbelly on a card."
+    },
+    {
+        id: "moth-1",
+        src: "assets/images/moth.png",
+        alt: "A blush pink moth on a card."
+    },
+    {
+        id: "mushroom-1",
+        src: "assets/images/mushroom.png",
+        alt: "Four purple tipped mushrooms with blue stems on a card."
+    },
+    {
+        id: "pouch-1",
+        src: "assets/images/pouch.png",
+        alt: "A small green fabric pouch on a card."
+    },
+    {
+        id: "snake-1",
+        src: "assets/images/snake.png",
+        alt: "A brown snake inside a glass bottle on a card."
+    },
+    {
+        id: "spider-1",
+        src: "assets/images/spider.png",
+        alt: "A red spider on a card."
+    },
+    {
+        id: "clover-2",
+        src: "assets/images/clover.png",
+        alt: "A green potion with a clover inside on a card."
+    },
+    {
+        id: "crystal-2",
+        src: "assets/images/crystal.png",
+        alt: "A cluster of purple crystals on a card."
+    },
+    {
+        id: "feather-2",
+        src: "assets/images/feather.png",
+        alt: "A single crow feather on a card."
+    },
+    {
+        id: "frog-2",
+        src: "assets/images/frog.png",
+        alt: "A blue frog with a white underbelly on a card."
+    },
+    {
+        id: "moth-2",
+        src: "assets/images/moth.png",
+        alt: "A blush pink moth on a card."
+    },
+    {
+        id: "mushroom-2",
+        src: "assets/images/mushroom.png",
+        alt: "Four purple tipped mushrooms with blue stems on a card."
+    },
+    {
+        id: "pouch-2",
+        src: "assets/images/pouch.png",
+        alt: "A small green fabric pouch on a card."
+    },
+    {
+        id: "snake-2",
+        src: "assets/images/snake.png",
+        alt: "A brown snake inside a glass bottle on a card."
+    },
+    {
+        id: "spider-2",
+        src: "assets/images/spider.png",
+        alt: "A red spider on a card."
+    }
+];
 
 // Loop through each card-container div to toggle the flip class on click.
 for (let i = 0; i < cardContainers.length; i++) {
-    cardContainers[i].addEventListener('click', function() {
+    cardContainers[i].addEventListener('click', function () {
         this.classList.toggle('flip');
     });
 };
@@ -20,21 +112,24 @@ function shuffleCards(array) {
     return array;
 }
 
-// Append a new front card image inside each card-container div.
+// Append a card images to each card-container div.
 const addCards = () => {
-    shuffleCards(allCards);
+    shuffleCards(cards);
 
     for (i = 0; i < cardContainers.length; i++) {
         // Create the card back image.
         let cardBack = document.createElement("img");
         cardBack.setAttribute("class", "game-card");
         cardBack.setAttribute("src", "assets/images/card-back.png");
+        cardBack.setAttribute("alt", "A purple tarrot card back design with a cresent moon in the center.");
         cardContainers[i].appendChild(cardBack);
 
         // Create the card front image.
         let cardFront = document.createElement("img");
         cardFront.setAttribute("class", "game-card front");
-        cardFront.setAttribute("src", `assets/images/${allCards[i]}.png`);
+        cardFront.setAttribute("id", cards[i].id);
+        cardFront.setAttribute("src", cards[i].src);
+        cardFront.setAttribute("alt", cards[i].alt);
         cardContainers[i].appendChild(cardFront);
     };
 };
