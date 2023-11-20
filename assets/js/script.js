@@ -4,6 +4,7 @@ const cardContainers = document.getElementsByClassName("card-container");
 let firstCard = null;
 let secondCard = null;
 let cardsToCheck = [];
+let checkingCards = false;
 
 // Array of card attribute information.
 const cards = [
@@ -99,6 +100,15 @@ const cards = [
     }
 ];
 
+// Toggle flip class and pass card through the checkCards function.
+const flipCard = function (clicked) {
+    // Prevents user from clicking cards while cards are checked for a match.
+    if (!checkingCards) {
+        this.classList.toggle('flip');
+        checkCards(clicked);
+    };
+};
+
 // Loop through each card-container div to toggle the flip class on click.
 for (let i = 0; i < cardContainers.length; i++) {
     cardContainers[i].addEventListener('click', function () {
@@ -123,6 +133,8 @@ const checkCards = event => {
     if (!firstCard) {
         firstCard = clickedCard;
         cardsToCheck.push(firstCard);
+        // Prevents first card from being clicked twice.
+        firstCard.parentElement.removeEventListener('click', flipCard);
     } else {
         secondCard = clickedCard;
         cardsToCheck.push(secondCard);
@@ -130,18 +142,28 @@ const checkCards = event => {
 
     // Check to see if the cards are a matching pair.
     if (cardsToCheck.length === 2) {
+        checkingCards = true;
         if (firstCard.getAttribute("src") === secondCard.getAttribute("src") && firstCard.getAttribute("id") !== secondCard.getAttribute("id")) {
             // Match found.
             console.log("It's a match!");
+            secondCard.parentElement.removeEventListener('click', flipCard);
             cardsToCheck = [];
             firstCard = null;
             secondCard = null;
+            checkingCards = false;
         } else {
             // Not a match.
             console.log("Not a match.");
-            cardsToCheck = [];
-            firstCard = null;
-            secondCard = null;
+            firstCard.parentElement.addEventListener('click', flipCard);
+            // Reset firstCard and secondCard.
+            setTimeout(function () {
+                firstCard.parentElement.classList.toggle('flip');
+                secondCard.parentElement.classList.toggle('flip');
+                cardsToCheck = [];
+                firstCard = null;
+                secondCard = null;
+                checkingCards = false;
+            }, 1000);
         };
     };
 };
