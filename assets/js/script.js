@@ -1,5 +1,10 @@
 const cardContainers = document.getElementsByClassName("card-container");
 
+// Initialise card data.
+let firstCard = null;
+let secondCard = null;
+let cardsToCheck = [];
+
 // Array of card attribute information.
 const cards = [
     {
@@ -111,6 +116,35 @@ function shuffleCards(array) {
     }
     return array;
 }
+
+const checkCards = event => {
+    const clickedCard = event.target.parentElement.lastElementChild;
+    // Check if firstCard and secondCard have data and store them in cardsToCheck array.
+    if (!firstCard) {
+        firstCard = clickedCard;
+        cardsToCheck.push(firstCard);
+    } else {
+        secondCard = clickedCard;
+        cardsToCheck.push(secondCard);
+    };
+
+    // Check to see if the cards are a matching pair.
+    if (cardsToCheck.length === 2) {
+        if (firstCard.getAttribute("src") === secondCard.getAttribute("src") && firstCard.getAttribute("id") !== secondCard.getAttribute("id")) {
+            // Match found.
+            console.log("It's a match!");
+            cardsToCheck = [];
+            firstCard = null;
+            secondCard = null;
+        } else {
+            // Not a match.
+            console.log("Not a match.");
+            cardsToCheck = [];
+            firstCard = null;
+            secondCard = null;
+        };
+    };
+};
 
 // Append a card images to each card-container div.
 const addCards = () => {
