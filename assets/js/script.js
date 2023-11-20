@@ -1,10 +1,12 @@
 const cardContainers = document.getElementsByClassName("card-container");
 
+let pairsFound = 0;
+let checkingCards = false;
+
 // Initialise card data.
 let firstCard = null;
 let secondCard = null;
 let cardsToCheck = [];
-let checkingCards = false;
 
 // Array of card attribute information.
 const cardInfo = [
@@ -105,6 +107,14 @@ const cardsMatch = () => {
         firstCard = null;
         secondCard = null;
         checkingCards = false;
+
+        // Increment pairs found.
+        pairsFound++;
+
+        // Check for win condtion.
+        if (pairsFound === 9) {
+            alert("You Win!");
+        };
     }, 1500);
 };
 
