@@ -126,6 +126,55 @@ for (let i = 0; i < cardContainers.length; i++) {
     cardContainers[i].addEventListener('mouseleave', lowerCard);
 };
 
+const cardsMatch = () => {
+    // Remove interactive elements from cards.
+    firstCard.parentElement.addEventListener('mouseleave', lowerCard);
+    secondCard.parentElement.removeEventListener('click', flipCard);
+    secondCard.parentElement.removeEventListener('mouseenter', floatCard);
+    firstCard.parentElement.removeEventListener('mouseenter', floatCard);
+    firstCard.style.cursor = 'default';
+    secondCard.style.cursor = 'default';
+
+    // Remove 'float' class if present on either card.
+    if (firstCard.parentElement.classList.contains('float')) {
+        firstCard.parentElement.classList.remove('float');
+    }
+    if (secondCard.parentElement.classList.contains('float')) {
+        secondCard.parentElement.classList.remove('float');
+    };
+
+    // Reset card data.
+    cardsToCheck = [];
+    firstCard = null;
+    secondCard = null;
+    checkingCards = false;
+};
+
+const noMatch = () => {
+    setTimeout(function () {
+        // Reset interactive elements on cards.
+        firstCard.parentElement.addEventListener('click', flipCard);
+        firstCard.parentElement.addEventListener('mouseleave', lowerCard);
+        firstCard.parentElement.classList.toggle('flip');
+        secondCard.parentElement.classList.toggle('flip');
+        secondCard.parentElement.addEventListener('mouseleave', lowerCard);
+
+        // Remove 'float' class if present on either card
+        if (firstCard.parentElement.classList.contains('float')) {
+            firstCard.parentElement.classList.remove('float');
+        };
+        if (secondCard.parentElement.classList.contains('float')) {
+            secondCard.parentElement.classList.remove('float');
+        };
+
+        // Reset card data.
+        cardsToCheck = [];
+        firstCard = null;
+        secondCard = null;
+        checkingCards = false;
+    }, 1500);
+};
+
 // Add two cards to the cardsToCheck array and check for a matching pair.
 const checkCards = event => {
     const clickedCard = event.target.parentElement.lastElementChild;
@@ -147,48 +196,10 @@ const checkCards = event => {
         checkingCards = true;
         if (firstCard.getAttribute("src") === secondCard.getAttribute("src") && firstCard.getAttribute("id") !== secondCard.getAttribute("id")) {
             // Match found.
-            console.log("It's a match!");
-            firstCard.parentElement.addEventListener('mouseleave', lowerCard);
-            secondCard.parentElement.removeEventListener('click', flipCard);
-            secondCard.parentElement.removeEventListener('mouseenter', floatCard);
-            firstCard.parentElement.removeEventListener('mouseenter', floatCard);
-            firstCard.style.cursor = 'default';
-            secondCard.style.cursor = 'default';
-
-            // Remove 'float' class if present on either card
-            if (firstCard.parentElement.classList.contains('float')) {
-                firstCard.parentElement.classList.remove('float');
-            }
-            if (secondCard.parentElement.classList.contains('float')) {
-                secondCard.parentElement.classList.remove('float');
-            };
-            cardsToCheck = [];
-            firstCard = null;
-            secondCard = null;
-            checkingCards = false;
+            cardsMatch();
         } else {
             // Not a match.
-            console.log("Not a match.");
-            firstCard.parentElement.addEventListener('click', flipCard);
-            firstCard.parentElement.addEventListener('mouseleave', lowerCard);
-            // Reset firstCard and secondCard.
-            setTimeout(function () {
-                firstCard.parentElement.classList.toggle('flip');
-                secondCard.parentElement.classList.toggle('flip');
-
-                // Remove 'float' class if present on either card
-                if (firstCard.parentElement.classList.contains('float')) {
-                    firstCard.parentElement.classList.remove('float');
-                };
-                if (secondCard.parentElement.classList.contains('float')) {
-                    secondCard.parentElement.classList.remove('float');
-                };
-                secondCard.parentElement.addEventListener('mouseleave', lowerCard);
-                cardsToCheck = [];
-                firstCard = null;
-                secondCard = null;
-                checkingCards = false;
-            }, 1500);
+            noMatch();
         };
     };
 };
