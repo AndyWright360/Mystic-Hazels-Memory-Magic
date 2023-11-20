@@ -109,27 +109,22 @@ const flipCard = function (clicked) {
     };
 };
 
+// Add float class to cards.
+const floatCard = function () {
+    this.classList.add('float');
+};
+
+// Remove float class from cards.
+const lowerCard = function () {
+    this.classList.remove('float');
+};
+
 // Loop through each card-container div to add flip on click, and float on mouse hover.
 for (let i = 0; i < cardContainers.length; i++) {
     cardContainers[i].addEventListener('click', flipCard);
-    cardContainers[i].addEventListener('mouseenter', () => {
-        cardContainers[i].classList.add('float');
-    });
-    cardContainers[i].addEventListener('mouseleave', () => {
-        cardContainers[i].classList.remove('float');
-    });
+    cardContainers[i].addEventListener('mouseenter', floatCard);
+    cardContainers[i].addEventListener('mouseleave', lowerCard);
 };
-
-// Fisher-Yates algorithm modified from 'dev.to' to shuffle an array.
-function shuffleCards(array) {
-    for (i = array.length - 1; i > 0; i--) {
-        const randomIndex = Math.floor(Math.random() * (i + 1));
-        const temporyIndex = array[i];
-        array[i] = array[randomIndex];
-        array[randomIndex] = temporyIndex;
-    }
-    return array;
-}
 
 const checkCards = event => {
     const clickedCard = event.target.parentElement.lastElementChild;
@@ -137,7 +132,6 @@ const checkCards = event => {
     if (!firstCard) {
         firstCard = clickedCard;
         cardsToCheck.push(firstCard);
-        // Prevents first card from being clicked twice.
         firstCard.parentElement.removeEventListener('click', flipCard);
     } else {
         secondCard = clickedCard;
@@ -151,6 +145,8 @@ const checkCards = event => {
             // Match found.
             console.log("It's a match!");
             secondCard.parentElement.removeEventListener('click', flipCard);
+            secondCard.parentElement.removeEventListener('mouseenter', floatCard);
+            firstCard.parentElement.removeEventListener('mouseenter', floatCard);
             cardsToCheck = [];
             firstCard = null;
             secondCard = null;
@@ -171,6 +167,17 @@ const checkCards = event => {
         };
     };
 };
+
+// Fisher-Yates algorithm modified from 'dev.to' to shuffle an array.
+function shuffleCards(array) {
+    for (i = array.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        const temporyIndex = array[i];
+        array[i] = array[randomIndex];
+        array[randomIndex] = temporyIndex;
+    }
+    return array;
+}
 
 // Append a card images to each card-container div.
 const addCards = () => {
