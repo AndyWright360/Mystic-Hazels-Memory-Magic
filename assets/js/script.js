@@ -1,5 +1,9 @@
 const cardContainers = document.getElementsByClassName("card-container");
 
+const turns = document.getElementById("turns");
+let turnCount = 0;
+turns.textContent = turnCount;
+
 let pairsFound = 0;
 let checkingCards = false;
 
@@ -164,8 +168,14 @@ const checkCards = event => {
         checkingCards = true;
         if (firstCard.getAttribute("src") === secondCard.getAttribute("src")) {
             cardsMatch();
+            // Increment turn counter.
+            turnCount++;
+            turns.textContent = turnCount;
         } else {
             noMatch();
+            // Increment turn counter.
+            turnCount++;
+            turns.textContent = turnCount;
         };
     };
 };
