@@ -73,7 +73,12 @@ h1 {
   width: 95%;
 }
 
-#win-heading {
+#lose-title {
+  width: 80%;
+}
+
+#win-heading,
+#lose-heading {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -82,6 +87,10 @@ h1 {
 
 #win-heading {
   top: 20%;
+}
+
+#lose-heading {
+  top: 15%;
 }
 
 .potion {
@@ -105,6 +114,10 @@ h1 {
 #win-modal p {
   display: inline-block;
   margin: 20px;
+  font-size: 24px;
+}
+
+#lose-modal p {
   font-size: 24px;
 }
 
@@ -295,7 +308,7 @@ ol {
 }
 
 .card-container.float > .game-card {
-  box-shadow: 0.8vw 0.8vw 1vw rgba(183, 153, 89, 1);
+  box-shadow: 0.8vw 0.8vw 1vw #b79959;
 }
 
 /*---------------------------------------------Home page*/
@@ -448,7 +461,8 @@ ol {
   margin: 15px 25px 5px;
 }
 
-#win-btn {
+#win-btn,
+#lose-btn {
   display: none;
 }
 

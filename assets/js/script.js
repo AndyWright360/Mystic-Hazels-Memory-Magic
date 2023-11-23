@@ -1,5 +1,6 @@
 const cardContainers = document.getElementsByClassName("card-container");
 const win = document.getElementById("win-btn");
+const lose = document.getElementById("lose-btn");
 
 const turns = document.getElementById("turns");
 let turnCount = 0;
@@ -226,7 +227,7 @@ const startTimer = () => {
 
     if (seconds === 0) {
       clearInterval(countDown);
-      alert("Time's up!");
+      lose.click();
     }
   }, 1000);
 };

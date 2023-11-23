@@ -297,6 +297,47 @@
           </div>
         </div>
       </div>
+
+      <!--LOSE MODAL-->
+      <!--Modal Trigger-->
+      <button
+        id="lose-btn"
+        class="button"
+        data-bs-toggle="modal"
+        data-bs-target="#lose-modal"
+      ></button>
+      <!--Modal Content-->
+      <div
+        id="lose-modal"
+        class="modal fade"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="modal-title"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <div id="lose-title" class="modal-title">
+                <img
+                  src="assets/images/modal-banner.png"
+                  class="modal-banner"
+                />
+                <h2 id="lose-heading" class="title">Time's Up</h2>
+              </div>
+              <img class="potion" src="assets/images/time-up.png" />
+              <p>Don't give up<br />Try again & help Hazel</p>
+              <button class="button modal-btn" data-bs-dismiss="modal">
+                Play Again
+              </button>
+              <button class="button modal-btn" data-bs-dismiss="modal">
+                High Scores
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!--FOOTER-->
