@@ -19,7 +19,7 @@ body {
 
 /*---------------------------------------------Title*/
 
-.title {
+.title-container {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
@@ -30,7 +30,6 @@ body {
 }
 
 h1 {
-    font-family: "blackpearl", "Fondamento", cursive, sans-serif;
     font-size: 5.2vw;
     margin-bottom: 0;
     position: absolute;
@@ -38,7 +37,10 @@ h1 {
     transform: translateX(-50%);
     top: 25%;
     width: 100%;
+}
 
+.title {
+    font-family: "blackpearl", "Fondamento", cursive, sans-serif;
     /*The below code was obtained from 'fossheim.io' to apply the text colour gradient. */
     text-stroke: 1px #4a0b6e;
     -webkit-text-stroke: 1px #4a0b6e;
@@ -226,7 +228,7 @@ ol {
 }
 
 .card-container.float>.game-card {
-    box-shadow: 0.8vw 0.8vw 1vw #B69756;
+    box-shadow: 0.8vw 0.8vw 1vw rgba(183, 153, 89, 1);
 }
 
 /*---------------------------------------------Home page*/
@@ -363,13 +365,16 @@ ol {
     border-radius: 50px;
     padding: 5px 10px;
     transition: background-color 0.3s ease-in-out;
-    font-size: 1.75vw;
 }
 
 .button:hover {
     background-color: #4a0b6e;
     color: #a2ff00;
     border-color: #28063c;
+}
+
+.book-btn {
+    font-size: 1.75vw;
 }
 
 /*---------------------------------------------Images*/
