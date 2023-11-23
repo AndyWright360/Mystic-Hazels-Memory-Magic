@@ -1,4 +1,5 @@
 const cardContainers = document.getElementsByClassName("card-container");
+const win = document.getElementById("win-btn");
 
 const turns = document.getElementById("turns");
 let turnCount = 0;
@@ -117,7 +118,7 @@ const cardsMatch = () => {
 
     // Check for win condtion.
     if (pairsFound === 9) {
-      alert("You Win!");
+      win.click();
     }
   }, 1000);
 };
