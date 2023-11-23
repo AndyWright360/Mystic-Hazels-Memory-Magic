@@ -219,7 +219,7 @@ h3 {
 
 .li-text {
   display: inline-block;
-  width: calc(100% - 20px);
+  width: calc(100% - 24px);
 }
 
 ul li {
