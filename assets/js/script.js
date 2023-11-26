@@ -20,8 +20,18 @@ const playerData = {
 const playerName = document.getElementById("player-name");
 const nameLabel = document.getElementsByTagName("label")[0];
 
+// Score display
+const starCount = document.getElementById("star");
 const playerTime = document.getElementById("player-time");
 const playerTurns = document.getElementById("player-turns");
+
+// Image data for score display
+const score = {
+  threeStar: "assets/images/3star.png",
+  twoStar: "assets/images/2star.png",
+  oneStar: "assets/images/1star.png",
+  zeroStar: "assets/images/0star.png",
+};
 
 // Initialise card data.
 let firstCard = null;
@@ -77,6 +87,47 @@ const cardInfo = [
   },
 ];
 const cards = [...cardInfo, ...cardInfo];
+
+// Display the players stats on the win message
+const displayScore = () => {
+  stopTimer();
+  playerTime.textContent = seconds;
+  playerTurns.textContent = turnCount;
+  if (seconds < 30) {
+    playerScore.setAttribute("src", score.oneStar);
+  } else if (seconds < 60) {
+    playerScore.setAttribute("src", score.twoStar);
+  } else {
+    playerScore.setAttribute("src", score.threeStar);
+  }
+};
+
+// Add player stats to playerData object
+const submitScore = () => {
+  playerData.name = playerName.value;
+  (playerData.score = playerScore.getAttribute("src")),
+    (playerData.time = seconds),
+    (playerData.turns = turnCount);
+  console.log(playerData);
+};
+
+// Record player stats on entry of player name
+playerName.addEventListener("keypress", (event) => {
+  // Submit name with 'Enter' key
+  if (event.key === "Enter") {
+    // Check if player name is empty
+    if (playerName.value.length === 0) {
+      nameLabel.textContent = "Please enter a valid name";
+      // Submit stats and disable player name input
+    } else {
+      nameLabel.textContent = "Your score has been submitted";
+      submitScore();
+      playerName.value = "";
+      playerName.placeholder = "";
+      playerName.disabled = true;
+    }
+  }
+});
 
 // Toggle flip class and pass card through the checkCards function.
 const flipCard = function (clicked) {
