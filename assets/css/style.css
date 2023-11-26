@@ -650,3 +650,54 @@ ol li {
     top: -50px;
   }
 }
+
+@media screen and (min-width: 767.5px) {
+  .title-container {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 4.4vw;
+  }
+
+  #scoreboard {
+    width: 40%;
+  }
+
+  #turns,
+  #timer {
+    font-size: 2.4vw;
+  }
+
+  .book-container {
+    width: 70%;
+  }
+
+  p,
+  .li-text,
+  .book-btn {
+    font-size: 18px;
+  }
+
+  .book-btn {
+    padding: 5px 8px;
+  }
+
+  h2,
+  #recorded-name {
+    font-size: 26px;
+  }
+
+  ol li,
+  #score-page2 p {
+    font-size: 24px;
+  }
+
+  .cauldron {
+    height: 250px;
+  }
+
+  #slime {
+    max-height: 150px;
+  }
+}
