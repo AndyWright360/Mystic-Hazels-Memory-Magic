@@ -21,6 +21,7 @@ const playerName = document.getElementById("player-name");
 const nameLabel = document.getElementsByTagName("label")[0];
 
 const playerTime = document.getElementById("player-time");
+const playerTurns = document.getElementById("player-turns");
 
 // Initialise card data.
 let firstCard = null;
@@ -134,6 +135,7 @@ const cardsMatch = () => {
     if (pairsFound === 9) {
       stopTimer();
       playerTime.textContent = seconds;
+      playerTurns.textContent = turnCount;
       win.click();
     }
   }, 1000);
