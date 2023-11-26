@@ -95,6 +95,13 @@ const score = {
 const win = document.getElementById("win-btn");
 const lose = document.getElementById("lose-btn");
 
+// High Scores players stats
+const topPlayers = document.getElementById("top-players");
+const recordedName = document.getElementById("recorded-name");
+const recordedScore = document.getElementById("recorded-score");
+const recordedTime = document.getElementById("recorded-time");
+const recordedTurns = document.getElementById("recorded-turns");
+
 //---------- VARIABLES ----------//
 
 // Card data
@@ -354,6 +361,22 @@ const addTopScore = (newScore) => {
 
   // Update scores in local storage
   localStorage.setItem("topScores", JSON.stringify(topScores));
+};
+
+// Display top player names on the High Scores page
+const displayHighScores = () => {
+  // Get the current top scores
+  retrieveStoredScores();
+
+  // Clear the existing topPlayers list
+  topPlayers.innerHTML = "";
+
+  // Add the top player names to the list
+  for (i = 0; i < topScores.length; i++) {
+    let player = document.createElement("li");
+    player.textContent = topScores[i].name;
+    topPlayers.appendChild(player);
+  }
 };
 
 //---------- EVENT LISTENERS ----------//
