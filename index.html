@@ -228,19 +228,16 @@
         <img src="assets/images/book.png" class="book" />
         <div id="score-page1">
           <h3>Highest Scores</h3>
-          <ol>
-            <li>Player Name</li>
-            <li>Player Name</li>
-            <li>Player Name</li>
-            <li>Player Name</li>
-            <li>Player Name</li>
-          </ol>
+          <ol id="top-players"></ol>
         </div>
         <div id="score-page2">
-          <h3>Player Name</h3>
-          <p>Score<span class="player-score">***</span></p>
-          <p>Time<span class="player-score">0:00</span></p>
-          <p>Turns<span class="player-score">0</span></p>
+          <h3 id="recorded-name"></h3>
+          <div>
+            <p>Score</p>
+            <img id="recorded-score" src="assets/images/0star.png" />
+          </div>
+          <p>Time<span id="recorded-time"></span></p>
+          <p>Turns<span id="recorded-turns"></span></p>
         </div>
       </div>
 
@@ -275,11 +272,12 @@
                 <h2 id="win-heading" class="title">Congratulations</h2>
               </div>
               <img class="potion" src="assets/images/potion.png" />
-              <img class="player-score" src="assets/images/3star.png" />
-              <p>Time Remaining: <span class="player-time">60</span></p>
-              <p>Turns: <span class="player-turns">25</span></p>
+              <img id="player-score" src="assets/images/3star.png" />
+              <p>Time Remaining: <span id="player-time"></span></p>
+              <p>Turns: <span id="player-turns"></span></p>
               <label for="player-name"
-                >Enter your name to record your score</label
+                >To submit your score please type your name and press
+                Enter</label
               >
               <input
                 type="text"

@@ -333,11 +333,54 @@ const retrieveStoredScores = () => {
   }
 };
 
-const addTopScore = (newScore) => {
-  // Get current top scores from local storage
+// Add bold font and pointer on mouseover
+const growFont = function () {
+  this.style.fontWeight = "bold";
+  this.style.cursor = "pointer";
+};
+
+// Remove bold font and pointer on mouseleave
+const shrinkFont = function () {
+  this.style.fontWeight = "";
+  this.style.cursor = "";
+};
+
+// Display clicked players score data
+const showPlayerScore = (topPlayer) => {
+  recordedName.textContent = topPlayer.name;
+  recordedScore.setAttribute("src", topPlayer.score);
+  recordedTime.textContent = topPlayer.time;
+  recordedTurns.textContent = topPlayer.turns;
+};
+
+// Display top player names on the High Scores page
+const displayHighScores = () => {
+  // Get the current top scores
   retrieveStoredScores();
 
+  // Clear the existing topPlayers list
+  topPlayers.innerHTML = "";
+
+  // Add the top player names to the list
+  for (let index = 0; index < topScores.length; index++) {
+    let player = document.createElement("li");
+    player.textContent = topScores[index].name;
+
+    // Add interactive elements to the list items
+    player.addEventListener("mouseenter", growFont);
+    player.addEventListener("mouseleave", shrinkFont);
+    player.addEventListener("click", () => {
+      showPlayerScore(topScores[index]);
+    });
+    topPlayers.appendChild(player);
+  }
+};
+
+// Check newly submitted player stats against leaderboard
+const addTopScore = (newScore) => {
+  retrieveStoredScores();
   let newHighScore = false;
+
   for (i = 0; i < topScores.length; i++) {
     // Compare new players score to top scores
     if (
@@ -361,22 +404,9 @@ const addTopScore = (newScore) => {
 
   // Update scores in local storage
   localStorage.setItem("topScores", JSON.stringify(topScores));
-};
 
-// Display top player names on the High Scores page
-const displayHighScores = () => {
-  // Get the current top scores
-  retrieveStoredScores();
-
-  // Clear the existing topPlayers list
-  topPlayers.innerHTML = "";
-
-  // Add the top player names to the list
-  for (i = 0; i < topScores.length; i++) {
-    let player = document.createElement("li");
-    player.textContent = topScores[i].name;
-    topPlayers.appendChild(player);
-  }
+  // Update High Scores leaderboard
+  displayHighScores();
 };
 
 //---------- EVENT LISTENERS ----------//
@@ -408,3 +438,4 @@ for (let i = 0; i < cardContainers.length; i++) {
 
 addCards();
 startTimer();
+displayHighScores();
