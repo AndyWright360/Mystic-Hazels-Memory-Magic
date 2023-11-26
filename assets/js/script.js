@@ -9,6 +9,17 @@ turns.textContent = turnCount;
 let pairsFound = 0;
 let checkingCards = false;
 
+// Player data
+const playerData = {
+  name: "",
+  score: 0,
+  time: 0,
+  turns: 0,
+};
+
+const playerName = document.getElementById("player-name");
+const nameLabel = document.getElementsByTagName("label")[0];
+
 // Initialise card data.
 let firstCard = null;
 let secondCard = null;
@@ -216,6 +227,21 @@ const addCards = () => {
     cardContainers[i].appendChild(cardFront);
   }
 };
+
+playerName.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    if (playerName.value.length === 0) {
+      nameLabel.textContent = "Please enter a valid name";
+    } else {
+      nameLabel.textContent = "Your score has been submitted";
+      playerData.name = playerName.value;
+      playerName.value = "";
+      playerName.placeholder = "";
+      playerName.disabled = true;
+      console.log(playerData);
+    }
+  }
+});
 
 const startTimer = () => {
   const timer = document.getElementById("timer");
