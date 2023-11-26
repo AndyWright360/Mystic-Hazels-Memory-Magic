@@ -104,6 +104,9 @@ let secondCard = null;
 let cardsToCheck = [];
 let checkingCards = false;
 
+// Array to store top 5 player scores
+let topScores = [];
+
 //Give variable global scope
 let countDown;
 
@@ -305,7 +308,52 @@ const submitScore = () => {
   (playerData.score = playerScore.getAttribute("src")),
     (playerData.time = seconds),
     (playerData.turns = turnCount);
-  console.log(playerData);
+
+  // Check players stats against leaderboard
+  addTopScore(playerData);
+};
+
+// Retrieve existing top scores from local storage
+const retrieveStoredScores = () => {
+  let storedScores = localStorage.getItem("topScores");
+
+  // Check if there are any scores stored
+  if (storedScores) {
+    // Convert to useable data
+    topScores = JSON.parse(storedScores);
+  } else {
+    topScores = [];
+  }
+};
+
+const addTopScore = (newScore) => {
+  // Get current top scores from local storage
+  retrieveStoredScores();
+
+  let newHighScore = false;
+  for (i = 0; i < topScores.length; i++) {
+    // Compare new players score to top scores
+    if (
+      newScore.time > topScores[i].time ||
+      (newScore.time === topScores[i].time &&
+        newScore.turns < topScores[i].turns)
+    ) {
+      topScores.splice(i, 0, newScore);
+      newHighScore = true;
+      break;
+    }
+  }
+
+  // If the leaderboard isn't full, add new players score
+  if (!newHighScore && topScores.length < 5) {
+    topScores.push(newScore);
+  }
+
+  // Ensure leaderboard is top 5 players only
+  topScores = topScores.slice(0, 5);
+
+  // Update scores in local storage
+  localStorage.setItem("topScores", JSON.stringify(topScores));
 };
 
 //---------- EVENT LISTENERS ----------//
