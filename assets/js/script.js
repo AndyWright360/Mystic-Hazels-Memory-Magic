@@ -20,6 +20,8 @@ const playerData = {
 const playerName = document.getElementById("player-name");
 const nameLabel = document.getElementsByTagName("label")[0];
 
+const playerTime = document.getElementById("player-time");
+
 // Initialise card data.
 let firstCard = null;
 let secondCard = null;
@@ -130,6 +132,8 @@ const cardsMatch = () => {
 
     // Check for win condtion.
     if (pairsFound === 9) {
+      stopTimer();
+      playerTime.textContent = seconds;
       win.click();
     }
   }, 1000);
@@ -243,11 +247,11 @@ playerName.addEventListener("keypress", (event) => {
   }
 });
 
+//Give variable global scope.
+let countDown;
+
 const startTimer = () => {
-  const timer = document.getElementById("timer");
-  let seconds = 120;
-  timer.textContent = seconds;
-  const countDown = setInterval(() => {
+  countDown = setInterval(() => {
     seconds--;
     timer.textContent = seconds;
 
@@ -256,6 +260,10 @@ const startTimer = () => {
       lose.click();
     }
   }, 1000);
+};
+
+const stopTimer = () => {
+  clearInterval(countDown);
 };
 
 addCards();
