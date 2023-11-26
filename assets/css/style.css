@@ -666,7 +666,7 @@ ol li {
 
   #turns,
   #timer {
-    font-size: 2.4vw;
+    font-size: 2.2vw;
   }
 
   .book-container {
@@ -699,5 +699,48 @@ ol li {
 
   #slime {
     max-height: 150px;
+  }
+}
+
+@media screen and (min-width: 991.5px) {
+  .title-container {
+    width: 400px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  #scoreboard {
+    width: 450px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  #turns,
+  #timer {
+    font-size: 24px;
+  }
+
+  .book-container {
+    width: 700px;
+  }
+
+  #recorded-name {
+    width: 50%;
+  }
+
+  .cauldron {
+    height: 350px;
+  }
+
+  #slime {
+    max-height: 200px;
+    top: -80px;
+  }
+
+  .rim-shadow {
+    top: 80px;
+    height: 25px;
   }
 }
