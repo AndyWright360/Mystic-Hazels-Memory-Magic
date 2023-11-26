@@ -196,7 +196,7 @@ label {
   left: 41%;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 4.25vw;
+  font-size: 3.5vw;
   color: #4a0b6e;
 }
 
@@ -577,7 +577,76 @@ ol li {
 #slime {
   width: 100%;
   height: auto;
-  max-height: 150px;
+  max-height: 80px;
   position: absolute;
   top: -30px;
+}
+
+/*---------------------------------------------Media Queries*/
+
+@media screen and (min-width: 575.5px) {
+  #lose-heading {
+    font-size: 45px;
+  }
+
+  #win-heading {
+    font-size: 36px;
+  }
+
+  .title-container {
+    width: 60%;
+  }
+
+  h1 {
+    font-size: 5.4vw;
+  }
+
+  #scoreboard {
+    width: 55%;
+  }
+
+  #turns,
+  #timer {
+    font-size: 3vw;
+  }
+
+  .book-container {
+    width: 80%;
+  }
+
+  p,
+  .li-text,
+  .book-btn {
+    font-size: 16px;
+  }
+
+  .book-btn {
+    padding: 3px 5px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  ol li,
+  #score-page2 p {
+    font-size: 20px;
+  }
+
+  #recorded-name {
+    font-size: 24px;
+  }
+
+  .cauldron {
+    height: 200px;
+  }
+
+  .rim-shadow {
+    top: 50px;
+  }
+
+  #slime {
+    max-height: 120px;
+    top: -50px;
+  }
 }
