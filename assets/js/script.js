@@ -437,5 +437,5 @@ for (let i = 0; i < cardContainers.length; i++) {
 }
 
 addCards();
-startTimer();
 displayHighScores();
+startTimer();

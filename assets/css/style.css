@@ -1,271 +1,273 @@
 /*---------------------------------------------Fonts*/
 
 @font-face {
-    font-family: "blackpearl";
-    src: url("../fonts/blackpearl.ttf") format("truetype");
+  font-family: "blackpearl";
+  src: url("../fonts/blackpearl.ttf") format("truetype");
 }
 
 html {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    background-image: url("../images/background.png");
-    background-color: #907860;
-    background-size: cover;
-    font-family: "Fondamento", cursive, sans-serif;
+  background-image: url("../images/background.png");
+  background-color: #907860;
+  background-size: cover;
+  font-family: "Fondamento", cursive, sans-serif;
+}
+
+p {
+  font-size: 14px;
 }
 
 /*---------------------------------------------Title*/
 
 .title-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-    align-items: center;
-    width: 60%;
-    margin: 50px auto;
-    position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+  margin: 10px auto;
+  position: relative;
 }
 
 h1 {
-    font-size: 5.2vw;
-    margin-bottom: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 25%;
-    width: 100%;
+  font-size: 7vw;
+  margin-bottom: 0;
+  position: absolute;
+  left: 49%;
+  transform: translateX(-50%);
+  top: 26%;
+  width: 100%;
 }
 
 .title {
-    font-family: "blackpearl", "Fondamento", cursive, sans-serif;
-    /*The below code was obtained from 'fossheim.io' to apply the text colour gradient. */
-    text-stroke: 1px #4a0b6e;
-    -webkit-text-stroke: 1px #4a0b6e;
-    background-color: black;
-    background-image: linear-gradient(yellow, orange, yellow);
-    background-size: 100% 30%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+  font-family: "blackpearl", "Fondamento", cursive, sans-serif;
+  /*The below code was obtained from 'fossheim.io' to apply the text colour gradient. */
+  text-stroke: 1px #4a0b6e;
+  -webkit-text-stroke: 1px #4a0b6e;
+  background-color: black;
+  background-image: linear-gradient(yellow, orange, yellow);
+  background-size: 100% 30%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 /*---------------------------------------------Modals*/
 
 .modal-content {
-    background-color: transparent;
-    background-image: url("../images/sign.png");
-    background-size: 100% 100%;
-    border: none;
+  background-color: transparent;
+  background-image: url("../images/sign.png");
+  background-size: 100% 100%;
+  border: none;
 }
 
 .modal-title {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
-#win-title {
-    width: 95%;
-}
-
+#win-title,
 #lose-title {
-    width: 80%;
+  width: 100%;
 }
 
 #win-heading,
 #lose-heading {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 36px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #win-heading {
-    top: 20%;
+  top: 20%;
+  font-size: 7vw;
 }
 
 #lose-heading {
-    top: 15%;
+  top: 15%;
+  font-size: 8.2vw;
 }
 
 .potion {
-    height: auto;
-    width: 25%;
-    margin-bottom: 20px;
+  height: auto;
+  width: 30%;
+  margin-bottom: 20px;
+  max-width: 120px;
 }
 
 .modal-banner {
-    height: auto;
-    width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 #player-score {
-    display: block;
-    height: auto;
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  height: auto;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  max-width: 160px;
 }
 
 #win-modal p {
-    display: inline-block;
-    margin: 20px;
-    font-size: 24px;
+  margin-bottom: 10px;
+  font-size: 24px;
 }
 
 #lose-modal p {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 #player-name {
-    font-size: 20px;
-    border-radius: 6px;
-    border: 2px solid #4f4280;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 20px;
+  border-radius: 6px;
+  border: 2px solid #4f4280;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #player-name:focus {
-    outline: 1.5px solid #4a0b6e;
+  outline: 1.5px solid #4a0b6e;
+}
+
+label {
+  margin: 0 20px;
 }
 
 /*---------------------------------------------Scoreboard*/
 
 #scoreboard {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    border: 1px solid darkorchid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border: 1px solid darkorchid;
 }
 
 #hourglass {
-    width: 40%;
-    height: auto;
-    align-self: center;
-    justify-self: start;
-    grid-row: 1;
-    grid-column: 1 / 2;
+  width: 40%;
+  height: auto;
+  align-self: center;
+  justify-self: start;
+  grid-row: 1;
+  grid-column: 1 / 2;
 }
 
 #crystal-ball {
-    width: 40.8%;
-    height: auto;
-    align-self: center;
-    justify-self: end;
-    grid-row: 1;
-    grid-column: 1 / 2;
+  width: 40.8%;
+  height: auto;
+  align-self: center;
+  justify-self: end;
+  grid-row: 1;
+  grid-column: 1 / 2;
 }
 
 #star {
-    width: 72%;
-    height: auto;
-    align-self: center;
-    justify-self: end;
-    grid-row: 1;
-    grid-column: 2 / 3;
+  width: 72%;
+  height: auto;
+  align-self: center;
+  justify-self: end;
+  grid-row: 1;
+  grid-column: 2 / 3;
 }
 
 #timer {
-    position: absolute;
-    left: 8.5%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2.3vw;
-    color: #4a0b6e;
+  position: absolute;
+  left: 8.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3.5vw;
+  color: #4a0b6e;
 }
 
 #turns {
-    position: absolute;
-    left: 40.5%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3vw;
-    color: #4a0b6e;
+  position: absolute;
+  left: 41%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4.25vw;
+  color: #4a0b6e;
 }
 
 /*---------------------------------------------Text*/
 
 h2 {
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
+  font-size: 5vw;
 }
 
 h3 {
-    font-weight: bold;
-    text-align: center;
+  font-weight: bold;
+  text-align: center;
 }
 
 /*---------------------------------------------Lists*/
 
 .list {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .bullet {
-    display: inline-block;
-    vertical-align: top;
-    width: 20px;
+  display: inline-block;
+  vertical-align: top;
+  width: 12px;
 }
 
 .li-text {
-    display: inline-block;
-    width: calc(100% - 20px);
+  display: inline-block;
+  width: calc(100% - 18px);
+  font-size: 14px;
 }
 
 ul li {
-    padding-top: 10px;
-    padding-left: 0;
-}
-
-ol {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-bottom: 0;
-    flex-grow: 1;
+  padding-top: 10px;
+  padding-left: 0;
 }
 
 /*---------------------------------------------Game board*/
 
 .book-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 1px solid red;
-    width: 75%;
-    margin: 50px auto 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid red;
+  width: 95%;
+  margin: 20px auto;
 }
 
 #game-page1,
 #game-page2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    border: 1px solid blue;
-    width: 85%;
-    height: auto;
-    perspective: 600px;
-    grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border: 1px solid blue;
+  width: 85%;
+  height: auto;
+  perspective: 600px;
+  grid-row: 1;
 }
 
 #game-page1 {
-    grid-column: 1 / 1;
-    margin: 5% 8% 10% 7%;
+  grid-column: 1 / 1;
+  margin: 5% 8% 10% 7%;
 }
 
 #game-page2 {
-    grid-column: 2 / 2;
-    margin: 5% 5% 10% 10%;
+  grid-column: 2 / 2;
+  margin: 5% 5% 10% 10%;
 }
 
 /*---------------------------------------------Cards*/
@@ -273,273 +275,309 @@ ol {
 /*The below code was modified from 'https://3dtransforms.desandro.com/card-flip' to apply the card flip animation. */
 
 .card-container {
-    width: 80%;
-    height: 80%;
-    transition: transform 1s, height 0.6s ease-in-out, width 0.3s ease-in-out;
-    transform-style: preserve-3d;
-    position: relative;
-    align-self: center;
-    justify-self: center;
-    border: 1px solid green;
+  width: 80%;
+  height: 80%;
+  transition: transform 1s, height 0.6s ease-in-out, width 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  border: 1px solid green;
 }
 
 .card-container.flip {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .game-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transition: box-shadow 0.5s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .front {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /*-------------------------*/
 
 .card-container.float {
-    width: 90%;
-    height: 90%;
+  width: 90%;
+  height: 90%;
 }
 
-.card-container.float>.game-card {
-    box-shadow: 0.8vw 0.8vw 1vw #b79959;
+.card-container.float > .game-card {
+  box-shadow: 0.8vw 0.8vw 1vw #b79959;
 }
 
 /*---------------------------------------------Home page*/
 
 #home-page1 {
-    position: relative;
-    border: 1px solid blue;
-    width: 95%;
-    height: auto;
-    grid-row: 1;
-    grid-column: 1 / 1;
-    z-index: 1;
-    margin: 5% 8% 10% 5%;
+  position: relative;
+  border: 1px solid blue;
+  width: 95%;
+  height: auto;
+  grid-row: 1;
+  grid-column: 1 / 1;
+  z-index: 1;
+  margin: 5% 8% 10% 5%;
 }
 
 #home-page2 {
-    border: 1px solid blue;
-    width: 85%;
-    height: auto;
-    grid-row: 1;
-    grid-column: 2 / 2;
-    z-index: 1;
-    margin: 5% 5% 10% 10%;
+  border: 1px solid blue;
+  width: 85%;
+  height: auto;
+  grid-row: 1;
+  grid-column: 2 / 2;
+  z-index: 1;
+  margin: 5% 5% 10% 10%;
 }
 
 .top-page1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80%;
-    overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  overflow-y: scroll;
 }
 
 .btm-page1 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
 }
 
 .top-page2 {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 80%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80%;
 }
 
 .btm-page2 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    width: 100%;
-    height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 20%;
 }
 
 /*---------------------------------------------How to play page*/
 
 #how-page1 {
-    position: relative;
-    border: 1px solid blue;
-    width: 95%;
-    height: auto;
-    grid-row: 1;
-    grid-column: 1 / 1;
-    z-index: 1;
-    margin: 5% 8% 10% 5%;
+  position: relative;
+  border: 1px solid blue;
+  width: 95%;
+  height: auto;
+  grid-row: 1;
+  grid-column: 1 / 1;
+  z-index: 1;
+  margin: 5% 8% 10% 5%;
 }
 
 #how-page2 {
-    position: relative;
-    border: 1px solid blue;
-    width: 89%;
-    height: auto;
-    grid-row: 1;
-    grid-column: 2 / 2;
-    z-index: 1;
-    margin: 5% 5% 10% 8%;
+  position: relative;
+  border: 1px solid blue;
+  width: 89%;
+  height: auto;
+  grid-row: 1;
+  grid-column: 2 / 2;
+  z-index: 1;
+  margin: 5% 5% 10% 8%;
 }
 
 .how-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.how-heading {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 /*---------------------------------------------High scores page*/
 
 #score-page1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid blue;
-    width: 85%;
-    height: auto;
-    grid-row: 1;
-    grid-column: 1 / 1;
-    margin: 5% 8% 10% 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid blue;
+  width: 85%;
+  height: auto;
+  grid-row: 1;
+  grid-column: 1 / 1;
+  margin: 5% 8% 10% 7%;
 }
 
 #score-page2 {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
-    border: 1px solid blue;
-    width: 85%;
-    height: auto;
-    grid-row: 1;
-    grid-column: 2 / 2;
-    margin: 5% 5% 10% 10%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  padding: 0;
+  justify-content: center;
+  border: 1px solid blue;
+  width: 85%;
+  height: auto;
+  grid-row: 1;
+  grid-column: 2 / 2;
+  margin: 5% 5% 10% 10%;
 }
 
 #score-page2 p {
-    font-weight: bold;
-    font-size: 20px;
+  font-weight: bold;
+  font-size: 5vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#score-container {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .player-score {
-    display: block;
-    font-weight: normal;
+  display: block;
+  font-weight: normal;
+}
+
+#recorded-name {
+  margin: 0 auto;
+  font-size: 5.5vw;
 }
 
 #recorded-score {
-    height: auto;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+  height: auto;
+  width: 60%;
+}
+
+#top-players {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 0;
+  margin-left: 10%;
+  height: 100%;
+  width: 90%;
+  padding: 0;
+}
+
+ol li {
+  border: 1px solid brown;
+  font-size: 5vw;
 }
 
 /*---------------------------------------------Buttons*/
 
 .button {
-    border: 3px solid #4a0b6e;
-    background-color: #4f4280;
-    color: #baff42;
-    border-radius: 50px;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease-in-out;
+  border: 3px solid #4a0b6e;
+  background-color: #4f4280;
+  color: #baff42;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .button:hover {
-    background-color: #4a0b6e;
-    color: #a2ff00;
-    border-color: #28063c;
+  background-color: #4a0b6e;
+  color: #a2ff00;
+  border-color: #28063c;
 }
 
 .book-btn {
-    font-size: 1.75vw;
+  font-size: 3.25vw;
+  padding: 2px;
 }
 
 .modal-btn {
-    margin: 15px 25px 5px;
+  margin: 25px 15px 5px;
+  padding: 5px 10px;
 }
 
 #win-btn,
 #lose-btn {
-    display: none;
+  display: none;
 }
 
 /*---------------------------------------------Images*/
 
 .book {
-    width: 100%;
-    height: auto;
-    grid-row: 1;
-    grid-column: 1 / -1;
+  width: 100%;
+  height: auto;
+  grid-row: 1;
+  grid-column: 1 / -1;
 }
 
 #scroll {
-    width: 100%;
-    height: auto;
-    grid-row: 1;
-    grid-column: 1 / -1;
+  width: 100%;
+  height: auto;
+  grid-row: 1;
+  grid-column: 1 / -1;
 }
 
 .hazel {
-    height: auto;
-    width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 /*---------------------------------------------Scrollbar*/
 
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #4f4280;
-    border-radius: 5px;
-    box-shadow: inset 0 0 7px #1b1b1b;
+  background: #4f4280;
+  border-radius: 5px;
+  box-shadow: inset 0 0 7px #1b1b1b;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #baff42;
-    border-radius: 5px;
-    box-shadow: inset 0 0 7px #1b1b1b;
+  background: #baff42;
+  border-radius: 5px;
+  box-shadow: inset 0 0 7px #1b1b1b;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #7ac700;
-    box-shadow: inset 0 0 7px #1b1b1b;
+  background: #7ac700;
+  box-shadow: inset 0 0 7px #1b1b1b;
 }
 
 /*---------------------------------------------Footer*/
 
 .cauldron {
-    background-color: #404040;
-    height: 250px;
-    width: 100%;
-    position: relative;
+  background-color: #404040;
+  height: 150px;
+  width: 100%;
+  position: relative;
 }
 
 .rim-shadow {
-    background-color: #1b1b1b;
-    height: 15px;
-    width: 100%;
-    position: absolute;
-    top: 50px;
+  background-color: #1b1b1b;
+  height: 15px;
+  width: 100%;
+  position: absolute;
+  top: 30px;
 }
 
 #slime {
-    width: 100%;
-    height: auto;
-    max-height: 150px;
-    position: absolute;
-    top: -50px;
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  position: absolute;
+  top: -30px;
 }
