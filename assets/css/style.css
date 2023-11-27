@@ -1,24 +1,24 @@
 /*---------------------------------------------Fonts*/
 
 @font-face {
-  font-family: "blackpearl";
-  src: url("../fonts/blackpearl.ttf") format("truetype");
+    font-family: "blackpearl";
+    src: url("../fonts/blackpearl.ttf") format("truetype");
 }
 
 /*---------------------------------------------Body*/
 
 html {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
-  background-image: url("../images/background.png");
-  background-color: #907860;
-  background-size: cover;
-  font-family: "Fondamento", cursive, sans-serif;
-  overflow-x: hidden;
+    background-image: url("../images/background.png");
+    background-color: #907860;
+    background-size: cover;
+    font-family: "Fondamento", cursive, sans-serif;
+    overflow-x: hidden;
 }
 
 /*---------------------------------------------Text*/
@@ -130,6 +130,7 @@ p {
 .book-btn {
     font-size: 3.25vw;
     padding: 2px;
+    min-width: 50px;
 }
 
 .modal-btn {
@@ -171,9 +172,9 @@ ul li {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     margin-bottom: 0;
-    margin-left: 10%;
+    margin-left: 15%;
     height: 100%;
-    width: 90%;
+    width: 85%;
     padding: 0;
 }
 
@@ -185,85 +186,85 @@ ol li {
 /*---------------------------------------------Title*/
 
 .title-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  text-align: center;
-  align-items: center;
-  width: 80%;
-  margin: 10px auto;
-  position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin: 10px auto;
+    position: relative;
 }
 
 .title {
-  font-family: "blackpearl", "Fondamento", cursive, sans-serif;
-  /*The below code was obtained from 'fossheim.io' to apply the text colour gradient. */
-  text-stroke: 1px #4a0b6e;
-  -webkit-text-stroke: 1px #4a0b6e;
-  background-color: black;
-  background-image: linear-gradient(yellow, orange, yellow);
-  background-size: 100% 30%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+    font-family: "blackpearl", "Fondamento", cursive, sans-serif;
+    /*The below code was obtained from 'fossheim.io' to apply the text colour gradient. */
+    text-stroke: 1px #4a0b6e;
+    -webkit-text-stroke: 1px #4a0b6e;
+    background-color: black;
+    background-image: linear-gradient(yellow, orange, yellow);
+    background-size: 100% 30%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 /*---------------------------------------------Scoreboard*/
 
 #scoreboard {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  border: 1px solid darkorchid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 1px solid darkorchid;
 }
 
 #hourglass {
-  width: 40%;
-  height: auto;
-  align-self: center;
-  justify-self: start;
-  grid-row: 1;
-  grid-column: 1 / 2;
+    width: 40%;
+    height: auto;
+    align-self: center;
+    justify-self: start;
+    grid-row: 1;
+    grid-column: 1 / 2;
 }
 
 #crystal-ball {
-  width: 40.8%;
-  height: auto;
-  align-self: center;
-  justify-self: end;
-  grid-row: 1;
-  grid-column: 1 / 2;
+    width: 40.8%;
+    height: auto;
+    align-self: center;
+    justify-self: end;
+    grid-row: 1;
+    grid-column: 1 / 2;
 }
 
 #star {
-  width: 72%;
-  height: auto;
-  align-self: center;
-  justify-self: end;
-  grid-row: 1;
-  grid-column: 2 / 3;
+    width: 72%;
+    height: auto;
+    align-self: center;
+    justify-self: end;
+    grid-row: 1;
+    grid-column: 2 / 3;
 }
 
 #timer {
-  position: absolute;
-  left: 8.5%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 3.5vw;
-  color: #4a0b6e;
+    position: absolute;
+    left: 8.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3.5vw;
+    color: #4a0b6e;
 }
 
 #turns {
-  position: absolute;
-  left: 41%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 3.5vw;
-  color: #4a0b6e;
+    position: absolute;
+    left: 41%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3.5vw;
+    color: #4a0b6e;
 }
 
 /*---------------------------------------------Home page*/
@@ -324,34 +325,34 @@ ol li {
 /*---------------------------------------------Game board*/
 
 .book-container {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid red;
-  width: 95%;
-  margin: 20px auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid red;
+    width: 95%;
+    margin: 20px auto;
 }
 
 #game-page1,
 #game-page2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  border: 1px solid blue;
-  width: 85%;
-  height: auto;
-  perspective: 600px;
-  grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid blue;
+    width: 85%;
+    height: auto;
+    perspective: 600px;
+    grid-row: 1;
 }
 
 #game-page1 {
-  grid-column: 1 / 1;
-  margin: 5% 8% 10% 7%;
+    grid-column: 1 / 1;
+    margin: 5% 8% 10% 7%;
 }
 
 #game-page2 {
-  grid-column: 2 / 2;
-  margin: 5% 5% 10% 10%;
+    grid-column: 2 / 2;
+    margin: 5% 5% 10% 10%;
 }
 
 /*---------------------------------------------Cards*/
@@ -359,139 +360,149 @@ ol li {
 /*The below code was modified from 'https://3dtransforms.desandro.com/card-flip' to apply the card flip animation. */
 
 .card-container {
-  width: 80%;
-  height: 80%;
-  transition: transform 1s, height 0.6s ease-in-out, width 0.3s ease-in-out;
-  transform-style: preserve-3d;
-  position: relative;
-  align-self: center;
-  justify-self: center;
-  border: 1px solid green;
+    width: 80%;
+    height: 80%;
+    transition: transform 1s, height 0.6s ease-in-out, width 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid green;
 }
 
 .card-container.flip {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .game-card {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: box-shadow 0.5s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: box-shadow 0.5s ease-in-out;
 }
 
 .front {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 /*-------------------------*/
 
 .card-container.float {
-  width: 90%;
-  height: 90%;
+    width: 90%;
+    height: 90%;
 }
 
-.card-container.float > .game-card {
-  box-shadow: 0.8vw 0.8vw 1vw #b79959;
+.card-container.float>.game-card {
+    box-shadow: 0.8vw 0.8vw 1vw #b79959;
 }
 
 /*---------------------------------------------How to play page*/
 
 #how-page1 {
-  position: relative;
-  border: 1px solid blue;
-  width: 95%;
-  height: auto;
-  grid-row: 1;
-  grid-column: 1 / 1;
-  z-index: 1;
-  margin: 5% 8% 10% 5%;
+    position: relative;
+    border: 1px solid blue;
+    width: 95%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 1 / 1;
+    z-index: 1;
+    margin: 5% 8% 10% 5%;
 }
 
 #how-page2 {
-  position: relative;
-  border: 1px solid blue;
-  width: 89%;
-  height: auto;
-  grid-row: 1;
-  grid-column: 2 / 2;
-  z-index: 1;
-  margin: 5% 5% 10% 8%;
+    position: relative;
+    border: 1px solid blue;
+    width: 89%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 2 / 2;
+    z-index: 1;
+    margin: 5% 5% 10% 8%;
+}
+
+.how-btm-pg {
+    position: absolute;
+    bottom: 0;
 }
 
 .how-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
 }
 
 .how-heading {
-  padding-bottom: 0;
-  margin-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 /*---------------------------------------------High scores page*/
 
 #score-page1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid blue;
-  width: 85%;
-  height: auto;
-  grid-row: 1;
-  grid-column: 1 / 1;
-  margin: 5% 8% 10% 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid blue;
+    width: 85%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 1 / 1;
+    margin: 5% 8% 10% 7%;
 }
 
 #score-page2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 1fr 1fr;
-  padding: 0;
-  justify-content: center;
-  border: 1px solid blue;
-  width: 85%;
-  height: auto;
-  grid-row: 1;
-  grid-column: 2 / 2;
-  margin: 5% 5% 10% 10%;
+    padding: 0;
+    border: 1px solid blue;
+    width: 85%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 2 / 2;
+    margin: 5% 5% 10% 10%;
+}
+
+.score-top-pg {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
 }
 
 #score-page2 p {
-  font-weight: bold;
-  font-size: 5vw;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    font-weight: bold;
+    font-size: 5vw;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 #score-container {
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .player-score {
-  display: block;
-  font-weight: normal;
+    display: block;
+    font-weight: normal;
 }
 
 #recorded-name {
-  margin: 0 auto;
-  font-size: 5.5vw;
+    margin: 0 auto;
+    font-size: 5.5vw;
 }
 
 #recorded-score {
-  height: auto;
-  width: 60%;
+    height: auto;
+    width: 60%;
 }
 
 /*---------------------------------------------Modals*/
@@ -582,26 +593,26 @@ label {
 /*---------------------------------------------Footer*/
 
 .cauldron {
-  background-color: #404040;
-  height: 150px;
-  width: 100%;
-  position: relative;
+    background-color: #404040;
+    height: 150px;
+    width: 100%;
+    position: relative;
 }
 
 .rim-shadow {
-  background-color: #1b1b1b;
-  height: 15px;
-  width: 100%;
-  position: absolute;
-  top: 30px;
+    background-color: #1b1b1b;
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    top: 30px;
 }
 
 #slime {
-  width: 100%;
-  height: auto;
-  max-height: 80px;
-  position: absolute;
-  top: -30px;
+    width: 100%;
+    height: auto;
+    max-height: 80px;
+    position: absolute;
+    top: -30px;
 }
 
 /*---------------------------------------------Scrollbar*/
@@ -631,162 +642,162 @@ label {
 /*---------------------------------------------Media Queries*/
 
 @media screen and (min-width: 575.5px) {
-  #lose-heading {
-    font-size: 45px;
-  }
+    #lose-heading {
+        font-size: 45px;
+    }
 
-  #win-heading {
-    font-size: 36px;
-  }
+    #win-heading {
+        font-size: 36px;
+    }
 
-  .title-container {
-    width: 60%;
-  }
+    .title-container {
+        width: 60%;
+    }
 
-  h1 {
-    font-size: 5.4vw;
-  }
+    h1 {
+        font-size: 5.4vw;
+    }
 
-  #scoreboard {
-    width: 55%;
-  }
+    #scoreboard {
+        width: 55%;
+    }
 
-  #turns,
-  #timer {
-    font-size: 3vw;
-  }
+    #turns,
+    #timer {
+        font-size: 3vw;
+    }
 
-  .book-container {
-    width: 80%;
-  }
+    .book-container {
+        width: 80%;
+    }
 
-  p,
-  .li-text,
-  .book-btn {
-    font-size: 16px;
-  }
+    p,
+    .li-text,
+    .book-btn {
+        font-size: 16px;
+    }
 
-  .book-btn {
-    padding: 3px 5px;
-  }
+    .book-btn {
+        padding: 3px 5px;
+    }
 
-  h2 {
-    font-size: 22px;
-  }
+    h2 {
+        font-size: 22px;
+    }
 
-  ol li,
-  #score-page2 p {
-    font-size: 20px;
-  }
+    ol li,
+    #score-page2 p {
+        font-size: 20px;
+    }
 
-  #recorded-name {
-    font-size: 24px;
-  }
+    #recorded-name {
+        font-size: 24px;
+    }
 
-  .cauldron {
-    height: 200px;
-  }
+    .cauldron {
+        height: 200px;
+    }
 
-  .rim-shadow {
-    top: 50px;
-  }
+    .rim-shadow {
+        top: 50px;
+    }
 
-  #slime {
-    max-height: 120px;
-    top: -50px;
-  }
+    #slime {
+        max-height: 120px;
+        top: -50px;
+    }
 }
 
 @media screen and (min-width: 767.5px) {
-  .title-container {
-    width: 50%;
-  }
+    .title-container {
+        width: 50%;
+    }
 
-  h1 {
-    font-size: 4.4vw;
-  }
+    h1 {
+        font-size: 4.4vw;
+    }
 
-  #scoreboard {
-    width: 40%;
-  }
+    #scoreboard {
+        width: 40%;
+    }
 
-  #turns,
-  #timer {
-    font-size: 2.2vw;
-  }
+    #turns,
+    #timer {
+        font-size: 2.2vw;
+    }
 
-  .book-container {
-    width: 70%;
-  }
+    .book-container {
+        width: 70%;
+    }
 
-  p,
-  .li-text,
-  .book-btn {
-    font-size: 18px;
-  }
+    p,
+    .li-text,
+    .book-btn {
+        font-size: 18px;
+    }
 
-  .book-btn {
-    padding: 5px 8px;
-  }
+    .book-btn {
+        padding: 5px 8px;
+    }
 
-  h2,
-  #recorded-name {
-    font-size: 26px;
-  }
+    h2,
+    #recorded-name {
+        font-size: 26px;
+    }
 
-  ol li,
-  #score-page2 p {
-    font-size: 24px;
-  }
+    ol li,
+    #score-page2 p {
+        font-size: 24px;
+    }
 
-  .cauldron {
-    height: 250px;
-  }
+    .cauldron {
+        height: 250px;
+    }
 
-  #slime {
-    max-height: 150px;
-  }
+    #slime {
+        max-height: 150px;
+    }
 }
 
 @media screen and (min-width: 991.5px) {
-  .title-container {
-    width: 400px;
-  }
+    .title-container {
+        width: 400px;
+    }
 
-  h1 {
-    font-size: 36px;
-  }
+    h1 {
+        font-size: 36px;
+    }
 
-  #scoreboard {
-    width: 450px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
+    #scoreboard {
+        width: 450px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
 
-  #turns,
-  #timer {
-    font-size: 24px;
-  }
+    #turns,
+    #timer {
+        font-size: 24px;
+    }
 
-  .book-container {
-    width: 700px;
-  }
+    .book-container {
+        width: 700px;
+    }
 
-  #recorded-name {
-    width: 50%;
-  }
+    #recorded-name {
+        width: 50%;
+    }
 
-  .cauldron {
-    height: 350px;
-  }
+    .cauldron {
+        height: 350px;
+    }
 
-  #slime {
-    max-height: 200px;
-    top: -80px;
-  }
+    #slime {
+        max-height: 200px;
+        top: -80px;
+    }
 
-  .rim-shadow {
-    top: 80px;
-    height: 25px;
-  }
+    .rim-shadow {
+        top: 80px;
+        height: 25px;
+    }
 }

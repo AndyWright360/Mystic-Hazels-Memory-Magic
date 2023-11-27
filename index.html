@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
-      content="Mystic Hazel's Memory Magic is a memory game. Aid Hazel in her quest to imptove her memory and perhaps improve yours along the way."
+      content="Mystic Hazel's Memory Magic is a memory game. Aid Hazel in her quest to improve her memory and perhaps improve yours along the way."
     />
 
     <!--google fonts-->
@@ -198,6 +198,9 @@
               </li>
             </ul>
           </div>
+          <div class="btm-page1">
+            <button class="button book-btn">Home</button>
+          </div>
         </div>
         <div id="how-page2">
           <div class="how-content">
@@ -245,6 +248,10 @@
               </li>
             </ul>
           </div>
+          <div class="btm-page2 how-btm-pg">
+            <button class="button book-btn">New Game</button>
+            <button class="button book-btn">High Scores</button>
+          </div>
         </div>
       </div>
 
@@ -252,17 +259,23 @@
       <div class="book-container">
         <img src="assets/images/book.png" class="book" />
         <div id="score-page1">
-          <h2>Highest Scores</h2>
+          <h2>High Scores</h2>
           <ol id="top-players"></ol>
         </div>
         <div id="score-page2">
-          <h3 id="recorded-name"></h3>
-          <div id="score-container">
-            <p>Score</p>
-            <img id="recorded-score" src="assets/images/0star.png" />
+          <div class="score-top-pg">
+            <h3 id="recorded-name"></h3>
+            <div id="score-container">
+              <p>Score</p>
+              <img id="recorded-score" src="assets/images/0star.png" />
+            </div>
+            <p>Time: <span id="recorded-time"></span></p>
+            <p>Turns: <span id="recorded-turns"></span></p>
           </div>
-          <p>Time: <span id="recorded-time"></span></p>
-          <p>Turns: <span id="recorded-turns"></span></p>
+          <div class="btm-page2">
+            <button class="button book-btn">Home</button>
+            <button class="button book-btn">New Game</button>
+          </div>
         </div>
       </div>
 
