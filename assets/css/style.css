@@ -5,6 +5,8 @@
   src: url("../fonts/blackpearl.ttf") format("truetype");
 }
 
+/*---------------------------------------------Body*/
+
 html {
   height: 100%;
   width: 100%;
@@ -19,8 +21,165 @@ body {
   overflow-x: hidden;
 }
 
+/*---------------------------------------------Text*/
+
+h1 {
+    font-size: 7vw;
+    margin-bottom: 0;
+    position: absolute;
+    left: 49%;
+    transform: translateX(-50%);
+    top: 26%;
+    width: 100%;
+}
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 5vw;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
 p {
-  font-size: 14px;
+    font-size: 14px;
+}
+
+/*---------------------------------------------Images*/
+
+.book {
+    width: 100%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+#scroll {
+    width: 100%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+.hazel {
+    height: auto;
+    width: 100%;
+}
+
+.bg-image {
+    position: absolute;
+    height: auto;
+}
+
+#cauldron {
+    width: 600px;
+    top: -350px;
+    left: -700px;
+}
+
+#candle-green {
+    width: 170px;
+    top: 190px;
+    left: -200px;
+}
+
+#candle-orange {
+    width: 150px;
+    top: 360px;
+    right: -180px;
+}
+
+#candle-purple {
+    width: 120px;
+    top: 380px;
+    left: -340px;
+}
+
+#orb {
+    width: 600px;
+    top: -400px;
+    right: -650px;
+}
+
+#wand {
+    width: 220px;
+    top: 80px;
+    right: -320px;
+}
+
+/*---------------------------------------------Buttons*/
+
+.button {
+    border: 3px solid #4a0b6e;
+    background-color: #4f4280;
+    color: #baff42;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #4a0b6e;
+    color: #a2ff00;
+    border-color: #28063c;
+}
+
+.book-btn {
+    font-size: 3.25vw;
+    padding: 2px;
+}
+
+.modal-btn {
+    margin: 25px 15px 5px;
+    padding: 5px 10px;
+}
+
+#win-btn,
+#lose-btn {
+    display: none;
+}
+
+/*---------------------------------------------Lists*/
+
+.list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.bullet {
+    display: inline-block;
+    vertical-align: top;
+    width: 12px;
+}
+
+.li-text {
+    display: inline-block;
+    width: calc(100% - 18px);
+    font-size: 14px;
+}
+
+ul li {
+    padding-top: 10px;
+    padding-left: 0;
+}
+
+#top-players {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 0;
+    margin-left: 10%;
+    height: 100%;
+    width: 90%;
+    padding: 0;
+}
+
+ol li {
+    border: 1px solid brown;
+    font-size: 5vw;
 }
 
 /*---------------------------------------------Title*/
@@ -33,16 +192,6 @@ p {
   width: 80%;
   margin: 10px auto;
   position: relative;
-}
-
-h1 {
-  font-size: 7vw;
-  margin-bottom: 0;
-  position: absolute;
-  left: 49%;
-  transform: translateX(-50%);
-  top: 26%;
-  width: 100%;
 }
 
 .title {
@@ -58,91 +207,6 @@ h1 {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-}
-
-/*---------------------------------------------Modals*/
-
-.modal-content {
-  background-color: transparent;
-  background-image: url("../images/sign.png");
-  background-size: 100% 100%;
-  border: none;
-}
-
-.modal-title {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-
-#win-title,
-#lose-title {
-  width: 100%;
-}
-
-#win-heading,
-#lose-heading {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#win-heading {
-  top: 20%;
-  font-size: 7vw;
-}
-
-#lose-heading {
-  top: 15%;
-  font-size: 8.2vw;
-}
-
-.potion {
-  height: auto;
-  width: 30%;
-  margin-bottom: 20px;
-  max-width: 120px;
-}
-
-.modal-banner {
-  height: auto;
-  width: 100%;
-}
-
-#player-score {
-  display: block;
-  height: auto;
-  width: 45%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  max-width: 160px;
-}
-
-#win-modal p {
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
-#lose-modal p {
-  font-size: 24px;
-}
-
-#player-name {
-  font-size: 20px;
-  border-radius: 6px;
-  border: 2px solid #4f4280;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#player-name:focus {
-  outline: 1.5px solid #4a0b6e;
-}
-
-label {
-  margin: 0 20px;
 }
 
 /*---------------------------------------------Scoreboard*/
@@ -202,42 +266,59 @@ label {
   color: #4a0b6e;
 }
 
-/*---------------------------------------------Text*/
+/*---------------------------------------------Home page*/
 
-h2 {
-  font-weight: bold;
-  text-align: center;
-  padding-bottom: 5px;
-  font-size: 5vw;
+#home-page1 {
+    position: relative;
+    border: 1px solid blue;
+    width: 95%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 1 / 1;
+    z-index: 1;
+    margin: 5% 8% 10% 5%;
 }
 
-h3 {
-  font-weight: bold;
-  text-align: center;
+#home-page2 {
+    border: 1px solid blue;
+    width: 85%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 2 / 2;
+    z-index: 1;
+    margin: 5% 5% 10% 10%;
 }
 
-/*---------------------------------------------Lists*/
-
-.list {
-  list-style-type: none;
-  padding-left: 0;
+.top-page1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
 }
 
-.bullet {
-  display: inline-block;
-  vertical-align: top;
-  width: 12px;
+.btm-page1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
 }
 
-.li-text {
-  display: inline-block;
-  width: calc(100% - 18px);
-  font-size: 14px;
+.top-page2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80%;
 }
 
-ul li {
-  padding-top: 10px;
-  padding-left: 0;
+.btm-page2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 20%;
 }
 
 /*---------------------------------------------Game board*/
@@ -315,61 +396,6 @@ ul li {
 
 .card-container.float > .game-card {
   box-shadow: 0.8vw 0.8vw 1vw #b79959;
-}
-
-/*---------------------------------------------Home page*/
-
-#home-page1 {
-  position: relative;
-  border: 1px solid blue;
-  width: 95%;
-  height: auto;
-  grid-row: 1;
-  grid-column: 1 / 1;
-  z-index: 1;
-  margin: 5% 8% 10% 5%;
-}
-
-#home-page2 {
-  border: 1px solid blue;
-  width: 85%;
-  height: auto;
-  grid-row: 1;
-  grid-column: 2 / 2;
-  z-index: 1;
-  margin: 5% 5% 10% 10%;
-}
-
-.top-page1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80%;
-  overflow-y: scroll;
-}
-
-.btm-page1 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  height: 100%;
-}
-
-.top-page2 {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 80%;
-}
-
-.btm-page2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  height: 20%;
 }
 
 /*---------------------------------------------How to play page*/
@@ -468,137 +494,89 @@ ul li {
   width: 60%;
 }
 
-#top-players {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  margin-bottom: 0;
-  margin-left: 10%;
-  height: 100%;
-  width: 90%;
-  padding: 0;
+/*---------------------------------------------Modals*/
+
+.modal-content {
+    background-color: transparent;
+    background-image: url("../images/sign.png");
+    background-size: 100% 100%;
+    border: none;
 }
 
-ol li {
-  border: 1px solid brown;
-  font-size: 5vw;
+.modal-title {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 
-/*---------------------------------------------Buttons*/
-
-.button {
-  border: 3px solid #4a0b6e;
-  background-color: #4f4280;
-  color: #baff42;
-  border-radius: 50px;
-  transition: background-color 0.3s ease-in-out;
+#win-title,
+#lose-title {
+    width: 100%;
 }
 
-.button:hover {
-  background-color: #4a0b6e;
-  color: #a2ff00;
-  border-color: #28063c;
+#win-heading,
+#lose-heading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.book-btn {
-  font-size: 3.25vw;
-  padding: 2px;
+#win-heading {
+    top: 20%;
+    font-size: 7vw;
 }
 
-.modal-btn {
-  margin: 25px 15px 5px;
-  padding: 5px 10px;
+#lose-heading {
+    top: 15%;
+    font-size: 8.2vw;
 }
 
-#win-btn,
-#lose-btn {
-  display: none;
+.potion {
+    height: auto;
+    width: 30%;
+    margin-bottom: 20px;
+    max-width: 120px;
 }
 
-/*---------------------------------------------Images*/
-
-.book {
-  width: 100%;
-  height: auto;
-  grid-row: 1;
-  grid-column: 1 / -1;
+.modal-banner {
+    height: auto;
+    width: 100%;
 }
 
-#scroll {
-  width: 100%;
-  height: auto;
-  grid-row: 1;
-  grid-column: 1 / -1;
+#player-score {
+    display: block;
+    height: auto;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    max-width: 160px;
 }
 
-.hazel {
-  height: auto;
-  width: 100%;
+#win-modal p {
+    margin-bottom: 10px;
+    font-size: 24px;
 }
 
-.bg-image {
-  position: absolute;
-  height: auto;
+#lose-modal p {
+    font-size: 24px;
 }
 
-#cauldron {
-  width: 600px;
-  top: -350px;
-  left: -700px;
+#player-name {
+    font-size: 20px;
+    border-radius: 6px;
+    border: 2px solid #4f4280;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#candle-green {
-  width: 170px;
-  top: 190px;
-  left: -200px;
+#player-name:focus {
+    outline: 1.5px solid #4a0b6e;
 }
 
-#candle-orange {
-  width: 150px;
-  top: 360px;
-  right: -180px;
-}
-
-#candle-purple {
-  width: 120px;
-  top: 380px;
-  left: -340px;
-}
-
-#orb {
-  width: 600px;
-  top: -400px;
-  right: -650px;
-}
-
-#wand {
-  width: 220px;
-  top: 80px;
-  right: -320px;
-}
-
-/*---------------------------------------------Scrollbar*/
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #4f4280;
-  border-radius: 5px;
-  box-shadow: inset 0 0 7px #1b1b1b;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #baff42;
-  border-radius: 5px;
-  box-shadow: inset 0 0 7px #1b1b1b;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #7ac700;
-  box-shadow: inset 0 0 7px #1b1b1b;
+label {
+    margin: 0 20px;
 }
 
 /*---------------------------------------------Footer*/
@@ -624,6 +602,30 @@ ol li {
   max-height: 80px;
   position: absolute;
   top: -30px;
+}
+
+/*---------------------------------------------Scrollbar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4f4280;
+    border-radius: 5px;
+    box-shadow: inset 0 0 7px #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #baff42;
+    border-radius: 5px;
+    box-shadow: inset 0 0 7px #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7ac700;
+    box-shadow: inset 0 0 7px #1b1b1b;
 }
 
 /*---------------------------------------------Media Queries*/
