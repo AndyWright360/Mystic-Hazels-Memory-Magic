@@ -102,6 +102,18 @@ const recordedScore = document.getElementById("recorded-score");
 const recordedTime = document.getElementById("recorded-time");
 const recordedTurns = document.getElementById("recorded-turns");
 
+// Page containers
+const gameBoard = document.getElementById("game-board");
+const homeBoard = document.getElementById("home-board");
+const howBoard = document.getElementById("how-board");
+const scoreBoard = document.getElementById("score-board");
+
+// Navigation buttons
+const homeButtons = document.getElementsByClassName("home");
+const gameButtons = document.getElementsByClassName("game");
+const scoreButtons = document.getElementsByClassName("high");
+const howToPlayButtons = document.getElementsByClassName("how");
+
 //---------- VARIABLES ----------//
 
 // Card data
@@ -300,6 +312,8 @@ const displayScore = () => {
   stopTimer();
   playerTime.textContent = seconds;
   playerTurns.textContent = turnCount;
+
+  // Display relavant score based on time remaining
   if (seconds < 30) {
     playerScore.setAttribute("src", score.oneStar);
   } else if (seconds < 60) {
@@ -409,6 +423,50 @@ const addTopScore = (newScore) => {
   displayHighScores();
 };
 
+const loadGame = () => {
+  // Display the game board
+  gameBoard.style.display = "";
+  homeBoard.style.display = "none";
+  howBoard.style.display = "none";
+  scoreBoard.style.display = "none";
+
+  // Add interactive elements to card containers
+  for (i = 0; i < cardContainers.length; i++) {
+    cardContainers[i].addEventListener("click", flipCard);
+    cardContainers[i].addEventListener("mouseenter", floatCard);
+    cardContainers[i].addEventListener("mouseleave", lowerCard);
+  };
+
+  addCards();
+  startTimer();
+};
+
+const loadHome = () => {
+  // Display the home board
+  homeBoard.style.display = "";
+  gameBoard.style.display = "none";
+  howBoard.style.display = "none";
+  scoreBoard.style.display = "none";
+};
+
+const loadHowToPlay = () => {
+  // Display the how to play board
+  howBoard.style.display = "";
+  homeBoard.style.display = "none";
+  gameBoard.style.display = "none";
+  scoreBoard.style.display = "none";
+};
+
+const loadScores = () => {
+  // Display the high scores board
+  scoreBoard.style.display = "";
+  homeBoard.style.display = "none";
+  howBoard.style.display = "none";
+  gameBoard.style.display = "none";
+
+  displayHighScores();
+};
+
 //---------- EVENT LISTENERS ----------//
 
 // Record player stats on entry of player name
@@ -429,13 +487,23 @@ playerName.addEventListener("keypress", (event) => {
   }
 });
 
-// Add event listeners to card containers
-for (let i = 0; i < cardContainers.length; i++) {
-  cardContainers[i].addEventListener("click", flipCard);
-  cardContainers[i].addEventListener("mouseenter", floatCard);
-  cardContainers[i].addEventListener("mouseleave", lowerCard);
-}
+// Add navigation functions to all button
+for (let i = 0; i < homeButtons.length; i++) {
+  homeButtons[i].addEventListener("click", loadHome);
+};
 
-addCards();
-displayHighScores();
-startTimer();
+for (let i = 0; i < gameButtons.length; i++) {
+  gameButtons[i].addEventListener("click", loadGame);
+};
+
+for (let i = 0; i < howToPlayButtons.length; i++) {
+  howToPlayButtons[i].addEventListener("click", loadHowToPlay);
+};
+
+for (let i = 0; i < scoreButtons.length; i++) {
+  scoreButtons[i].addEventListener("click", loadScores);
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  homeButtons[0].click();
+});

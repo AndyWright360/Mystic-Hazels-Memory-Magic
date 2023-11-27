@@ -75,39 +75,39 @@ p {
     height: auto;
 }
 
-#cauldron {
+.bg-cauldron {
     width: 600px;
     top: -350px;
     left: -700px;
 }
 
-#candle-green {
+.bg-candle-green {
     width: 170px;
     top: 190px;
     left: -200px;
 }
 
-#candle-orange {
+.bg-candle-orange {
     width: 150px;
     top: 360px;
     right: -180px;
 }
 
-#candle-purple {
+.bg-candle-purple {
     width: 120px;
     top: 380px;
     left: -340px;
 }
 
-#orb {
+.bg-orb {
     width: 600px;
     top: -400px;
     right: -650px;
 }
 
-#wand {
+.bg-wand {
     width: 220px;
-    top: 80px;
+    top: 50px;
     right: -320px;
 }
 
@@ -333,7 +333,7 @@ ol li {
     grid-template-columns: 1fr 1fr;
     border: 1px solid red;
     width: 95%;
-    margin: 20px auto;
+    margin: 20px auto 100px;
 }
 
 #game-page1,
