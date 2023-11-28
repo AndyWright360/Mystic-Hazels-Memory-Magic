@@ -4,49 +4,49 @@
 const cardInfo = [
   {
     name: "clover",
-    src: "assets/images/clover.png",
     alt: "A green potion with a clover inside on a card.",
+    src: "assets/images/clover.png"
   },
   {
     name: "crystal",
-    src: "assets/images/crystal.png",
     alt: "A cluster of purple crystals on a card.",
+    src: "assets/images/crystal.png"
   },
   {
     name: "feather",
-    src: "assets/images/feather.png",
     alt: "A single crow feather on a card.",
+    src: "assets/images/feather.png"
   },
   {
     name: "frog",
-    src: "assets/images/frog.png",
     alt: "A blue frog with a white underbelly on a card.",
+    src: "assets/images/frog.png"
   },
   {
     name: "moth",
-    src: "assets/images/moth.png",
     alt: "A blush pink moth on a card.",
+    src: "assets/images/moth.png"
   },
   {
     name: "mushroom",
-    src: "assets/images/mushroom.png",
     alt: "Four purple tipped mushrooms with blue stems on a card.",
+    src: "assets/images/mushroom.png"
   },
   {
     name: "pouch",
-    src: "assets/images/pouch.png",
     alt: "A small green fabric pouch on a card.",
+    src: "assets/images/pouch.png"
   },
   {
     name: "snake",
-    src: "assets/images/snake.png",
     alt: "A brown snake inside a glass bottle on a card.",
+    src: "assets/images/snake.png"
   },
   {
     name: "spider",
-    src: "assets/images/spider.png",
     alt: "A red spider on a card.",
-  },
+    src: "assets/images/spider.png"
+  }
 ];
 // Array of all card images
 const cards = [...cardInfo, ...cardInfo];
@@ -58,7 +58,7 @@ const playerData = {
   name: "",
   score: "",
   time: 0,
-  turns: 0,
+  turns: 0
 };
 
 // Player name input and label instructions
@@ -85,10 +85,10 @@ const starCount = document.getElementById("star");
 
 // Image data for score display
 const score = {
-  threeStar: "assets/images/3star.png",
-  twoStar: "assets/images/2star.png",
-  oneStar: "assets/images/1star.png",
   zeroStar: "assets/images/0star.png",
+  oneStar: "assets/images/1star.png",
+  twoStar: "assets/images/2star.png",
+  threeStar: "assets/images/3star.png"
 };
 
 // Triggers for win/lose message
@@ -144,7 +144,7 @@ const startTimer = () => {
       lose.click();
 
       // Flip cards back over
-      for (i = 0; i < cardContainers.length; i++) {
+      for (let i = 0; i < cardContainers.length; i++) {
         cardContainers[i].classList.remove("flip");
       }
       // Update the player score display
@@ -184,10 +184,10 @@ const lowerCard = function () {
 
 // Fisher-Yates algorithm modified from 'dev.to' to shuffle the cards array
 const shuffleCards = (array) => {
-  for (i = array.length - 1; i > 0; i--) {
-    const randomIndex = Math.floor(Math.random() * (i + 1));
-    const temporyIndex = array[i];
-    array[i] = array[randomIndex];
+  for (let j = array.length - 1; j > 0; j--) {
+    const randomIndex = Math.floor(Math.random() * (j + 1));
+    const temporyIndex = array[j];
+    array[j] = array[randomIndex];
     array[randomIndex] = temporyIndex;
   }
   return array;
@@ -197,7 +197,7 @@ const shuffleCards = (array) => {
 const addCards = () => {
   shuffleCards(cards);
 
-  for (i = 0; i < cardContainers.length; i++) {
+  for (let k = 0; k < cardContainers.length; k++) {
     // Create the card back image
     let cardBack = document.createElement("img");
     cardBack.setAttribute("class", "game-card");
@@ -206,14 +206,14 @@ const addCards = () => {
       "alt",
       "A purple tarrot card back design with a cresent moon in the center."
     );
-    cardContainers[i].appendChild(cardBack);
+    cardContainers[k].appendChild(cardBack);
 
     // Create the card front image
     let cardFront = document.createElement("img");
     cardFront.setAttribute("class", "game-card front");
-    cardFront.setAttribute("src", cards[i].src);
-    cardFront.setAttribute("alt", cards[i].alt);
-    cardContainers[i].appendChild(cardFront);
+    cardFront.setAttribute("src", cards[k].src);
+    cardFront.setAttribute("alt", cards[k].alt);
+    cardContainers[k].appendChild(cardFront);
   }
 };
 
@@ -251,10 +251,10 @@ const cardsMatch = () => {
       win.click();
 
       // Flip cards back over
-      for (i = 0; i < cardContainers.length; i++) {
-        cardContainers[i].classList.remove("flip");
-      };
-    };
+      for (let l = 0; l < cardContainers.length; l++) {
+        cardContainers[l].classList.remove("flip");
+      }
+    }
   }, 1000);
 };
 
@@ -336,9 +336,9 @@ const displayScore = () => {
 // Add player stats to playerData object
 const submitScore = () => {
   playerData.name = playerName.value;
-  (playerData.score = playerScore.getAttribute("src")),
-    (playerData.time = seconds),
-    (playerData.turns = turnCount);
+  playerData.score = playerScore.getAttribute("src");
+  playerData.time = seconds;
+  playerData.turns = turnCount;
 
   // Check players stats against leaderboard
   addTopScore(playerData);
@@ -386,15 +386,15 @@ const displayHighScores = () => {
   topPlayers.innerHTML = "";
 
   // Add the top player names to the list
-  for (let index = 0; index < topScores.length; index++) {
+  for (let m = 0; m < topScores.length; m++) {
     let player = document.createElement("li");
-    player.textContent = topScores[index].name;
+    player.textContent = topScores[m].name;
 
     // Add interactive elements to the list items
     player.addEventListener("mouseenter", growFont);
     player.addEventListener("mouseleave", shrinkFont);
     player.addEventListener("click", () => {
-      showPlayerScore(topScores[index]);
+      showPlayerScore(topScores[m]);
     });
     topPlayers.appendChild(player);
   }
@@ -405,14 +405,14 @@ const addTopScore = (newScore) => {
   retrieveStoredScores();
   let newHighScore = false;
 
-  for (i = 0; i < topScores.length; i++) {
+  for (let n = 0; n < topScores.length; n++) {
     // Compare new players score to top scores
     if (
-      newScore.time > topScores[i].time ||
-      (newScore.time === topScores[i].time &&
-        newScore.turns < topScores[i].turns)
+      newScore.time > topScores[n].time ||
+      (newScore.time === topScores[n].time &&
+        newScore.turns < topScores[n].turns)
     ) {
-      topScores.splice(i, 0, newScore);
+      topScores.splice(n, 0, newScore);
       newHighScore = true;
       break;
     }
@@ -435,32 +435,32 @@ const addTopScore = (newScore) => {
 
 // Reset score board elements
 const scoreReset = () => {
-    seconds = 120;
-    timer.textContent = seconds;
-    turnCount = 0;
-    turns.textContent = turnCount;
-    starCount.setAttribute("src", score.zeroStar);
+  seconds = 120;
+  timer.textContent = seconds;
+  turnCount = 0;
+  turns.textContent = turnCount;
+  starCount.setAttribute("src", score.zeroStar);
 };
 
 const loadGame = () => {
   // Display the game board
-  gameBoard.classList.remove("d-none")
+  gameBoard.classList.remove("d-none");
   homeBoard.classList.add("d-none");
   howBoard.classList.add("d-none");
   scoreBoard.classList.add("d-none");
 
   // Add interactive elements to card containers
-  for (i = 0; i < cardContainers.length; i++) {
-    cardContainers[i].addEventListener("click", flipCard);
-    cardContainers[i].addEventListener("mouseenter", floatCard);
-    cardContainers[i].addEventListener("mouseleave", lowerCard);
+  for (let p = 0; p < cardContainers.length; p++) {
+    cardContainers[p].addEventListener("click", flipCard);
+    cardContainers[p].addEventListener("mouseenter", floatCard);
+    cardContainers[p].addEventListener("mouseleave", lowerCard);
 
     // Reset cards if they've been flipped
-    if (cardContainers[i].classList.contains("flip")) {
-      cardContainers[i].classList.remove("flip");
-    };
-  };
-  
+    if (cardContainers[p].classList.contains("flip")) {
+      cardContainers[p].classList.remove("flip");
+    }
+  }
+
   // Reset game stats
   seconds = 120;
   timer.textContent = seconds;
@@ -474,7 +474,7 @@ const loadGame = () => {
 
 const loadHome = () => {
   // Display the home board
-  homeBoard.classList.remove("d-none")
+  homeBoard.classList.remove("d-none");
   gameBoard.classList.add("d-none");
   howBoard.classList.add("d-none");
   scoreBoard.classList.add("d-none");
@@ -512,7 +512,10 @@ playerName.addEventListener("keypress", (event) => {
     // Check if player name is empty
     if (playerName.value.length === 0) {
       nameLabel.textContent = "Please enter a valid name";
-      // Submit stats and disable player name input
+    // Prevent names longer than 10 characters  
+    } else if (playerName.value.length > 10) {
+      nameLabel.textContent = "Too many characters (10 maximum)";
+    // Submit stats and disable player name input
     } else {
       nameLabel.textContent = "Your score has been submitted";
       submitScore();
@@ -524,21 +527,21 @@ playerName.addEventListener("keypress", (event) => {
 });
 
 // Add navigation functions to all button
-for (let i = 0; i < homeButtons.length; i++) {
-  homeButtons[i].addEventListener("click", loadHome);
-};
+for (let q = 0; q < homeButtons.length; q++) {
+  homeButtons[q].addEventListener("click", loadHome);
+}
 
-for (let i = 0; i < gameButtons.length; i++) {
-  gameButtons[i].addEventListener("click", loadGame);
-};
+for (let r = 0; r < gameButtons.length; r++) {
+  gameButtons[r].addEventListener("click", loadGame);
+}
 
-for (let i = 0; i < howToPlayButtons.length; i++) {
-  howToPlayButtons[i].addEventListener("click", loadHowToPlay);
-};
+for (let s = 0; s < howToPlayButtons.length; s++) {
+  howToPlayButtons[s].addEventListener("click", loadHowToPlay);
+}
 
-for (let i = 0; i < scoreButtons.length; i++) {
-  scoreButtons[i].addEventListener("click", loadScores);
-};
+for (let t = 0; t < scoreButtons.length; t++) {
+  scoreButtons[t].addEventListener("click", loadScores);
+}
 
 // Load the home page when loaded
 document.addEventListener("DOMContentLoaded", loadHome);
