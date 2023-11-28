@@ -5,47 +5,47 @@ const cardInfo = [
   {
     name: "clover",
     alt: "A green potion with a clover inside on a card.",
-    src: "assets/images/clover.png"
+    src: "assets/images/clover.webp"
   },
   {
     name: "crystal",
     alt: "A cluster of purple crystals on a card.",
-    src: "assets/images/crystal.png"
+    src: "assets/images/crystal.webp"
   },
   {
     name: "feather",
     alt: "A single crow feather on a card.",
-    src: "assets/images/feather.png"
+    src: "assets/images/feather.webp"
   },
   {
     name: "frog",
     alt: "A blue frog with a white underbelly on a card.",
-    src: "assets/images/frog.png"
+    src: "assets/images/frog.webp"
   },
   {
     name: "moth",
     alt: "A blush pink moth on a card.",
-    src: "assets/images/moth.png"
+    src: "assets/images/moth.webp"
   },
   {
     name: "mushroom",
     alt: "Four purple tipped mushrooms with blue stems on a card.",
-    src: "assets/images/mushroom.png"
+    src: "assets/images/mushroom.webp"
   },
   {
     name: "pouch",
     alt: "A small green fabric pouch on a card.",
-    src: "assets/images/pouch.png"
+    src: "assets/images/pouch.webp"
   },
   {
     name: "snake",
     alt: "A brown snake inside a glass bottle on a card.",
-    src: "assets/images/snake.png"
+    src: "assets/images/snake.webp"
   },
   {
     name: "spider",
     alt: "A red spider on a card.",
-    src: "assets/images/spider.png"
+    src: "assets/images/spider.webp"
   }
 ];
 // Array of all card images
@@ -85,10 +85,10 @@ const starCount = document.getElementById("star");
 
 // Image data for score display
 const score = {
-  zeroStar: "assets/images/0star.png",
-  oneStar: "assets/images/1star.png",
-  twoStar: "assets/images/2star.png",
-  threeStar: "assets/images/3star.png"
+  zeroStar: "assets/images/0star.webp",
+  oneStar: "assets/images/1star.webp",
+  twoStar: "assets/images/2star.webp",
+  threeStar: "assets/images/3star.webp"
 };
 
 // Triggers for win/lose message
@@ -201,7 +201,7 @@ const addCards = () => {
     // Create the card back image
     let cardBack = document.createElement("img");
     cardBack.setAttribute("class", "game-card");
-    cardBack.setAttribute("src", "assets/images/card-back.png");
+    cardBack.setAttribute("src", "assets/images/card-back.webp");
     cardBack.setAttribute(
       "alt",
       "A purple tarrot card back design with a cresent moon in the center."

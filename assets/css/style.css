@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background-image: url("../images/background.png");
+    background-image: url("../images/background.webp");
     background-color: #907860;
     background-size: cover;
     font-family: "Fondamento", cursive, sans-serif;
@@ -516,7 +516,7 @@ ol li {
 
 .modal-content {
     background-color: transparent;
-    background-image: url("../images/sign.png");
+    background-image: url("../images/sign.webp");
     background-size: 100% 100%;
     border: none;
 }
