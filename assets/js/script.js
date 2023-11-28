@@ -503,7 +503,3 @@ for (let i = 0; i < howToPlayButtons.length; i++) {
 for (let i = 0; i < scoreButtons.length; i++) {
   scoreButtons[i].addEventListener("click", loadScores);
 };
-
-document.addEventListener("DOMContentLoaded", function () {
-  homeButtons[0].click();
-});

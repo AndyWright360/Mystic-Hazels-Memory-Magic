@@ -56,9 +56,59 @@
         <img src="assets/images/3star.png" id="star" />
       </div>
 
-      <!--GAME BOARD-->
-      <div id="game-board" class="book-container">
+      <!--HOME BOARD-->
+      <div id="home-board" class="book-container">
         <img src="assets/images/book.png" class="book" />
+        <div id="home-page1">
+          <div class="top-page1">
+            <h2>Mystic Hazel's Memory Magic</h2>
+            <p>
+                In a whimsical forest nestled deep within an enchanted realm,
+                there lived a charming and thoughtful witch named Hazel. She was
+                known far and wide for her heartwarming spells and ever-present
+                smile, but there was one little problem. Hazel had a memory like a
+                leaky bucket.
+            </p>
+            <p>
+                As a talented potion maker, she decided to fix her poor memory
+                once and for all by creating a memory-boosting elixir! But Hazel
+                can't remember the ingredients to make it. Can you help her find
+                the matching ingredients scattered around her workshop?
+            </p>
+          </div>
+          <div class="btm-page1">
+            <button class="button book-btn how">How To Play</button>
+          </div>
+        </div>
+        <div id="home-page2">
+          <div class="top-page2">
+            <img class="hazel" src="assets/images/hazel.png" />
+          </div>
+          <div class="btm-page2">
+            <button class="button book-btn game">New Game</button>
+            <button class="button book-btn high">High Scores</button>
+          </div>
+        </div>
+        <!--Container of background images-->
+        <div>
+          <img class="bg-image bg-cauldron" src="assets/images/cauldron.png"
+            alt="A black cauldron filled with a green bubbling potion" />
+          <img class="bg-image bg-candle-green" src="assets/images/candle-green.png"
+            alt="A lime green circular candle with an orange flame" />
+          <img class="bg-image bg-candle-orange" src="assets/images/candle-orange.png"
+            alt="A vibrant orange circular candle with a green flame" />
+          <img class="bg-image bg-candle-purple" src="assets/images/candle-purple.png"
+            alt="A purple circular candle with a blue flame" />
+          <img class="bg-image bg-orb" src="assets/images/orb.png" alt="A crystal ball with a glowing purple aura" />
+          <img class="bg-image bg-wand" src="assets/images/wand.png"
+            alt="A silver witches wand with green jewels and a purple crystal fixed to the top" />
+        </div>
+      </div>
+
+      <!--GAME BOARD-->
+      <div id="game-board" class="book-container d-none">
+        <img src="assets/images/book.png" class="book" />
+      
         <div id="game-page1">
           <div class="card-container"></div>
           <div class="card-container"></div>
@@ -97,57 +147,8 @@
         </div>
       </div>
 
-      <!--HOME BOARD-->
-      <div id="home-board" class="book-container">
-        <img src="assets/images/book.png" class="book" />
-        <div id="home-page1">
-          <div class="top-page1">
-            <h2>Mystic Hazel's Memory Magic</h2>
-            <p>
-              In a whimsical forest nestled deep within an enchanted realm,
-              there lived a charming and thoughtful witch named Hazel. She was
-              known far and wide for her heartwarming spells and ever-present
-              smile, but there was one little problem. Hazel had a memory like a
-              leaky bucket.
-            </p>
-            <p>
-              As a talented potion maker, she decided to fix her poor memory
-              once and for all by creating a memory-boosting elixir! But Hazel
-              can't remember the ingredients to make it. Can you help her find
-              the matching ingredients scattered around her workshop?
-            </p>
-          </div>
-          <div class="btm-page1">
-            <button class="button book-btn how">How To Play</button>
-          </div>
-        </div>
-        <div id="home-page2">
-          <div class="top-page2">
-            <img class="hazel" src="assets/images/hazel.png" />
-          </div>
-          <div class="btm-page2">
-            <button class="button book-btn game">New Game</button>
-            <button class="button book-btn high">High Scores</button>
-          </div>
-        </div>
-        <!--Container of background images-->
-        <div>
-            <img class="bg-image bg-cauldron" src="assets/images/cauldron.png"
-                alt="A black cauldron filled with a green bubbling potion" />
-            <img class="bg-image bg-candle-green" src="assets/images/candle-green.png"
-                alt="A lime green circular candle with an orange flame" />
-            <img class="bg-image bg-candle-orange" src="assets/images/candle-orange.png"
-                alt="A vibrant orange circular candle with a green flame" />
-            <img class="bg-image bg-candle-purple" src="assets/images/candle-purple.png"
-                alt="A purple circular candle with a blue flame" />
-            <img class="bg-image bg-orb" src="assets/images/orb.png" alt="A crystal ball with a glowing purple aura" />
-            <img class="bg-image bg-wand" src="assets/images/wand.png"
-                alt="A silver witches wand with green jewels and a purple crystal fixed to the top" />
-        </div>
-      </div>
-
       <!--HOW TO PLAY BOARD-->
-      <div id="how-board" class="book-container">
+      <div id="how-board" class="book-container d-none">
         <img src="assets/images/book.png" class="book" />
         <div id="how-page1">
           <div class="how-content">
@@ -274,7 +275,7 @@
       </div>
 
       <!--HIGH SCORES BOARD-->
-      <div id="score-board" class="book-container">
+      <div id="score-board" class="book-container d-none">
         <img src="assets/images/book.png" class="book" />
         <div id="score-page1">
           <h2>High Scores</h2>
