@@ -142,6 +142,11 @@ const startTimer = () => {
       clearInterval(countDown);
       starCount.setAttribute("src", score.zeroStar);
       lose.click();
+
+      // Flip cards back over
+      for (i = 0; i < cardContainers.length; i++) {
+        cardContainers[i].classList.remove("flip");
+      }
       // Update the player score display
     } else if (seconds < 30) {
       starCount.setAttribute("src", score.oneStar);
@@ -241,10 +246,15 @@ const cardsMatch = () => {
     pairsFound++;
 
     // Check for win condtion
-    if (pairsFound === 1) {
+    if (pairsFound === 9) {
       displayScore();
       win.click();
-    }
+
+      // Flip cards back over
+      for (i = 0; i < cardContainers.length; i++) {
+        cardContainers[i].classList.remove("flip");
+      };
+    };
   }, 1000);
 };
 
@@ -423,19 +433,40 @@ const addTopScore = (newScore) => {
   displayHighScores();
 };
 
+// Reset score board elements
+const scoreReset = () => {
+    seconds = 120;
+    timer.textContent = seconds;
+    turnCount = 0;
+    turns.textContent = turnCount;
+    starCount.setAttribute("src", score.zeroStar);
+};
+
 const loadGame = () => {
   // Display the game board
-  gameBoard.style.display = "";
-  homeBoard.style.display = "none";
-  howBoard.style.display = "none";
-  scoreBoard.style.display = "none";
+  gameBoard.classList.remove("d-none")
+  homeBoard.classList.add("d-none");
+  howBoard.classList.add("d-none");
+  scoreBoard.classList.add("d-none");
 
   // Add interactive elements to card containers
   for (i = 0; i < cardContainers.length; i++) {
     cardContainers[i].addEventListener("click", flipCard);
     cardContainers[i].addEventListener("mouseenter", floatCard);
     cardContainers[i].addEventListener("mouseleave", lowerCard);
+
+    // Reset cards if they've been flipped
+    if (cardContainers[i].classList.contains("flip")) {
+      cardContainers[i].classList.remove("flip");
+    }
   };
+  
+  // Reset game stats
+  seconds = 120;
+  timer.textContent = seconds;
+  turnCount = 0;
+  turns.textContent = turnCount;
+  pairsFound = 0;
 
   addCards();
   startTimer();
@@ -443,27 +474,32 @@ const loadGame = () => {
 
 const loadHome = () => {
   // Display the home board
-  homeBoard.style.display = "";
-  gameBoard.style.display = "none";
-  howBoard.style.display = "none";
-  scoreBoard.style.display = "none";
+  homeBoard.classList.remove("d-none")
+  gameBoard.classList.add("d-none");
+  howBoard.classList.add("d-none");
+  scoreBoard.classList.add("d-none");
+
+  scoreReset();
 };
 
 const loadHowToPlay = () => {
   // Display the how to play board
-  howBoard.style.display = "";
-  homeBoard.style.display = "none";
-  gameBoard.style.display = "none";
-  scoreBoard.style.display = "none";
+  howBoard.classList.remove("d-none");
+  homeBoard.classList.add("d-none");
+  gameBoard.classList.add("d-none");
+  scoreBoard.classList.add("d-none");
+
+  scoreReset();
 };
 
 const loadScores = () => {
   // Display the high scores board
-  scoreBoard.style.display = "";
-  homeBoard.style.display = "none";
-  howBoard.style.display = "none";
-  gameBoard.style.display = "none";
+  scoreBoard.classList.remove("d-none");
+  homeBoard.classList.add("d-none");
+  howBoard.classList.add("d-none");
+  gameBoard.classList.add("d-none");
 
+  scoreReset();
   displayHighScores();
 };
 
@@ -503,3 +539,5 @@ for (let i = 0; i < howToPlayButtons.length; i++) {
 for (let i = 0; i < scoreButtons.length; i++) {
   scoreButtons[i].addEventListener("click", loadScores);
 };
+
+document.addEventListener("DOMContentLoaded", loadHome);
