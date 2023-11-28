@@ -458,7 +458,7 @@ const loadGame = () => {
     // Reset cards if they've been flipped
     if (cardContainers[i].classList.contains("flip")) {
       cardContainers[i].classList.remove("flip");
-    }
+    };
   };
   
   // Reset game stats
@@ -540,4 +540,5 @@ for (let i = 0; i < scoreButtons.length; i++) {
   scoreButtons[i].addEventListener("click", loadScores);
 };
 
+// Load the home page when loaded
 document.addEventListener("DOMContentLoaded", loadHome);
