@@ -1,8 +1,14 @@
 # **Mystic Hazel's Memory Magic** <!-- omit in toc -->
 
+![Mystic Hazel's logo](documentation/logo.png)
+
 This is the documentation for Mystic Hazel's Memory Magic. A memory game designed for children, set in a whimsical world of magic and wonder. Aid the charming character Mystic Hazel on her quest to create a memory-boosting potion, and perhaps improve your own memory along the way.
 
 The project was created as part of the Code Institute Level 5 Diploma in Web Application Development course.
+
+![Mystic Hazel's Memory Magic displayed on miltiple devices](documentation/responsive-layout.jpg)
+
+[Click here to play Mystic Hazel's Memory Magic](https://andywright360.github.io/Mystic-Hazels-Memory-Magic/)
 
 **By Andrew Wright**
 
@@ -54,6 +60,12 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
 ## **User Experience (UX)**
 
 ### **Initial Concept**
+
+The idea for the project was to develop a memory game targetted towards children. The concept was to create a loveable character that needed the users help. This was to encourage the users to play the game and hopefully increase their enjoyment of it.
+
+The visual design was to give the impression of the game being played on a witches work desk. The game window is displayed on an open spell book and is intended to be from the users perspective.
+
+I included a scoring system to provide replayability and entice players to return and improve their scores.
 
 ### **User Stories**
 
