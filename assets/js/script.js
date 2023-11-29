@@ -248,6 +248,11 @@ const cardsMatch = () => {
     // Check for win condtion
     if (pairsFound === 9) {
       displayScore();
+      // Reset player name input field
+      playerName.disabled = false;
+      playerName.placeholder = "Player Name";
+      nameLabel.textContent = "To submit your score please type your name and press Enter";
+      // Display win modal
       win.click();
 
       // Flip cards back over
