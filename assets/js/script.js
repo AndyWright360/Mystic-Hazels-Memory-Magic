@@ -143,9 +143,10 @@ const startTimer = () => {
       starCount.setAttribute("src", score.zeroStar);
       lose.click();
 
-      // Flip cards back over
+      // Flip cards back over and remove float
       for (let i = 0; i < cardContainers.length; i++) {
         cardContainers[i].classList.remove("flip");
+        cardContainers[i].classList.remove("float");
       }
       // Update the player score display
     } else if (seconds < 30) {
@@ -255,9 +256,10 @@ const cardsMatch = () => {
       // Display win modal
       win.click();
 
-      // Flip cards back over
+      // Flip cards back over and remove float
       for (let l = 0; l < cardContainers.length; l++) {
         cardContainers[l].classList.remove("flip");
+        cardContainers[l].classList.remove("float");
       }
     }
   }, 1000);
@@ -460,9 +462,12 @@ const loadGame = () => {
     cardContainers[p].addEventListener("mouseenter", floatCard);
     cardContainers[p].addEventListener("mouseleave", lowerCard);
 
-    // Reset cards if they've been flipped
+    // Reset cards if they've been flipped or have float
     if (cardContainers[p].classList.contains("flip")) {
       cardContainers[p].classList.remove("flip");
+    }
+    if (cardContainers[p].classList.contains("float")) {
+      cardContainers[p].classList.remove("float");  
     }
   }
 
