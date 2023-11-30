@@ -43,6 +43,9 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
     - [**Scrollbar**](#scrollbar)
   - [**Home Page**](#home-page)
   - [**How To Play Page**](#how-to-play-page)
+  - [**Game Page**](#game-page)
+    - [**Score Display**](#score-display)
+    - [**Game Cards**](#game-cards)
   - [**Future Implementations**](#future-implementations)
 - [**Technologies Used**](#technologies-used)
   - [**Languages Used**](#languages-used)
@@ -424,6 +427,58 @@ All wireframes were created using Balsamiq for the following screen sizes:
 - It was assumed that the user had never played a game of this type before.
 
 - The how to play instructions layout the core gameplay mechanics. As well as the conditions to win the game and tips to improve your score.
+
+### **Game Page**
+
+#### **Score Display**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/score-display.gif">
+
+*Score Display*
+
+</details>
+
+- The score display is the visual indicator to the user of their performance in the game.
+
+- It's split into three sections, the countdown timer, turn counter and score rating.
+
+- The 3-star rating display is updated in real time and triggered by the countdown reaching certain intervals.
+
+- This provides the player with instant feedback as the game progresses.
+
+#### **Game Cards**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/float.gif">
+
+*Card Float*
+
+<img src="documentation/features/flip.gif">
+
+*Card Flip*
+
+<img src="documentation/features/match.gif">
+
+*Card Match*
+
+</details>
+
+- The card back design was chosen as a reference to tarot cards.
+
+- The front images were selected as cartoon imagery that is synonymous with witchcraft.
+
+- I added the floating animation to the cards as a means of highlighting the cards interactive elements.
+
+- The height and width expand at different rates to give a more cartoony feel to the animation.
+
+- The drop shadow was also added to give the impression that the cards were floating rather than enlarging.
+
+- When a single card is clicked by the player it remains floating so they're able to keep track of the currently selected card.
+
+- When a matching pair is found, the pointer cursor is removed to indicate to the player that the cards can no longer be interacted with.
 
 ### **Future Implementations**
 
