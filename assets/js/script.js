@@ -114,6 +114,9 @@ const gameButtons = document.getElementsByClassName("game");
 const scoreButtons = document.getElementsByClassName("high");
 const howToPlayButtons = document.getElementsByClassName("how");
 
+// Page title
+const title = document.getElementById("title-container");
+
 //---------- VARIABLES ----------//
 
 // Card data
@@ -503,7 +506,8 @@ const loadHome = () => {
   gameBoard.classList.add("d-none");
   howBoard.classList.add("d-none");
   scoreBoard.classList.add("d-none");
-
+  
+  stopTimer();
   scoreReset();
 };
 
@@ -551,7 +555,7 @@ playerName.addEventListener("keypress", (event) => {
   }
 });
 
-// Add navigation functions to all button
+// Add navigation functions to all buttons
 for (let q = 0; q < homeButtons.length; q++) {
   homeButtons[q].addEventListener("click", loadHome);
 }
@@ -567,6 +571,19 @@ for (let s = 0; s < howToPlayButtons.length; s++) {
 for (let t = 0; t < scoreButtons.length; t++) {
   scoreButtons[t].addEventListener("click", loadScores);
 }
+
+// Navigate to home page when title is clicked
+title.addEventListener("click", loadHome);
+
+// Set pointer cursor on mouseover
+title.addEventListener("mouseover", () => {
+  title.style.cursor = "pointer";
+});
+
+// Set default cursor on mouseleave
+title.addEventListener("mouseleave", () => {
+  title.style.cursor = "default";
+});
 
 // Load the home page when loaded
 document.addEventListener("DOMContentLoaded", loadHome);

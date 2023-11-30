@@ -209,7 +209,7 @@ ol li {
 
 /*---------------------------------------------Title*/
 
-.title-container {
+#title-container {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
