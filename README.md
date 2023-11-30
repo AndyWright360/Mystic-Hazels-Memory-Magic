@@ -41,6 +41,8 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
     - [**Footer**](#footer)
     - [**Buttons**](#buttons)
     - [**Scrollbar**](#scrollbar)
+  - [**Home Page**](#home-page)
+  - [**How To Play Page**](#how-to-play-page)
   - [**Future Implementations**](#future-implementations)
 - [**Technologies Used**](#technologies-used)
   - [**Languages Used**](#languages-used)
@@ -337,7 +339,7 @@ All wireframes were created using Balsamiq for the following screen sizes:
 
 - The page title was designed to represent a magical scroll.
 
-- A bright orange and yellow gradient was chosen to give depth to the heading and help it pop against the purple of the scroll.
+- A bright orange and yellow gradient was chosen to give depth to the heading and help it pop against the purple scroll.
 
 - It doubles as a navigation feature for the user and a means of exiting from a game.
 
@@ -371,7 +373,7 @@ All wireframes were created using Balsamiq for the following screen sizes:
 
 - A subtle colour transition was applied to the buttons when hovered over with a mouse.
 
-- This provides feedback to player that these are interactive elements.
+- This provides feedback to the user that these are interactive elements.
 
 #### **Scrollbar**
 
@@ -386,6 +388,42 @@ All wireframes were created using Balsamiq for the following screen sizes:
 - As the book container layout required the use of scrolling content. I decided to include custom styling to the scrollbar.
 
 - This allowed the visual design of the scrollbar to match the theme of the page.
+
+### **Home Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/home-page.jpg">
+
+*Home Page Book*
+
+<img src="documentation/features/home-scroll.gif">
+
+*Home Page Story*
+
+</details>
+
+- As an incentive for the user to play the game. A backstory and main character were created.
+
+- With the game being targeted at children, I wanted to develop a light-hearted story featuring a cute character.
+
+- A Witch was chosen as I wanted the world and theming to be whimsical.
+
+- The scrollable design of the book page eliminated the ned to constrain the page content based on the image size.
+
+### **How To Play Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/how-page.jpg">
+
+*How To Play Page Book*
+
+</details>
+
+- It was assumed that the user had never played a game of this type before.
+
+- The how to play instructions layout the core gameplay mechanics. As well as the conditions to win the game and tips to improve your score.
 
 ### **Future Implementations**
 
