@@ -15,7 +15,8 @@ html {
 
 body {
     background-image: url("../images/background.webp");
-    background-color: #907860;
+    background-color: #efe8cc;
+    color: #1b1b1b;
     background-size: cover;
     font-family: "Fondamento", cursive, sans-serif;
     overflow: hidden;
@@ -51,6 +52,8 @@ h2 {
 h3 {
     font-weight: bold;
     text-align: center;
+    margin: 0 auto;
+    font-size: 5.5vw;
 }
 
 p {
@@ -139,7 +142,6 @@ p {
 
 .button:hover {
     background-color: #4a0b6e;
-    color: #a2ff00;
     border-color: #28063c;
 }
 
@@ -502,11 +504,6 @@ ol li {
     font-weight: normal;
 }
 
-#recorded-name {
-    margin: 0 auto;
-    font-size: 5.5vw;
-}
-
 #recorded-score {
     height: auto;
     width: 60%;
@@ -721,17 +718,14 @@ label {
         padding: 3px 15px;
     }
 
-    h2 {
+    h2,
+    h3 {
         font-size: 22px;
     }
 
     ol li,
     #score-page2 p {
         font-size: 20px;
-    }
-
-    #recorded-name {
-        font-size: 24px;
     }
 
     .bg-candle-orange {
@@ -798,7 +792,7 @@ label {
     }
 
     h2,
-    #recorded-name {
+    h3 {
         font-size: 26px;
     }
 
@@ -832,10 +826,6 @@ label {
     .book-container {
         width: 700px;
         margin: 0 auto 10%;
-    }
-
-    #recorded-name {
-        width: 50%;
     }
 
     .bg-candle-orange {

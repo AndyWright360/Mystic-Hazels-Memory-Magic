@@ -1,6 +1,6 @@
 # **Mystic Hazel's Memory Magic** <!-- omit in toc -->
 
-![Mystic Hazel's logo](documentation/logo.png)
+<img src="documentation/logo.png" alt="The logo image for Mystic Hazel's Memory Game" style="display: block; margin: 0 auto; width: 500px; height: auto;" />
 
 This is the documentation for Mystic Hazel's Memory Magic. A memory game designed for children, set in a whimsical world of magic and wonder. Aid the charming character Mystic Hazel on her quest to create a memory-boosting potion, and perhaps improve your own memory along the way.
 
@@ -61,11 +61,11 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
 
 ### **Initial Concept**
 
-The idea for the project was to develop a memory game targetted towards children. The concept was to create a loveable character that needed the users help. This was to encourage the users to play the game and hopefully increase their enjoyment of it.
+The idea for the project was to develop a memory game targeted towards children. The concept was to create a loveable character that needed the users help. This was to encourage the users to play the game and hopefully increase their enjoyment of it.
 
-The visual design was to give the impression of the game being played on a witches work desk. The game window is displayed on an open spell book and is intended to be from the users perspective.
+The visual design was to give the impression of the game being played on a witch's work desk. The game window is displayed on an open spell book and is intended to be from the user's perspective.
 
-I included a scoring system to provide replayability and entice players to return and improve their scores.
+I included a scoring system to provide greater replayability and entice players to return and improve their scores.
 
 ### **User Stories**
 
@@ -73,7 +73,7 @@ I included a scoring system to provide replayability and entice players to retur
 
   1. Understand the rules of the game so I can play without confusion.
   2. I want the page to be responsive so I can play it on the device of my choosing.
-  3. I want to be introuduced to the games character and story.
+  3. I want to be introduced to the character and story of the game.
 
 - **Returning Visitor Goals**
 
