@@ -686,7 +686,7 @@ label {
         font-size: 36px;
     }
 
-    .title-container {
+    #title-container {
         width: 60%;
     }
 
@@ -760,7 +760,7 @@ label {
 }
 
 @media screen and (min-width: 767.5px) {
-    .title-container {
+    #title-container {
         width: 50%;
     }
 
@@ -807,7 +807,7 @@ label {
 }
 
 @media screen and (min-width: 991.5px) {
-    .title-container {
+    #title-container {
         width: 400px;
         margin: 2% auto 0;
     }
