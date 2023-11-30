@@ -365,14 +365,14 @@ const retrieveStoredScores = () => {
 };
 
 // Add bold font and pointer on mouseover
-const growFont = function () {
-  this.style.fontWeight = "bold";
+const underline = function () {
+  this.style.textDecoration = "underline";
   this.style.cursor = "pointer";
 };
 
 // Remove bold font and pointer on mouseleave
-const shrinkFont = function () {
-  this.style.fontWeight = "";
+const removeUnderline = function () {
+  this.style.textDecoration = "";
   this.style.cursor = "";
 };
 
@@ -398,12 +398,27 @@ const displayHighScores = () => {
     player.textContent = topScores[m].name;
 
     // Add interactive elements to the list items
-    player.addEventListener("mouseenter", growFont);
-    player.addEventListener("mouseleave", shrinkFont);
+    player.addEventListener("mouseenter", underline);
+    player.addEventListener("mouseleave", removeUnderline);
     player.addEventListener("click", () => {
       showPlayerScore(topScores[m]);
+
+      // Remove bold font class from previously selected player
+      const previousSelectedPlayer = document.querySelector(".selected-player");
+      if (previousSelectedPlayer) {
+        previousSelectedPlayer.classList.remove("selected-player");
+      }
+
+      // Add bold font class to the clicked player
+      player.classList.add("selected-player");
     });
     topPlayers.appendChild(player);
+
+    // Display the top player's score by default
+    if (m === 0) {
+      showPlayerScore(topScores[0]);
+      player.classList.add("selected-player");
+    }
   }
 };
 

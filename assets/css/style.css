@@ -199,6 +199,10 @@ ul li {
     padding: 0;
 }
 
+.selected-player {
+    font-weight: bold;
+}
+
 ol li {
     font-size: 5vw;
 }
