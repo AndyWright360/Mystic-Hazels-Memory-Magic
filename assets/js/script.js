@@ -485,7 +485,7 @@ const loadGame = () => {
       cardContainers[p].classList.remove("flip");
     }
     if (cardContainers[p].classList.contains("float")) {
-      cardContainers[p].classList.remove("float");  
+      cardContainers[p].classList.remove("float");
     }
   }
 
@@ -495,6 +495,11 @@ const loadGame = () => {
   turnCount = 0;
   turns.textContent = turnCount;
   pairsFound = 0;
+
+  // Reset card data
+  cardsToCheck = [];
+  firstCard = null;
+  secondCard = null;
 
   addCards();
   startTimer();
