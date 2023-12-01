@@ -69,6 +69,10 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
   - [**Code Used**](#code-used)
   - [**Content**](#content)
   - [**Media**](#media)
+    - [**Background Images**](#background-images)
+    - [**Home Page Images**](#home-page-images)
+    - [**Game Images**](#game-images)
+    - [**Modals**](#modals-2)
   - [**Acknowledgments**](#acknowledgments)
 
 ---
@@ -703,8 +707,68 @@ Fortunately, the fix was straightforward, requiring a reset of the card data whe
 
 ### **Code Used**
 
+- [Gradient overlay for fonts by Sarah L. Fossheim](https://fossheim.io/writing/posts/css-text-gradient/)
+
+  - This code was employed to generate the gradient design for the title font and modal headings
+
+- [The Fisher-Yates algorith by James Bubb](https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj)
+
+  - This code was used to shuffle the array of cards, randomising their order for each game.
+
 ### **Content**
+
+All content for the website was written by the developer Andrew Wright.
 
 ### **Media**
 
+All images used on the website we're obtained from the following websites:
+
+- Freepik.com
+- Pngtree.com
+
+#### **Background Images**
+
+- [Table background](https://www.freepik.com/free-vector/wood-vector-texture-template-pattern-seamless-material-hardwood-floor-natural-light-parquet-vector-illustration_11059494.htm#position=3)
+- [Cauldron](https://www.freepik.com/free-vector/spooky-design-elements-halloween_5482226.htm#&position=3&from_view=user&uuid=bf63cf58-05e9-4e24-915f-6e2b1a780ded)
+- [Crystal ball](https://www.freepik.com/free-vector/magic-balls-illustration_16375324.htm)
+- [Magic wand](https://pngtree.com/freepng/set-of-magic-wand-for-game-applications-and-ui_6075021.html)
+- [Candle](https://www.freepik.com/free-vector/spooky-design-elements-halloween_5482226.htm#&position=3&from_view=user&uuid=bf63cf58-05e9-4e24-915f-6e2b1a780ded)
+
+#### **Home Page Images**
+
+- [Title banner](https://www.freepik.com/free-vector/old-parchment-scroll-ancient-paper-banner-antique-manuscript-isolated-white-background_12620549.htm#&position=0&from_view=user&uuid=54bd428a-c0de-45c6-bd27-195722bfe0fe)
+- [Book](https://www.freepik.com/free-vector/blank-book-lots-children_1046802.htm)
+- [Mystic Hazel](https://www.freepik.com/free-vector/cute-halloween-witch-stirring-pot_5559496.htm#&position=1&from_view=user&uuid=c8468a54-a23c-49c1-9b50-9b1518fc8a33)
+- [Timer](https://pngtree.com/freepng/blue-transparent-hourglass-clipart_6019065.html)
+- [Turn counter](https://pngtree.com/freepng/transparent-crystal-ball_5399359.html)
+- [Stars](https://pngtree.com/freepng/orange-star-rating-steps-concept-with-feedback-rating_3608697.html)
+- [Slime](https://pngtree.com/freepng/slime-dripping-pink-bacteria_6837947.html)
+
+#### **Game Images**
+
+- [Card back](https://www.freepik.com/free-vector/hand-drawn-mystical-tarot-mobile-wallpaper_21862417.htm#&position=7&from_view=user&uuid=41d889f8-0636-4603-ac95-173108f54758)
+- [Card front](https://www.freepik.com/free-vector/hand-drawn-mystical-tarot-mobile-wallpaper_21862420.htm#&position=8&from_view=user&uuid=26d2278a-c1c7-4cae-8b3a-d63c53bb58dc)
+- [Clover](https://www.freepik.com/free-vector/elixir-bottles-set_9174576.htm#&position=4&from_view=user&uuid=5c0b8aa0-1c7d-4c94-b47d-a99477d2ce01)
+- [Crystals](https://www.freepik.com/free-vector/cartoon-minerals-stones-set-stone-mineral-cartoon-mineral-stone-natural-mineral-stone-crystal-mineral-stone-illustration_13437807.htm#&position=7&from_view=user&uuid=f19cf37e-362b-42c7-86e3-69764e83b6ee)
+- [Feather](https://www.freepik.com/free-vector/shiny-feathers-birds-flat-illustrations-set_14625659.htm#&position=8&from_view=user&uuid=ed1a750f-0ae9-42d1-a532-5cfb6de8e1fb)
+- [Frog](https://www.freepik.com/free-vector/cute-blue-frog-cartoon-vector-illustration_63103958.htm#&position=6&from_view=user&uuid=04f17780-4b8f-46b5-93a1-0e1a31674f7c)
+- [Moth](https://www.freepik.com/free-vector/colorful-hand-drawn-insect-collection_3944267.htm#position=3)
+- [Mushrooms](https://www.freepik.com/free-vector/colorful-magic-mushrooms-set_4385739.htm#&position=9&from_view=user&uuid=bd7b0ccf-1bc0-4c75-8bce-16085b3b2cf1)
+- [Pouch](https://www.freepik.com/free-vector/set-game-elements_39920942.htm#&position=10&from_view=user&uuid=69fa74b9-cd82-4897-9e23-d69b5f8699de)
+- [Snake](https://www.freepik.com/free-vector/elixir-bottles-set_9174576.htm#&position=4&from_view=user&uuid=5c0b8aa0-1c7d-4c94-b47d-a99477d2ce01)
+- [Spider](https://www.freepik.com/free-vector/black-spider_4524956.htm#&position=5&from_view=user&uuid=3b51f000-635d-4f0d-9f9d-be3103da298f)
+
+#### **Modals**
+
+- [Wooden sign](https://pngtree.com/freepng/brown-wooden-board-listing-illustration_4647936.html)
+- [Banner](https://www.freepik.com/free-vector/old-parchment-scroll-ancient-paper-banner-antique-manuscript-isolated-white-background_12620549.htm#&position=0&from_view=user&uuid=54bd428a-c0de-45c6-bd27-195722bfe0fe)
+- [Potion](https://pngtree.com/freepng/magic-game-elements-set-potion-bottle-with-transparent-background_5976908.html)
+- [Hourglass](https://pngtree.com/freepng/hourglass-vector_8405715.html)
+
 ### **Acknowledgments**
+
+- My mentor [Jubril Akolade](https://github.com/Jubrillionaire) for all his encouragement and valuable advice throughout the project.
+
+- Everyone at [Code Institute](https://codeinstitute.net/) for their exceptional support.
+
+- The Code Institute Slack community for the invaluable feedback and assistance I recieved along the way.
