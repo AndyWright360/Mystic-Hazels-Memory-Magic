@@ -13,10 +13,13 @@
 - [**Testing**](#testing)
   - [**W3C HTML Validation**](#w3c-html-validation)
   - [**W3C CSS Validation**](#w3c-css-validation)
+    - [**Second Validation Test**](#second-validation-test)
   - [**JSHint JavaScript Validation**](#jshint-javascript-validation)
   - [**WCAG Colour Contrast Checker**](#wcag-colour-contrast-checker)
-  - [**Bugs \& Fixes**](#bugs--fixes)
-  - [**Known Bugs**](#known-bugs)
+    - [**Page Content**](#page-content)
+    - [**Score Display**](#score-display)
+    - [**Buttons**](#buttons)
+    - [**Footer Content**](#footer-content)
   - [**Testing User Stories**](#testing-user-stories)
     - [**First Time Visitor Goals**](#first-time-visitor-goals)
     - [**Returning Visitor Goals**](#returning-visitor-goals)
@@ -52,7 +55,13 @@
 
 The error detected refers to the use of an incorrect CSS property `text-stroke` which was applied to the `.title` class. This property must be pre-fixed with `-webkit-` in order to be valid as this is a non-standard CSS property.
 
-In order to correct this error, I removed the property from the class.
+#### **Second Validation Test**
+
+In order to correct this error, I removed the property from the `.title` class. The results from the second validation were a pass.
+
+![W3C CSS validation pass](documentation/testing/css-validation.jpg)
+
+*Pass*
 
 ### **JSHint JavaScript Validation**
 
@@ -121,11 +130,39 @@ This was the only method I could think of that would allow me to pass the specif
 
 ### **WCAG Colour Contrast Checker**
 
+I paid close attention to achieving a strong contrast while choosing the color scheme for the website. The outcomes of each background and foreground combination employed in this project are detailed below.
 
+#### **Page Content**
 
-### **Bugs & Fixes**
+![Colour contrast results](documentation/testing/book-contrast.jpg)
 
-### **Known Bugs**
+With the text colour close to black and the book pages being light, the contrast ratio was very high. The only potential issue that could arise is from the fact that the container for the text content is an image. If this fails to load, then the text would be overlaid onto the background image for the body, which is considerably darker.
+
+With the image having transparent edges, I was reluctant to add a background color to the container as this would be visible. However, this is something I would look to rectify in future iterations to avoid any potential issues with legibility.
+
+#### **Score Display**
+
+![Colour contrast results](documentation/testing/score-contrast.jpg)
+
+This is the contract results for the timer countdown and player turn count.
+
+#### **Buttons**
+
+![Colour contrast results](documentation/testing/button-contrast.jpg)
+
+*Buttons - Default*
+
+![Colour contrast results](documentation/testing/button-hover-contrast.jpg)
+
+*Buttons - Hover*
+
+These are the contrast results for the buttons and the hover effect applied to them.
+
+#### **Footer Content**
+
+![Colour contrast results](documentation/testing/footer-contrast.jpg)
+
+This is the contrast for the social media links and copyright information displayed on the footer.
 
 ### **Testing User Stories**
 

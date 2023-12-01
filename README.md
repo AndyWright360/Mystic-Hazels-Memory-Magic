@@ -61,6 +61,10 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
   - [**Local Development**](#local-development)
     - [**How to Fork**](#how-to-fork)
     - [**How to Clone**](#how-to-clone)
+- [**Testing**](#testing)
+  - [**Bugs \& Fixes**](#bugs--fixes)
+    - [**Double Scrollbar Bug**](#double-scrollbar-bug)
+    - [**Card Data Bug**](#card-data-bug)
 - [**Credits**](#credits)
   - [**Code Used**](#code-used)
   - [**Content**](#content)
@@ -668,6 +672,18 @@ To clone this project, please follow the steps below:
 8. Type '**git clone**' into the terminal and then paste the link you copied in Step 5.
 
 9. Press enter.
+
+---
+
+## **Testing**
+
+For a detailed overview of all conducted testing, kindly refer to the [TESTING.md](TESTING.md) file.
+
+### **Bugs & Fixes**
+
+#### **Double Scrollbar Bug**
+
+#### **Card Data Bug**
 
 ---
 
