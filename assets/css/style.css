@@ -222,7 +222,6 @@ ol li {
 .title {
     font-family: "blackpearl", "Fondamento", cursive, sans-serif;
     /*The below code was obtained from 'fossheim.io' to apply the text colour gradient. */
-    text-stroke: 1px #4a0b6e;
     -webkit-text-stroke: 1px #4a0b6e;
     background-color: black;
     background-image: linear-gradient(yellow, orange, yellow);

@@ -61,18 +61,6 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
   - [**Local Development**](#local-development)
     - [**How to Fork**](#how-to-fork)
     - [**How to Clone**](#how-to-clone)
-- [**Testing**](#testing)
-  - [**W3C HTML Validation**](#w3c-html-validation)
-  - [**W3C CSS Validation**](#w3c-css-validation)
-  - [**WCAG Colour Contrast Checker**](#wcag-colour-contrast-checker)
-  - [**Bugs \& Fixes**](#bugs--fixes)
-  - [**Known Bugs**](#known-bugs)
-  - [**Testing User Stories**](#testing-user-stories)
-    - [**First Time Visitor Goals**](#first-time-visitor-goals)
-    - [**Returning Visitor Goals**](#returning-visitor-goals)
-    - [**Frequent User Goals**](#frequent-user-goals)
-  - [**Lighthouse Testing**](#lighthouse-testing)
-  - [**Manual Testing**](#manual-testing)
 - [**Credits**](#credits)
   - [**Code Used**](#code-used)
   - [**Content**](#content)
@@ -680,32 +668,6 @@ To clone this project, please follow the steps below:
 8. Type '**git clone**' into the terminal and then paste the link you copied in Step 5.
 
 9. Press enter.
-
----
-
-## **Testing**
-
-### **W3C HTML Validation**
-
-### **W3C CSS Validation**
-
-### **WCAG Colour Contrast Checker**
-
-### **Bugs & Fixes**
-
-### **Known Bugs**
-
-### **Testing User Stories**
-
-#### **First Time Visitor Goals**
-
-#### **Returning Visitor Goals**
-
-#### **Frequent User Goals**
-
-### **Lighthouse Testing**
-
-### **Manual Testing**
 
 ---
 
