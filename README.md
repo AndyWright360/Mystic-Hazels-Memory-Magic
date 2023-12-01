@@ -10,7 +10,7 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
 
 [Click here to play Mystic Hazel's Memory Magic](https://andywright360.github.io/Mystic-Hazels-Memory-Magic/)
 
-**By Andrew Wright**
+**By [Andrew Wright](https://github.com/AndyWright360)**
 
 ---
 
@@ -46,6 +46,8 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
   - [**Game Page**](#game-page)
     - [**Score Display**](#score-display)
     - [**Game Cards**](#game-cards)
+  - [**High Scores Page**](#high-scores-page)
+  - [**Modals**](#modals-1)
   - [**Future Implementations**](#future-implementations)
 - [**Technologies Used**](#technologies-used)
   - [**Languages Used**](#languages-used)
@@ -112,7 +114,7 @@ I included a scoring system to provide greater replayability and entice players 
 
 ![Primary colour palette used in the project](documentation/palette.jpg)
 
-The colour palette used throughout the project was primarily purples combined with greens. These colours were selected as they're a typical used as a Halloween theme.
+The colour palette used throughout the project was primarily purples combined with greens. These colours were selected as they're a typically used as a Halloween theme.
 
 With the main character of the game being a witch, I wanted to lean into this theme as much as possible. The specific palette matches colours used for the image of Hazel. This was to connect the character with the world of the game.
 
@@ -130,27 +132,32 @@ These additional colours were used for the page text and also the footer. The de
 
 ![Logo for Black Pearl font](documentation/black-pearl.jpg)
 
-Black Pearl was the font used for the main heading of the page and also the headings for the modals. This font was chosen to invoke the idea of a folktale for the game. I wanted the design to have the charm of a children's book.
+Black Pearl was the font used for the main heading of the page and also the headings for the modals. The whimsical and folktale-like appearance of Black Pearl was chosen to evoke a sense of playfulness in the headings. I wanted the design to have the charm of a children's book.
 
 #### **Fondamento**
 
 ![Logo for Fondamento font](documentation/fondamento.jpg)
 
-Fondamento was used for all text and headings throughout the page. Again, the style chosen was to further the folktale look. With the content of the page being overlaid onto an open book. The idea was that the page content was handwritten.
+Fondamento was used for all text and headings throughout the page. The font was selected to enhance the folktale theme. It also aligned with the overarching design concept of the content appearing as if handwritten on the pages of an open book.
 
-At the same time, I wanted the font to maintain readability for the user even at the smallest font size used.
+Readability was also important, I wanted to ensure the font was legible for the user even at smaller font sizes.
 
 ### **Imagery**
 
-The imagery used, was to reinforce the cartoon style of the world. Everything was to be brightly coloured and compliment the colour palette of the page. I modified the colour for some images using Pixlr in order to better suit the theme.
+![Design concept for page](documentation/concept.jpg)
+*Design Concept*
 
-The design concept for the page was to be from the players perspective, looking down onto Hazel's workbench. To visually represent this, all images chosen were from a birds-eye view.
+The imagery used, was to reinforce the cartoon style of the world. Everything was to be brightly coloured and compliment the colour palette of the page. I modified the colour for some images using Pixlr to better fit the theme.
+
+The design concept for the page was to be from the players perspective, looking down onto Hazel's worktable. To visually represent this, all images chosen were from a birds-eye view.
+
+This perspective provides a unique viewpoint, immersing players in the whimsical world and enhancing the overall visual experience.
 
 Other colours, such as orange were also included using the images. This was to include additional colours typically used for a Halloween theme.
 
 ### **Wireframes**
 
-All wireframes were created using Balsamiq for the following screen sizes:
+Wireframes were created using Balsamiq for desktop, tablet, and mobile screen sizes to ensure a responsive design. This approach helps in visualising and planning the layout for multiple devices, providing a consistent user experience.
 
 #### **Desktop**
 
@@ -288,7 +295,7 @@ All wireframes were created using Balsamiq for the following screen sizes:
 
 </details>
 
-- I ensured that the layout of the page will respond to the width of the device it'll be displayed on.
+- The layout adapts to various device widths, ensuring a seamless experience for users regardless of their chosen device. This enhances accessibility and usability.
 
 - The layout was created with a mobile first approach and then modified to suit wider screens.
 
@@ -406,13 +413,13 @@ All wireframes were created using Balsamiq for the following screen sizes:
 
 </details>
 
-- As an incentive for the user to play the game. A backstory and main character were created.
+- As an incentive for the user to play the game, a backstory and main character were created.
 
-- With the game being targeted at children, I wanted to develop a light-hearted story featuring a cute character.
+- With the game being targeted at children, a light-hearted story featuring a cute character was developed.
 
 - A Witch was chosen as I wanted the world and theming to be whimsical.
 
-- The scrollable design of the book page eliminated the ned to constrain the page content based on the image size.
+- The scrollable design of the book page eliminated the need to constrain the page content based on the image size.
 
 ### **How To Play Page**
 
@@ -424,9 +431,9 @@ All wireframes were created using Balsamiq for the following screen sizes:
 
 </details>
 
-- It was assumed that the user had never played a game of this type before.
+- With the target audience being children, the assumption that the user might not have played a similar game before led to the creation of comprehensive instructions.
 
-- The how to play instructions layout the core gameplay mechanics. As well as the conditions to win the game and tips to improve your score.
+- Core gameplay mechanics, the win condition, and tips for an enjoyable gaming experience were outlined to the user.
 
 ### **Game Page**
 
@@ -479,6 +486,60 @@ All wireframes were created using Balsamiq for the following screen sizes:
 - When a single card is clicked by the player it remains floating so they're able to keep track of the currently selected card.
 
 - When a matching pair is found, the pointer cursor is removed to indicate to the player that the cards can no longer be interacted with.
+
+### **High Scores Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/high-scores.gif">
+
+*High Scores Page*
+
+<img src="documentation/features/empty-score.jpg">
+
+*Empty Score Board*
+
+</details>
+
+- The High Scores page showcases the top 5 player scores submitted by users.
+
+- By default, the page opens with the score of the top-ranked player prominently displayed.
+
+- The selected player's name is presented in bold, drawing attention to the user's current choice.
+
+- When hovered over, player names are underlined, indicating their selectability.
+
+- In instances where no high scores exist, this section remains empty, encouraging users to set new records.
+
+### **Modals**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/win-modal.gif">
+
+*Win Modal*
+
+<img src="documentation/features/lose-modal.jpg">
+
+*Lose Modal*
+
+</details>
+
+- The modals were designed to look like a wooden message board and fit into the cartoon style of the page.
+
+- The Win modal celebrates the user's success with a congratulatory message and an image of the completed potion, offering positive reinforcement.
+
+- The overall score, time remaining and turn count are displayed to give feedback to the user.
+
+- Clear instructions on score submission are displayed above the text input field, ensuring user clarity.
+
+- Restrictions prevent users from submitting empty names or names exceeding 10 characters. If triggered, updated instructions offer feedback on errors.
+
+- Upon successful submission, a confirmation message is displayed, and the input field is disabled to prevent duplicate entries.
+
+- The Lose modal signals the end of the game with a "time's up" message and an hourglass image, clarifying the time limit.
+  
+- An encouraging message prompts the player to retry, providing positive engagement.
 
 ### **Future Implementations**
 
