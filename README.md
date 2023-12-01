@@ -49,6 +49,10 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
   - [**High Scores Page**](#high-scores-page)
   - [**Modals**](#modals-1)
   - [**Future Implementations**](#future-implementations)
+    - [**Difficulty Settings**](#difficulty-settings)
+    - [**Additional Games**](#additional-games)
+    - [**Sound and Music**](#sound-and-music)
+    - [**Achievements and Rewards**](#achievements-and-rewards)
 - [**Technologies Used**](#technologies-used)
   - [**Languages Used**](#languages-used)
   - [**Frameworks, Libraries \& Programs Used**](#frameworks-libraries--programs-used)
@@ -542,6 +546,28 @@ Wireframes were created using Balsamiq for desktop, tablet, and mobile screen si
 - An encouraging message prompts the player to retry, providing positive engagement.
 
 ### **Future Implementations**
+
+#### **Difficulty Settings**
+
+The inclusion of difficulty settings would allow users to tailor the game to their level of experience. Adjusting the difficulty adds a layer of challenge, making the game accessible to a broader audience while ensuring a satisfying experience for seasoned players.
+
+This would come in the form of modifying the time limit, adjusting the number of cards, and implementing a lives counter.
+
+#### **Additional Games**
+
+Additional game types would offer more variety for users to enjoy and encourage players to return for a new experience.
+
+This would also provide the opportunity to expand on the story elements of the game. Hazel's character could be further developed and tied to new games, such as potion mixing, where players must select the correct colour combination of ingredients to achieve the desired result.
+
+#### **Sound and Music**
+
+The option for players to toggle background music and sound effects would offer a greater sense of immersion into the world of the game. The audio enhancements will add depth to the gameplay and provide additional feedback to players.
+
+#### **Achievements and Rewards**
+
+An achievements system that would reward players with customisation options for completing specified challenges. This would encourage returning users and provide additional positive feedback.
+
+Rewards would include additional card design options, mouse pointer customisation, and more.
 
 ---
 
