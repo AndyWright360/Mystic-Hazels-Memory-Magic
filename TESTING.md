@@ -73,7 +73,7 @@ In order to correct this error, I removed the property from the `.title` class. 
 
 *Results*
 
-The warnings pertained to use of ES6 features used throught my file. These included:
+The warnings referred to the use of ES6 features throughout the file. These features include:
 
  - The 'let' keyword
  - The 'const' keyword
@@ -124,7 +124,7 @@ const displayHighScores = () => {
 
 The warning pertains to the `displayHighScores` function, which iterates through an array of recorded top players. For each item in the top players array, an `li` element is created. Within this loop, a `click` event listener is attached to the created element.
 
-When the `li` element is clicked, the details of the clicked player's corresponding object is passed as an argument to the `showPlayerScore` function. This allows the `showPlayerScore` function to display the score information of the player who triggered the event.
+When the `li` element is clicked, the details of the clicked player's corresponding object are passed as an argument to the `showPlayerScore` function. This allows the `showPlayerScore` function to display the score information of the player who triggered the event.
 
 This was the only method I could think of that would allow me to pass the specific players information as an argument to another function.
 
@@ -144,7 +144,7 @@ With the image having transparent edges, I was reluctant to add a background col
 
 ![Colour contrast results](documentation/testing/score-contrast.jpg)
 
-This is the contract results for the timer countdown and player turn count.
+This is the contrast results for the timer countdown and player turn count.
 
 #### **Buttons**
 

@@ -677,13 +677,25 @@ To clone this project, please follow the steps below:
 
 ## **Testing**
 
-For a detailed overview of all conducted testing, kindly refer to the [TESTING.md](TESTING.md) file.
+For a detailed overview of all conducted testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ### **Bugs & Fixes**
 
 #### **Double Scrollbar Bug**
 
+![Double scrollbar bug](documentation/testing/double-scroll-bug.gif)
+
+This bug occurred when the screen size was reduced to a narrow width, affecting mobile devices. The issue appeared to create a separate scrollbar for the body and HTML elements. I resolved this by applying the `overflow: hidden` property to the body element.
+
 #### **Card Data Bug**
+
+![Card data bug](documentation/testing/new-game-bug.gif)
+
+This elusive bug remained unresolved for quite some time. Its infrequent occurrence made it challenging to pinpoint. The breakthrough came when I implemented the feature to return to the home screen by clicking the title, making it easier to identify.
+
+The root cause was traced to the data for comparing the cards not being reset when a new game started. Consequently, the data for the first card was being retained across games.This would lead to cards being compared from seperate games. Resulting in unintentional flips and cards being out of sync.
+
+Fortunately, the fix was straightforward, requiring a reset of the card data whenever a new game was initiated.
 
 ---
 
