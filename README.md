@@ -581,6 +581,46 @@ Rewards would include additional card design options, mouse pointer customisatio
 
 ### **Frameworks, Libraries & Programs Used**
 
+1.) **Codeanywhere**
+
+Employed for version control, utilising the terminal to commit and push changes to GitHub.
+
+2.) **GitHub**
+
+Functions as the repository for storing the project's code after it's been pushed from Codeanywhere.
+
+3.) **Bootstrap 5.3.2**
+
+Applied for creating modals upon game completion and employing the 'd-none' class to hide content.
+
+4.) **Google Fonts**
+
+The 'Fondamento' font served as the primary typeface throughout the project.
+
+5.) **Font Awesome**
+
+Used to insert social media icons into the footer, functioning as navigation links.
+
+6.) **Pixlr**
+
+Applied for modifying images to create game cards, adjusting image colouring to align with the colour scheme, and resizing images.
+
+7.) **Balsamiq**
+
+Utilised in creating wireframes during the design stage.
+
+8.) **XnConvert**
+
+Employed to convert all image files from JPEG and PNG to WebP format.
+
+9.) **TinyPNG**
+
+Used for compressing image files to enhance performance.
+
+10.) **ScreenToGif**
+
+Implemented to capture screen recordings as gif files.
+
 ---
 
 ## **Deployment & Local Development**
