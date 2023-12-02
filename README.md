@@ -66,6 +66,8 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
     - [**Double Scrollbar Bug**](#double-scrollbar-bug)
     - [**Card Data Bug**](#card-data-bug)
     - [**Rapid Clicking Bug**](#rapid-clicking-bug)
+  - [**Known Bugs**](#known-bugs)
+    - [**Box Shadow Bug**](#box-shadow-bug)
 - [**Credits**](#credits)
   - [**Code Used**](#code-used)
   - [**Content**](#content)
@@ -711,6 +713,20 @@ This caused cards to flip incorrectly, displaying the front of the card while st
 To rectify this issue, I implemented a 'checking cards' flag that prevents the user from clicking on cards while a pair is being checked for a match.
 
 Although this feature adds a small time delay to when the user can select a new card, it prevents overwhelming the card-check system and provides a more consistent game experience.
+
+### **Known Bugs**
+
+#### **Box Shadow Bug**
+
+![Box Shadow Bug](documentation/testing/box-shadow-bug.gif)
+
+*Mozilla Firefox*
+
+![Box Shadow default](documentation/testing/box-shadow-chrome.gif)
+
+*Google Chrome*
+
+Upon testing the website across multiple web browsers, I discovered that the `box-shadow` property behaves differently on Firefox. The size of the box shadow is much larger and when flipped, the box-shadow of the card back is also visible. This creates a large shadow that surrounds the card when selected. I'm unsure how to modify this property's display on Firefox without altering it across all browsers.
 
 ---
 
