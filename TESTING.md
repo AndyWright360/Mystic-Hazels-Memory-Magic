@@ -10,7 +10,7 @@
 
 ## **Contents** <!-- omit in toc -->
 
-- [**Testing**](#testing)
+- [**Automated Testing**](#automated-testing)
   - [**W3C HTML Validation**](#w3c-html-validation)
   - [**W3C CSS Validation**](#w3c-css-validation)
     - [**Second Validation Test**](#second-validation-test)
@@ -20,16 +20,19 @@
     - [**Score Display**](#score-display)
     - [**Buttons**](#buttons)
     - [**Footer Content**](#footer-content)
+  - [**Lighthouse Testing**](#lighthouse-testing)
+    - [**Desktop Results**](#desktop-results)
+    - [**Mobile Results**](#mobile-results)
+- [**Manual Testing**](#manual-testing)
   - [**Testing User Stories**](#testing-user-stories)
     - [**First Time Visitor Goals**](#first-time-visitor-goals)
     - [**Returning Visitor Goals**](#returning-visitor-goals)
     - [**Frequent User Goals**](#frequent-user-goals)
-  - [**Lighthouse Testing**](#lighthouse-testing)
-  - [**Manual Testing**](#manual-testing)
+  - [**Full Testing**](#full-testing)
 
 ---
 
-## **Testing**
+## **Automated Testing**
 
 ### **W3C HTML Validation**
 
@@ -164,6 +167,22 @@ These are the contrast results for the buttons and the hover effect applied to t
 
 This is the contrast for the social media links and copyright information displayed on the footer.
 
+### **Lighthouse Testing**
+
+Lighthouse within Chrome Developer Tools was used to assess the website's performance, accessibility, adherence to best practices, and SEO.
+
+#### **Desktop Results**
+
+![Lighthouse results for desktop](documentation/testing/lighthouse-desktop.jpg)
+
+#### **Mobile Results**
+
+![Lighthouse results for mobile](documentation/testing/lighthouse-mobile.jpg)
+
+---
+
+## **Manual Testing**
+
 ### **Testing User Stories**
 
 #### **First Time Visitor Goals**
@@ -172,6 +191,4 @@ This is the contrast for the social media links and copyright information displa
 
 #### **Frequent User Goals**
 
-### **Lighthouse Testing**
-
-### **Manual Testing**
+### **Full Testing**
