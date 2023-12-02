@@ -187,8 +187,23 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 
 #### **First Time Visitor Goals**
 
+| Goals | How are they achieved? |
+| :--- | :--- |
+| I want to understand the rules of the game so I can play without confusion. | The `How To Play` navigation button directs users to a comprehensive tutorial explaining the game mechanics, winning strategies, and valuable tips. |
+| I want the page to be responsive so I can play it on the device of my choosing. | The page was designed with responsiveness in mind, employing a mobile-first approach. This ensures a consistent user experience across various devices. |
+| I want to be introduced to the character and story of the game. | The home page features a prominent image introducing the main character, Hazel. The story unfolds on the image of an open book, inviting users to explore the game's backstory. |
+
 #### **Returning Visitor Goals**
 
+| Goals | How are they achieved? |
+| :--- | :--- |
+| I want to keep track of my previous scores so I can monitor my improvement. | Upon submitting a player's score, the data is stored using local storage. This functionality enables users to revisit the page at any time, with their score data retained, as long as the same device is used. |
+
 #### **Frequent User Goals**
+
+| Goals | How are they achieved? |
+| :--- | :--- |
+| I want to challenge myself to achieve the highest score possible. | The scoring system implemented challenges users to complete the game within a specified time to achieve the highest score. This can be further improved by reducing the number of turns used. This combination allows frequent users to compete against their best scores. |
+| I want to follow the games social media accounts. | Links to the game's social media accounts are displayed within the footer. Each link redirects the user to the specified page, enabling easy access to follow the requested account. |
 
 ### **Full Testing**

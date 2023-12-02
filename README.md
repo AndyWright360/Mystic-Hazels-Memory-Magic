@@ -91,18 +91,18 @@ I included a scoring system to provide greater replayability and entice players 
 
 - **First Time Visitor Goals**
 
-  1. Understand the rules of the game so I can play without confusion.
+  1. I want to understand the rules of the game so I can play without confusion.
   2. I want the page to be responsive so I can play it on the device of my choosing.
   3. I want to be introduced to the character and story of the game.
 
 - **Returning Visitor Goals**
 
-  1. Keep track of my previous scores so I can monitor my improvement.
+  1. I want to keep track of my previous scores so I can monitor my improvement.
 
 - **Frequent User Goals**
 
-  1. Challenge myself to achieve the highest score possible.
-  2. Follow the games social media accounts.
+  1. I want to challenge myself to achieve the highest score possible.
+  2. I want to follow the games social media accounts.
 
 ---
 
@@ -735,8 +735,8 @@ All content for the website was written by the developer Andrew Wright.
 
 All images used on the website we're obtained from the following websites:
 
-- Freepik.com
-- Pngtree.com
+- [Freepik](https://www.freepik.com/)
+- [Pngtree](https://pngtree.com/)
 
 #### **Background Images**
 
