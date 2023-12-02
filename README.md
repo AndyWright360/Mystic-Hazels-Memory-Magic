@@ -715,6 +715,18 @@ Fortunately, the fix was straightforward, requiring a reset of the card data whe
 
   - This code was used to shuffle the array of cards, randomising their order for each game.
 
+- [Intro to CSS 3D transforms by David DeSandro](https://3dtransforms.desandro.com/card-flip)
+
+  - This helped me to impliment the card flip animation used in my game.
+
+- [Local Storage Explained In 10 min | Javascript by ProMaker Dev](https://www.youtube.com/watch?v=fYTTUBa-lPc)
+
+- [How to use Local Storage in JavaScript by dcode](https://www.youtube.com/watch?v=k8yJCeuP6I8)
+
+- [Storing Objects with Local Storage in JavaScript by dcode](https://www.youtube.com/watch?v=AUOzvFzdIk4)
+
+  - These YouTube tutorials helped me understand how local storage is used in JavaScript and how the data can be retrieved in a readable way.
+
 ### **Content**
 
 All content for the website was written by the developer Andrew Wright.
