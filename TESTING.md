@@ -207,3 +207,23 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 | I want to follow the games social media accounts. | Links to the game's social media accounts are displayed within the footer. Each link redirects the user to the specified page, enabling easy access to follow the requested account. |
 
 ### **Full Testing**
+
+Full testing was performed on the following devices:
+
+- Laptop:
+  - MSI Thin GF63 15 inch screen
+- Mobile Device:
+  - iPhone XR
+
+The following browsers were tested using each device:
+
+- Laptop:
+  - Google Chrome
+  - Microsoft Edge
+  - Mozilla Firefox
+- Mobile:
+  - Safari
+
+Friends and family also tested the website using a variety of devices. No issues were reported.
+
+

@@ -65,6 +65,7 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
   - [**Bugs \& Fixes**](#bugs--fixes)
     - [**Double Scrollbar Bug**](#double-scrollbar-bug)
     - [**Card Data Bug**](#card-data-bug)
+    - [**Rapid Clicking Bug**](#rapid-clicking-bug)
 - [**Credits**](#credits)
   - [**Code Used**](#code-used)
   - [**Content**](#content)
@@ -700,6 +701,16 @@ This elusive bug remained unresolved for quite some time. Its infrequent occurre
 The root cause was traced to the data for comparing the cards not being reset when a new game started. Consequently, the data for the first card was being retained across games.This would lead to cards being compared from seperate games. Resulting in unintentional flips and cards being out of sync.
 
 Fortunately, the fix was straightforward, requiring a reset of the card data whenever a new game was initiated.
+
+#### **Rapid Clicking Bug**
+
+In the early stages of developing the game logic, I noticed that implementing the card-checking mechanic made it susceptible to confusion. Rapidly clicking on multiple cards in quick succession could overwhelm the logic, leading to confusion about which cards were being checked.
+
+This caused cards to flip incorrectly, displaying the front of the card while still in play.
+
+To rectify this issue, I implemented a 'checking cards' flag that prevents the user from clicking on cards while a pair is being checked for a match.
+
+Although this feature adds a small time delay to when the user can select a new card, it prevents overwhelming the card-check system and provides a more consistent game experience.
 
 ---
 
