@@ -150,6 +150,7 @@ Readability was also important, I wanted to ensure the font was legible for the 
 ### **Imagery**
 
 ![Design concept for page](documentation/concept.jpg)
+
 *Design Concept*
 
 The imagery used, was to reinforce the cartoon style of the world. Everything was to be brightly coloured and compliment the colour palette of the page. I modified the colour for some images using Pixlr to better fit the theme.
