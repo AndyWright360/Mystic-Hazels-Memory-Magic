@@ -48,6 +48,7 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
     - [**Game Cards**](#game-cards)
   - [**High Scores Page**](#high-scores-page)
   - [**Modals**](#modals-1)
+  - [**404 \& 500 Error Page**](#404--500-error-page)
   - [**Future Implementations**](#future-implementations)
     - [**Difficulty Settings**](#difficulty-settings)
     - [**Additional Games**](#additional-games)
@@ -76,6 +77,7 @@ The project was created as part of the Code Institute Level 5 Diploma in Web App
     - [**Home Page Images**](#home-page-images)
     - [**Game Images**](#game-images)
     - [**Modals**](#modals-2)
+    - [**Error pages**](#error-pages)
   - [**Acknowledgments**](#acknowledgments)
 
 ---
@@ -544,6 +546,28 @@ Wireframes were created using Balsamiq for desktop, tablet, and mobile screen si
   
 - An encouraging message prompts the player to retry, providing positive engagement.
 
+### **404 & 500 Error Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="documentation/features/404-page.jpg">
+
+*404 Error Page*
+
+<img src="documentation/features/500-page.jpg">
+
+*500 Error Page*
+
+</details>
+
+- The error pages use the same page layout as the site page to maintain a consistent style.
+
+- A message is displayed inside the book page to inform the user that an error has occurred.
+
+- A navigation button helps redirect the user back to the home page.
+
+- An image of a cartoon cottage is used as a visual representation that the user is no longer on the home page.
+
 ### **Future Implementations**
 
 #### **Difficulty Settings**
@@ -803,6 +827,10 @@ All images used on the website we're obtained from the following websites:
 - [Banner](https://www.freepik.com/free-vector/old-parchment-scroll-ancient-paper-banner-antique-manuscript-isolated-white-background_12620549.htm#&position=0&from_view=user&uuid=54bd428a-c0de-45c6-bd27-195722bfe0fe)
 - [Potion](https://pngtree.com/freepng/magic-game-elements-set-potion-bottle-with-transparent-background_5976908.html)
 - [Hourglass](https://pngtree.com/freepng/hourglass-vector_8405715.html)
+
+#### **Error pages**
+
+- [Cottage](https://pngtree.com/freepng/cabin-clipart-cartoon-cabin-style-vector_11066503.html )
 
 ### **Acknowledgments**
 
