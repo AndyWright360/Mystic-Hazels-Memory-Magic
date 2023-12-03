@@ -39,6 +39,8 @@
 [W3C](https://validator.w3.org/) was used to validate the HTML code.
 
 - index.html - Passed
+- 404.html - Passed
+- 500.html - Passed
 
 ![W3C HTML validation results](documentation/testing/html-validation.jpg)
 
@@ -173,11 +175,31 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 
 #### **Desktop Results**
 
+- index.html
+
 ![Lighthouse results for desktop](documentation/testing/lighthouse-desktop.jpg)
+
+- 404.html
+
+![Lighthouse results for desktop](documentation/testing/404-lighthouse-desktop.jpg)
+
+- 500.html
+
+![Lighthouse results for desktop](documentation/testing/500-lighthouse-desktop.jpg)
 
 #### **Mobile Results**
 
+- index.html
+
 ![Lighthouse results for mobile](documentation/testing/lighthouse-mobile.jpg)
+
+- 404.html
+
+![Lighthouse results for desktop](documentation/testing/404-lighthouse-mobile.jpg)
+
+- 500.html
+
+![Lighthouse results for desktop](documentation/testing/500-lighthouse-mobile.jpg)
 
 ---
 
@@ -290,3 +312,19 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Social Media Link (Twitter) | Opens Twitter link in a new tab | Clicked Twitter icon | New tabs opened to Twitter | Pass |
 | Social Media Link (Instagram) | Opens Instagram link in a new tab | Clicked Instagram icon | New tabs opened to Instagram | Pass |
 | Icon hover effect | Icon size increases on mouse hover | Hover mouse over icon | Icon size increases | Pass |
+| `404 Error Page` |
+| Page Title | Redirect to the home page | Click page title | Redirected to home page | Pass |
+| Home button | Redirect to the home page | Click button | Redirected to home page | Pass |
+| Button hover effect | Button colour changes on mouse hover | Hover mouse over button | Button colour changes | Pass |
+| Social Media Link (Facebook) | Opens Facebook link in a new tab | Clicked Facebook icon | New tabs opened to Facebook | Pass |
+| Social Media Link (YouTube) | Opens YouTube link in a new tab | Clicked YouTube icon | New tabs opened to YouTube | Pass |
+| Social Media Link (Twitter) | Opens Twitter link in a new tab | Clicked Twitter icon | New tabs opened to Twitter | Pass |
+| Social Media Link (Instagram) | Opens Instagram link in a new tab | Clicked Instagram icon | New tabs opened to Instagram | Pass |
+| `500 Error Page` |
+| Page Title | Redirect to the home page | Click page title | Redirected to home page | Pass |
+| Home button | Redirect to the home page | Click button | Redirected to home page | Pass |
+| Button hover effect | Button colour changes on mouse hover | Hover mouse over button | Button colour changes | Pass |
+| Social Media Link (Facebook) | Opens Facebook link in a new tab | Clicked Facebook icon | New tabs opened to Facebook | Pass |
+| Social Media Link (YouTube) | Opens YouTube link in a new tab | Clicked YouTube icon | New tabs opened to YouTube | Pass |
+| Social Media Link (Twitter) | Opens Twitter link in a new tab | Clicked Twitter icon | New tabs opened to Twitter | Pass |
+| Social Media Link (Instagram) | Opens Instagram link in a new tab | Clicked Instagram icon | New tabs opened to Instagram | Pass |
