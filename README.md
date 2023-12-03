@@ -127,7 +127,7 @@ With the main character of the game being a witch, I wanted to lean into this th
 
 ![Additional colour palette used in the project](documentation/secondary-colours.jpg)
 
-These additional colours were used for the page text and also the footer. The design of the footer was to resemble a witch's cauldron. I wanted the greens used in the footer to have a strong contrast to the background.
+These additional colours were used for the page text and the footer. The design of the footer was to resemble a witch's cauldron. I wanted the greens used in the footer to have a strong contrast to the background.
 
 ### **Typography**
 
@@ -135,7 +135,7 @@ These additional colours were used for the page text and also the footer. The de
 
 ![Logo for Black Pearl font](documentation/black-pearl.jpg)
 
-Black Pearl was the font used for the main heading of the page and also the headings for the modals. The whimsical and folktale-like appearance of Black Pearl was chosen to evoke a sense of playfulness in the headings. I wanted the design to have the charm of a children's book.
+Black Pearl was the font used for the main heading of the page and the headings for the modals. The whimsical and folktale-like appearance of Black Pearl was chosen to evoke a sense of playfulness in the headings. I wanted the design to have the charm of a children's book.
 
 #### **Fondamento**
 
@@ -648,7 +648,7 @@ The project was deployed to GitHub Pages. The following steps were used to achie
 
 #### **How to Fork**
 
-Forking the the GitHub Repository allows for changes to be made without altering the original repository. To do this please follow the following steps:
+Forking the GitHub Repository allows for changes to be made without altering the original repository. To do this please follow the following steps:
 
 1. Log in to GitHub.
 
@@ -700,7 +700,7 @@ This bug occurred when the screen size was reduced to a narrow width, affecting 
 
 This elusive bug remained unresolved for quite some time. Its infrequent occurrence made it challenging to pinpoint. The breakthrough came when I implemented the feature to return to the home screen by clicking the title, making it easier to identify.
 
-The root cause was traced to the data for comparing the cards not being reset when a new game started. Consequently, the data for the first card was being retained across games.This would lead to cards being compared from seperate games. Resulting in unintentional flips and cards being out of sync.
+The root cause was traced to the data for comparing the cards not being reset when a new game started. Consequently, the data for the first card was being retained across games. This would lead to cards being compared from separate games. Resulting in unintentional flips and cards being out of sync.
 
 Fortunately, the fix was straightforward, requiring a reset of the card data whenever a new game was initiated.
 
@@ -744,7 +744,7 @@ Upon testing the website across multiple web browsers, I discovered that the `bo
 
 - [Intro to CSS 3D transforms by David DeSandro](https://3dtransforms.desandro.com/card-flip)
 
-  - This helped me to impliment the card flip animation used in my game.
+  - This helped me to implement the card flip animation used in my game.
 
 - [Local Storage Explained In 10 min | Javascript by ProMaker Dev](https://www.youtube.com/watch?v=fYTTUBa-lPc)
 
@@ -810,4 +810,4 @@ All images used on the website we're obtained from the following websites:
 
 - Everyone at [Code Institute](https://codeinstitute.net/) for their exceptional support.
 
-- The Code Institute Slack community for the invaluable feedback and assistance I recieved along the way.
+- The Code Institute Slack community for the invaluable feedback and assistance I received along the way.

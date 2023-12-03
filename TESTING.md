@@ -127,13 +127,13 @@ const displayHighScores = () => {
 
 The warning pertains to the `displayHighScores` function, which iterates through an array of recorded top players. For each item in the top players array, an `li` element is created. Within this loop, a `click` event listener is attached to the created element.
 
-When the `li` element is clicked, the details of the clicked player's corresponding object are passed as an argument to the `showPlayerScore` function. This allows the `showPlayerScore` function to display the score information of the player who triggered the event.
+When the `li` element is clicked, the details of the clicked player's corresponding object are passed as an argument to the `showPlayerScore` function. This allows the `showPlayerScore` function to display the score information of the player's name which triggered the event.
 
-This was the only method I could think of that would allow me to pass the specific players information as an argument to another function.
+This was the only method I could think of that would allow me to pass the specific players' information as an argument to another function.
 
 ### **WCAG Colour Contrast Checker**
 
-I paid close attention to achieving a strong contrast while choosing the color scheme for the website. The outcomes of each background and foreground combination employed in this project are detailed below.
+I paid close attention to achieving a strong contrast while choosing the colour scheme for the website. The outcomes of each background and foreground combination employed in this project are detailed below.
 
 #### **Page Content**
 
@@ -141,7 +141,7 @@ I paid close attention to achieving a strong contrast while choosing the color s
 
 With the text colour close to black and the book pages being light, the contrast ratio was very high. The only potential issue that could arise is from the fact that the container for the text content is an image. If this fails to load, then the text would be overlaid onto the background image for the body, which is considerably darker.
 
-With the image having transparent edges, I was reluctant to add a background color to the container as this would be visible. However, this is something I would look to rectify in future iterations to avoid any potential issues with legibility.
+With the image having transparent edges, I was reluctant to add a background colour to the container as this would be visible. However, this is something I would look to rectify in future iterations to avoid any potential issues with legibility.
 
 #### **Score Display**
 
@@ -242,48 +242,48 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Button hover effect | Button colour changes on mouse hover | Hover mouse over button | Button colour changes | Pass |
 | `Game Page` |
 | Cards populated | All 18 cards are displayed on screen | Load game page | All 18 cards are displayed on screen | Pass |
-| Countdown begins | Time countsdown from 120 seconds | Load game page | Time countsdown from 120 seconds | Pass |
-| Turn counter incriments | Incriment turn counter each time two cards are selected | Click two cards | Turn counter incrimented by one | Pass |
+| Countdown begins | Time counts down from 120 seconds | Load game page | Time counts down from 120 seconds | Pass |
+| Turn counter increments | Increment turn counter each time two cards are selected | Click two cards | Turn counter incremented by one | Pass |
 | Score display populated | The score display shows three stars | Load game page | The score display shows three stars | Pass |
 | Score display modifies | At 59 seconds score display shows two stars | Countdown falls below 60 seconds | The score display shows two stars | Pass |
 | Score display modifies | At 29 seconds score display shows one star | Countdown falls below 30 seconds | The score display shows one star | Pass |
 | Cards float effect | On mouse over the card size will increase and a box shadow will display | Hover mouse over cards | The cards increase in size and the box shadow is displayed | Pass |
 | Cards float removed | On mouse leave the cards reduce in size and the box shadow is removed | Remove mouse pointer from cards | The cards decrease in size and the box shadow is removed | Pass |
 | Cards flip effect | The cards rotate 180 degrees horizontally when clicked | Click cards | The cards are flipped | Pass |
-| First card remains flaoting | The first selected card will maintain the float class | Click first card | The card remains floating | Pass |
+| First card remains floating | The first selected card will maintain the float class | Click first card | The card remains floating | Pass |
 | Cards flip on non-match | Two selected cards that don't have matching images are flipped back | Click two non-matching cards | Both cards are flipped back over | Pass |
-| Cards stay flipped on match | Two selected cards with matching images remain flipped and float is removed | Click two matching cards | The matching cards remain flipped and float is removed | Pass |
+| Cards stay flipped on match | Two selected cards with matching images remain flipped and float is removed | Click two matching cards | The matching cards remain flipped, and float is removed | Pass |
 | Pointer removed from matching cards | Matching pairs will no longer trigger the cursor to display a pointer | Hover mouse over matching pair | The cursor maintains the default display | Pass |
-| Cards can't be clicked while pair is checked | While a pair of cards is currently being checked for a match additional cards are unable to be clicked | Click cards while pair is being checked | The cards don't respond to the mouse click | Pass |
+| Cards can't be clicked while pair is checked | While a pair of cards is currently being checked for a match, additional cards are unable to be clicked | Click cards while pair is being checked | The cards don't respond to the mouse click | Pass |
 | Lose modal triggers | When the timer reaches zero the lose modal is triggered | Countdown falls to zero | The lose modal is triggered | Pass |
 | Win modal triggers | When nine matching pairs of cards are found the win modal is triggered | Find nine pairs of cards | The win modal is triggered | Pass |
 | `High Scores Page` |
 | Home button | Redirect to the home page | Click button | Redirected to home page | Pass |
 | New Game button | Redirect to the game page | Click button | Redirected to game page | Pass |
 | Button hover effect | Button colour changes on mouse hover | Hover mouse over button | Button colour changes | Pass |
-| No scores by default | While no scores have been submitted the display scrren is unpopulated  | Visit page without submitting a score | The score display screen is unpopulated | Pass |
+| No scores by default | While no scores have been submitted the display screen is unpopulated  | Visit page without submitting a score | The score display screen is unpopulated | Pass |
 | Display submitted player score | Upon submission the players score details are displayed on the page | Submit a score and load the page | The score display is populated | Pass |
-| Highest score displayed by default | When multiple scores have been submitted the highest scoring player stats will be displayed by default | Sumnit multiple scores and load page | The highest scoring players details are displayed | Pass |
+| Highest score displayed by default | When multiple scores have been submitted the highest scoring player stats will be displayed by default | Submit multiple scores and load page | The highest scoring players details are displayed | Pass |
 | Selected player has bold text | The currently selected player displays bold text | Select player names | The currently selected player has bold text | Pass |
 | Player name hover effect | On mouse hover the players name will be underlined | Hover mouse over player names | The players name displays an underline | Pass |
-| Selecting new player removes bold text from previous layer name | When a new player name is selected the previous player name removes bold text | Select new player name | The previously selected player removes bold text | Pass |
+| Selecting new player removes bold text from previous player name | When a new player name is selected the previous player name removes bold text | Select new player name | The previously selected player removes bold text | Pass |
 | `Win Modal` |
-| Player score displays | When the modal loads the players score is displayed | Trigger win modal | The players score is displayed | Pass |
-| Name input rejects no character entry | When attempting to enter a name with zero characters the label will display a rejection message | Enter name with zero chacters | The input label displays the rejection message | Pass |
+| Player score displays | When the modal loads the player's score is displayed | Trigger win modal | The player's score is displayed | Pass |
+| Name input rejects no character entry | When attempting to enter a name with zero characters the label will display a rejection message | Enter name with zero characters | The input label displays the rejection message | Pass |
 | Name input rejects entries exceeding ten characters | When attempting to enter a name exceeding ten characters the label will display a rejection message | Enter name greater than ten characters in length | The label displays a rejection message | Pass |
-| Successfull submission message | Upon entering a valid name the label will display a successful submission message | Enter valid name input | The label displays a successfull submission message | Pass |
-| Input field disabled on submission | Upon successfull submission of a player name the input field will be disabled | Enter valid name input | The input field is disabled | Pass |
+| Successful submission message | Upon entering a valid name, the label will display a successful submission message | Enter valid name input | The label displays a successful submission message | Pass |
+| Input field disabled on submission | Upon successful submission of a player name the input field will be disabled | Enter valid name input | The input field is disabled | Pass |
 | New Game button | Close modal and load new game | Click button | Modal closed and new game loaded | Pass |
 | High Scores button | Close modal and redirect to the high scores page | Click button | Modal closed and redirected to high scores page | Pass |
 | Button hover effect | Button colour changes on mouse hover | Hover mouse over button | Button colour changes | Pass |
-| Can't close modal by clicking outside | The modal can't be closed by the user clicking outside the modal display | Click outide modal display | Modal doesn't close | Pass |
-| Can't close modal by presssing 'esc' button | The modal can't be closed by the user pressing the 'esc' button | Press 'esc' key | Modal doesn't close | Pass |
+| Can't close modal by clicking outside | The modal can't be closed by the user clicking outside the modal display | Click outside modal display | Modal doesn't close | Pass |
+| Can't close modal by pressing 'esc' button | The modal can't be closed by the user pressing the 'esc' button | Press 'esc' key | Modal doesn't close | Pass |
 | `Lose Modal` |
 | New Game button | Close modal and load new game | Click button | Modal closed and new game loaded | Pass |
 | High Scores button | Close modal and redirect to the high scores page | Click button | Modal closed and redirected to high scores page | Pass |
 | Button hover effect | Button colour changes on mouse hover | Hover mouse over button | Button colour changes | Pass |
-| Can't close modal by clicking outside | The modal can't be closed by the user clicking outside the modal display | Click outide modal display | Modal doesn't close | Pass |
-| Can't close modal by presssing 'esc' button | The modal can't be closed by the user pressing the 'esc' button | Press 'esc' key | Modal doesn't close | Pass |
+| Can't close modal by clicking outside | The modal can't be closed by the user clicking outside the modal display | Click outside modal display | Modal doesn't close | Pass |
+| Can't close modal by pressing 'esc' button | The modal can't be closed by the user pressing the 'esc' button | Press 'esc' key | Modal doesn't close | Pass |
 | `Footer` |
 | Social Media Link (Facebook) | Opens Facebook link in a new tab | Clicked Facebook icon | New tabs opened to Facebook | Pass |
 | Social Media Link (YouTube) | Opens YouTube link in a new tab | Clicked YouTube icon | New tabs opened to YouTube | Pass |
