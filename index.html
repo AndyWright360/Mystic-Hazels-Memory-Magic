@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta
-      name="description"
-      content="Mystic Hazel's Memory Magic is a memory game. Aid Hazel in her quest to improve her memory and perhaps improve yours along the way."
-    >
+    <meta name="description"
+        content="Mystic Hazel's Memory Magic is a memory game. Aid Hazel in her quest to improve her memory and perhaps improve yours along the way.">
 
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap"
-      rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
 
     <!--bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!--external CSS file-->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
     <!--font awesome-->
-    <script
-      src="https://kit.fontawesome.com/bdde0c9132.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/bdde0c9132.js" crossorigin="anonymous"></script>
 
     <!--favicons-->
     <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
@@ -44,554 +33,384 @@
 
     <!--page title-->
     <title>Mystic Hazel's Memory Magic</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <div id="title-container">
-        <img
-          src="assets/images/scroll.webp"
-          id="scroll"
-          alt="A purple scroll of parchment containing the page title"
-        >
-        <h1 class="title">Mystic Hazel's<br>Memory Magic</h1>
-      </div>
+        <div id="title-container">
+            <img src="assets/images/scroll.webp" id="scroll"
+                alt="A purple scroll of parchment containing the page title">
+            <h1 class="title">Mystic Hazel's<br>Memory Magic</h1>
+        </div>
     </header>
 
     <main>
-      <!--SCORE-->
-      <div id="scoreboard">
-        <img
-          src="assets/images/hourglass.webp"
-          id="hourglass"
-          alt="A purple hourglass draining sand"
-        >
-        <span id="timer"></span>
-        <img
-          src="assets/images/crystal-ball.webp"
-          id="crystal-ball"
-          alt="A crystal ball on a purple base"
-        >
-        <span id="turns"></span>
-        <img
-          src="assets/images/0star.webp"
-          id="star"
-          alt="Three empty containers in the shape of stars"
-        >
-      </div>
+        <!--SCORE-->
+        <div id="scoreboard">
+            <img src="assets/images/hourglass.webp" id="hourglass" alt="A purple hourglass draining sand">
+            <span id="timer"></span>
+            <img src="assets/images/crystal-ball.webp" id="crystal-ball" alt="A crystal ball on a purple base">
+            <span id="turns"></span>
+            <img src="assets/images/0star.webp" id="star" alt="Three empty containers in the shape of stars">
+        </div>
 
-      <!--HOME BOARD-->
-      <div id="home-board" class="book-container">
-        <img
-          src="assets/images/book.webp"
-          class="book"
-          alt="An open book with a curled page corner"
-        >
-        <div id="home-page1">
-          <div class="top-page1">
-            <h2>Mystic Hazel's Memory Magic</h2>
-            <p>
-              In a whimsical forest nestled deep within an enchanted realm,
-              there lived a charming and thoughtful witch named Hazel. She was
-              known far and wide for her heartwarming spells and ever-present
-              smile, but there was one little problem. Hazel had a memory like a
-              leaky bucket.
-            </p>
-            <p>
-              As a talented potion maker, she decided to fix her poor memory
-              once and for all by creating a memory-boosting elixir! But Hazel
-              can't remember the ingredients to make it. Can you help her find
-              the matching ingredients scattered around her workshop?
-            </p>
-          </div>
-          <div class="btm-page1">
-            <button class="button book-btn how">How To Play</button>
-          </div>
-        </div>
-        <div id="home-page2">
-          <div class="top-page2">
-            <img
-              class="hazel"
-              src="assets/images/hazel.webp"
-              alt="A cartoon witch with purple hair stirring a cauldron"
-            >
-          </div>
-          <div class="btm-page2">
-            <button class="button book-btn game">New Game</button>
-            <button class="button book-btn high">High Scores</button>
-          </div>
-        </div>
-        <!--Container of background images-->
-        <div>
-          <img
-            class="bg-image bg-cauldron"
-            src="assets/images/cauldron.webp"
-            alt="A black cauldron filled with a green bubbling potion"
-          >
-          <img
-            class="bg-image bg-candle-green"
-            src="assets/images/candle-green.webp"
-            alt="A lime green circular candle with an orange flame"
-          >
-          <img
-            class="bg-image bg-candle-orange"
-            src="assets/images/candle-orange.webp"
-            alt="A vibrant orange circular candle with a green flame"
-          >
-          <img
-            class="bg-image bg-candle-purple"
-            src="assets/images/candle-purple.webp"
-            alt="A purple circular candle with a blue flame"
-          >
-          <img
-            class="bg-image bg-orb"
-            src="assets/images/orb.webp"
-            alt="A crystal ball with a glowing purple aura"
-          >
-          <img
-            class="bg-image bg-wand"
-            src="assets/images/wand.webp"
-            alt="A silver witches wand with green jewels and a purple crystal fixed to the top"
-          >
-        </div>
-      </div>
-
-      <!--GAME BOARD-->
-      <div id="game-board" class="book-container d-none">
-        <img
-          src="assets/images/book.webp"
-          class="book"
-          alt="An open book with a curled page corner"
-        >
-        <div id="game-page1">
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-        </div>
-        <div id="game-page2">
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-          <div class="card-container"></div>
-        </div>
-        <!--Container of background images-->
-        <div>
-          <img
-            class="bg-image bg-cauldron"
-            src="assets/images/cauldron.webp"
-            alt="A black cauldron filled with a green bubbling potion"
-          >
-          <img
-            class="bg-image bg-candle-green"
-            src="assets/images/candle-green.webp"
-            alt="A lime green circular candle with an orange flame"
-          >
-          <img
-            class="bg-image bg-candle-orange"
-            src="assets/images/candle-orange.webp"
-            alt="A vibrant orange circular candle with a green flame"
-          >
-          <img
-            class="bg-image bg-candle-purple"
-            src="assets/images/candle-purple.webp"
-            alt="A purple circular candle with a blue flame"
-          >
-          <img
-            class="bg-image bg-orb"
-            src="assets/images/orb.webp"
-            alt="A crystal ball with a glowing purple aura"
-          >
-          <img
-            class="bg-image bg-wand"
-            src="assets/images/wand.webp"
-            alt="A silver witches wand with green jewels and a purple crystal fixed to the top"
-          >
-        </div>
-      </div>
-
-      <!--HOW TO PLAY BOARD-->
-      <div id="how-board" class="book-container d-none">
-        <img
-          src="assets/images/book.webp"
-          class="book"
-          alt="An open book with a curled page corner"
-        >
-        <div id="how-page1">
-          <div class="how-content">
-            <h2 class="how-heading">How to Play</h2>
-            <ul class="list">
-              <li>
-                <span class="bullet">
-                  <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
-                </span>
-                <span class="li-text">
-                  The game board consists of a grid of facedown cards, each
-                  hiding an ingredient.
-                </span>
-              </li>
-              <li>
-                <span class="bullet">
-                  <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
-                </span>
-                <span class="li-text">
-                  To play, click on any two cards to reveal what's hidden
-                  beneath.
-                </span>
-              </li>
-              <li>
-                <span class="bullet">
-                  <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
-                </span>
-                <span class="li-text">
-                  If the two cards you've chosen reveal matching ingredients,
-                  congratulations! You've found a pair.
-                </span>
-              </li>
-              <li>
-                <span class="bullet">
-                  <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
-                </span>
-                <span class="li-text">
-                  If the cards don't match, don't worry. The cards will
-                  automatically flip back face-down, and you can continue your
-                  search for pairs.
-                </span>
-              </li>
-              <li>
-                <span class="bullet">
-                  <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
-                </span>
-                <span class="li-text">
-                  Continue revealing cards and trying to match pairs. The more
-                  pairs you find, the closer Hazel becomes to improving her
-                  memory.
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div class="btm-page1">
-            <button class="button book-btn home">Home</button>
-          </div>
-        </div>
-        <div id="how-page2">
-          <div class="how-content">
-            <h2 class="how-heading">Winning the Game</h2>
-            <ul class="list">
-              <li>
-                <span class="bullet">
-                  <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
-                </span>
-                <span class="li-text">
-                  Once you've successfully matched all the pairs of ingredients,
-                  Hazel will be able to create her memory-enhancing potion, and
-                  you win the game!
-                </span>
-              </li>
-            </ul>
-            <h2 class="how-heading">Tips</h2>
-            <ul class="list">
-              <li>
-                <span class="bullet">
-                  <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
-                </span>
-                <span class="li-text">
-                  Concentration is key. Pay attention to the cards you've
-                  already revealed and where you saw matching ingredients.
-                </span>
-              </li>
-              <li>
-                <span class="bullet">
-                  <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
-                </span>
-                <span class="li-text">
-                  Keep an eye on the number of moves you make. Try to find all
-                  the pairs in as few moves as possible.
-                </span>
-              </li>
-              <li>
-                <span class="bullet">
-                  <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
-                </span>
-                <span class="li-text">
-                  Challenge yourself to improve your time and earn yourself
-                  three stars.
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div class="btm-page2 how-btm-pg">
-            <button class="button book-btn game">New Game</button>
-            <button class="button book-btn high">High Scores</button>
-          </div>
-        </div>
-        <!--Container of background images-->
-        <div>
-          <img
-            class="bg-image bg-cauldron"
-            src="assets/images/cauldron.webp"
-            alt="A black cauldron filled with a green bubbling potion"
-          >
-          <img
-            class="bg-image bg-candle-green"
-            src="assets/images/candle-green.webp"
-            alt="A lime green circular candle with an orange flame"
-          >
-          <img
-            class="bg-image bg-candle-orange"
-            src="assets/images/candle-orange.webp"
-            alt="A vibrant orange circular candle with a green flame"
-          >
-          <img
-            class="bg-image bg-candle-purple"
-            src="assets/images/candle-purple.webp"
-            alt="A purple circular candle with a blue flame"
-          >
-          <img
-            class="bg-image bg-orb"
-            src="assets/images/orb.webp"
-            alt="A crystal ball with a glowing purple aura"
-          >
-          <img
-            class="bg-image bg-wand"
-            src="assets/images/wand.webp"
-            alt="A silver witches wand with green jewels and a purple crystal fixed to the top"
-          >
-        </div>
-      </div>
-
-      <!--HIGH SCORES BOARD-->
-      <div id="score-board" class="book-container d-none">
-        <img
-          src="assets/images/book.webp"
-          class="book"
-          alt="An open book with a curled page corner"
-        >
-        <div id="score-page1">
-          <h2>High Scores</h2>
-          <ol id="top-players"></ol>
-        </div>
-        <div id="score-page2">
-          <div class="score-top-pg">
-            <h3 id="recorded-name">Player Name</h3>
-            <div id="score-container">
-              <h3>Score</h3>
-              <img id="recorded-score" src="assets/images/0star.webp" alt="A row of three empty star containers">
+        <!--HOME BOARD-->
+        <div id="home-board" class="book-container">
+            <img src="assets/images/book.webp" class="book" alt="An open book with a curled page corner">
+            <div id="home-page1">
+                <div class="top-page1">
+                    <h2>Mystic Hazel's Memory Magic</h2>
+                    <p>
+                        In a whimsical forest nestled deep within an enchanted realm,
+                        there lived a charming and thoughtful witch named Hazel. She was
+                        known far and wide for her heartwarming spells and ever-present
+                        smile, but there was one little problem. Hazel had a memory like a
+                        leaky bucket.
+                    </p>
+                    <p>
+                        As a talented potion maker, she decided to fix her poor memory
+                        once and for all by creating a memory-boosting elixir! But Hazel
+                        can't remember the ingredients to make it. Can you help her find
+                        the matching ingredients scattered around her workshop?
+                    </p>
+                </div>
+                <div class="btm-page1">
+                    <button class="button book-btn how">How To Play</button>
+                </div>
             </div>
-            <h3>Time: <span id="recorded-time"></span></h3>
-            <h3>Turns: <span id="recorded-turns"></span></h3>
-          </div>
-          <div class="btm-page2">
-            <button class="button book-btn home">Home</button>
-            <button class="button book-btn game">New Game</button>
-          </div>
-        </div>
-        <!--Container of background images-->
-        <div>
-          <img
-            class="bg-image bg-cauldron"
-            src="assets/images/cauldron.webp"
-            alt="A black cauldron filled with a green bubbling potion"
-          >
-          <img
-            class="bg-image bg-candle-green"
-            src="assets/images/candle-green.webp"
-            alt="A lime green circular candle with an orange flame"
-          >
-          <img
-            class="bg-image bg-candle-orange"
-            src="assets/images/candle-orange.webp"
-            alt="A vibrant orange circular candle with a green flame"
-          >
-          <img
-            class="bg-image bg-candle-purple"
-            src="assets/images/candle-purple.webp"
-            alt="A purple circular candle with a blue flame"
-          >
-          <img
-            class="bg-image bg-orb"
-            src="assets/images/orb.webp"
-            alt="A crystal ball with a glowing purple aura"
-          >
-          <img
-            class="bg-image bg-wand"
-            src="assets/images/wand.webp"
-            alt="A silver witches wand with green jewels and a purple crystal fixed to the top"
-          >
-        </div>
-      </div>
-
-      <!--WIN MODAL-->
-      <!--Modal Trigger-->
-      <button
-        id="win-btn"
-        class="button"
-        data-bs-toggle="modal"
-        data-bs-target="#win-modal"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-      >Win</button>
-      <!--Modal Content-->
-      <div
-        id="win-modal"
-        class="modal fade"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-body text-center">
-              <div id="win-title" class="modal-title">
-                <img
-                  src="assets/images/modal-banner.webp"
-                  class="modal-banner"
-                  alt="A wooden sign board"
-                >
-                <h2 id="win-heading" class="title">Congratulations</h2>
-              </div>
-              <img
-                class="modal-image"
-                src="assets/images/potion.webp"
-                alt="A green potion in a glass bottle"
-              >
-              <img
-                id="player-score"
-                src="assets/images/0star.webp"
-                alt="A string of three star containers"
-              >
-              <p>Time Remaining: <span id="player-time"></span></p>
-              <p>Turns: <span id="player-turns"></span></p>
-              <label for="player-name"
-                >To submit your score please type your name and press
-                Enter</label
-              >
-              <input
-                type="text"
-                id="player-name"
-                placeholder="Player Name"
-              >
-              <button class="button modal-btn game" data-bs-dismiss="modal">
-                Play Again
-              </button>
-              <button class="button modal-btn high" data-bs-dismiss="modal">
-                High Scores
-              </button>
+            <div id="home-page2">
+                <div class="top-page2">
+                    <img class="hazel" src="assets/images/hazel.webp"
+                        alt="A cartoon witch with purple hair stirring a cauldron">
+                </div>
+                <div class="btm-page2">
+                    <button class="button book-btn game">New Game</button>
+                    <button class="button book-btn high">High Scores</button>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!--LOSE MODAL-->
-      <!--Modal Trigger-->
-      <button
-        id="lose-btn"
-        class="button"
-        data-bs-toggle="modal"
-        data-bs-target="#lose-modal"
-      >Lose</button>
-      <!--Modal Content-->
-      <div
-        id="lose-modal"
-        class="modal fade"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-body text-center">
-              <div id="lose-title" class="modal-title">
-                <img
-                  src="assets/images/modal-banner.webp"
-                  class="modal-banner"
-                  alt="A wooden sign board"
-                >
-                <h2 id="lose-heading" class="title">Time's Up</h2>
-              </div>
-              <img class="modal-image" src="assets/images/time-up.webp" alt="A purple hourglass with green sand">
-              <p>Don't give up<br>Try again & help Hazel</p>
-              <button class="button modal-btn game" data-bs-dismiss="modal">
-                Play Again
-              </button>
-              <button class="button modal-btn high" data-bs-dismiss="modal">
-                High Scores
-              </button>
+            <!--Container of background images-->
+            <div>
+                <img class="bg-image bg-cauldron" src="assets/images/cauldron.webp"
+                    alt="A black cauldron filled with a green bubbling potion">
+                <img class="bg-image bg-candle-green" src="assets/images/candle-green.webp"
+                    alt="A lime green circular candle with an orange flame">
+                <img class="bg-image bg-candle-orange" src="assets/images/candle-orange.webp"
+                    alt="A vibrant orange circular candle with a green flame">
+                <img class="bg-image bg-candle-purple" src="assets/images/candle-purple.webp"
+                    alt="A purple circular candle with a blue flame">
+                <img class="bg-image bg-orb" src="assets/images/orb.webp"
+                    alt="A crystal ball with a glowing purple aura">
+                <img class="bg-image bg-wand" src="assets/images/wand.webp"
+                    alt="A silver witches wand with green jewels and a purple crystal fixed to the top">
             </div>
-          </div>
         </div>
-      </div>
+
+        <!--GAME BOARD-->
+        <div id="game-board" class="book-container d-none">
+            <img src="assets/images/book.webp" class="book" alt="An open book with a curled page corner">
+            <div id="game-page1">
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+            </div>
+            <div id="game-page2">
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+                <div class="card-container"></div>
+            </div>
+            <!--Container of background images-->
+            <div>
+                <img class="bg-image bg-cauldron" src="assets/images/cauldron.webp"
+                    alt="A black cauldron filled with a green bubbling potion">
+                <img class="bg-image bg-candle-green" src="assets/images/candle-green.webp"
+                    alt="A lime green circular candle with an orange flame">
+                <img class="bg-image bg-candle-orange" src="assets/images/candle-orange.webp"
+                    alt="A vibrant orange circular candle with a green flame">
+                <img class="bg-image bg-candle-purple" src="assets/images/candle-purple.webp"
+                    alt="A purple circular candle with a blue flame">
+                <img class="bg-image bg-orb" src="assets/images/orb.webp"
+                    alt="A crystal ball with a glowing purple aura">
+                <img class="bg-image bg-wand" src="assets/images/wand.webp"
+                    alt="A silver witches wand with green jewels and a purple crystal fixed to the top">
+            </div>
+        </div>
+
+        <!--HOW TO PLAY BOARD-->
+        <div id="how-board" class="book-container d-none">
+            <img src="assets/images/book.webp" class="book" alt="An open book with a curled page corner">
+            <div id="how-page1">
+                <div class="how-content">
+                    <h2 class="how-heading">How to Play</h2>
+                    <ul class="list">
+                        <li>
+                            <span class="bullet">
+                                <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
+                            </span>
+                            <span class="li-text">
+                                The game board consists of a grid of facedown cards, each
+                                hiding an ingredient.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="bullet">
+                                <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
+                            </span>
+                            <span class="li-text">
+                                To play, click on any two cards to reveal what's hidden
+                                beneath.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="bullet">
+                                <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
+                            </span>
+                            <span class="li-text">
+                                If the two cards you've chosen reveal matching ingredients,
+                                congratulations! You've found a pair.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="bullet">
+                                <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
+                            </span>
+                            <span class="li-text">
+                                If the cards don't match, don't worry. The cards will
+                                automatically flip back face-down, and you can continue your
+                                search for pairs.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="bullet">
+                                <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
+                            </span>
+                            <span class="li-text">
+                                Continue revealing cards and trying to match pairs. The more
+                                pairs you find, the closer Hazel becomes to improving her
+                                memory.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btm-page1">
+                    <button class="button book-btn home">Home</button>
+                </div>
+            </div>
+            <div id="how-page2">
+                <div class="how-content">
+                    <h2 class="how-heading">Winning the Game</h2>
+                    <ul class="list">
+                        <li>
+                            <span class="bullet">
+                                <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
+                            </span>
+                            <span class="li-text">
+                                Once you've successfully matched all the pairs of ingredients,
+                                Hazel will be able to create her memory-enhancing potion, and
+                                you win the game!
+                            </span>
+                        </li>
+                    </ul>
+                    <h2 class="how-heading">Tips</h2>
+                    <ul class="list">
+                        <li>
+                            <span class="bullet">
+                                <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
+                            </span>
+                            <span class="li-text">
+                                Concentration is key. Pay attention to the cards you've
+                                already revealed and where you saw matching ingredients.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="bullet">
+                                <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
+                            </span>
+                            <span class="li-text">
+                                Keep an eye on the number of moves you make. Try to find all
+                                the pairs in as few moves as possible.
+                            </span>
+                        </li>
+                        <li>
+                            <span class="bullet">
+                                <i class="fa-solid fa-splotch fa-rotate-270 fa-2xs"></i>
+                            </span>
+                            <span class="li-text">
+                                Challenge yourself to improve your time and earn yourself
+                                three stars.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btm-page2 how-btm-pg">
+                    <button class="button book-btn game">New Game</button>
+                    <button class="button book-btn high">High Scores</button>
+                </div>
+            </div>
+            <!--Container of background images-->
+            <div>
+                <img class="bg-image bg-cauldron" src="assets/images/cauldron.webp"
+                    alt="A black cauldron filled with a green bubbling potion">
+                <img class="bg-image bg-candle-green" src="assets/images/candle-green.webp"
+                    alt="A lime green circular candle with an orange flame">
+                <img class="bg-image bg-candle-orange" src="assets/images/candle-orange.webp"
+                    alt="A vibrant orange circular candle with a green flame">
+                <img class="bg-image bg-candle-purple" src="assets/images/candle-purple.webp"
+                    alt="A purple circular candle with a blue flame">
+                <img class="bg-image bg-orb" src="assets/images/orb.webp"
+                    alt="A crystal ball with a glowing purple aura">
+                <img class="bg-image bg-wand" src="assets/images/wand.webp"
+                    alt="A silver witches wand with green jewels and a purple crystal fixed to the top">
+            </div>
+        </div>
+
+        <!--HIGH SCORES BOARD-->
+        <div id="score-board" class="book-container d-none">
+            <img src="assets/images/book.webp" class="book" alt="An open book with a curled page corner">
+            <div id="score-page1">
+                <h2>High Scores</h2>
+                <ol id="top-players"></ol>
+            </div>
+            <div id="score-page2">
+                <div class="score-top-pg">
+                    <h3 id="recorded-name">Player Name</h3>
+                    <div id="score-container">
+                        <h3>Score</h3>
+                        <img id="recorded-score" src="assets/images/0star.webp"
+                            alt="A row of three empty star containers">
+                    </div>
+                    <h3>Time: <span id="recorded-time"></span></h3>
+                    <h3>Turns: <span id="recorded-turns"></span></h3>
+                </div>
+                <div class="btm-page2">
+                    <button class="button book-btn home">Home</button>
+                    <button class="button book-btn game">New Game</button>
+                </div>
+            </div>
+            <!--Container of background images-->
+            <div>
+                <img class="bg-image bg-cauldron" src="assets/images/cauldron.webp"
+                    alt="A black cauldron filled with a green bubbling potion">
+                <img class="bg-image bg-candle-green" src="assets/images/candle-green.webp"
+                    alt="A lime green circular candle with an orange flame">
+                <img class="bg-image bg-candle-orange" src="assets/images/candle-orange.webp"
+                    alt="A vibrant orange circular candle with a green flame">
+                <img class="bg-image bg-candle-purple" src="assets/images/candle-purple.webp"
+                    alt="A purple circular candle with a blue flame">
+                <img class="bg-image bg-orb" src="assets/images/orb.webp"
+                    alt="A crystal ball with a glowing purple aura">
+                <img class="bg-image bg-wand" src="assets/images/wand.webp"
+                    alt="A silver witches wand with green jewels and a purple crystal fixed to the top">
+            </div>
+        </div>
+
+        <!--WIN MODAL-->
+        <!--Modal Trigger-->
+        <button id="win-btn" class="button" data-bs-toggle="modal" data-bs-target="#win-modal" data-bs-backdrop="static"
+            data-bs-keyboard="false">Win</button>
+        <!--Modal Content-->
+        <div id="win-modal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div id="win-title" class="modal-title">
+                            <img src="assets/images/modal-banner.webp" class="modal-banner" alt="A wooden sign board">
+                            <h2 id="win-heading" class="title">Congratulations</h2>
+                        </div>
+                        <img class="modal-image" src="assets/images/potion.webp" alt="A green potion in a glass bottle">
+                        <img id="player-score" src="assets/images/0star.webp" alt="A string of three star containers">
+                        <p>Time Remaining: <span id="player-time"></span></p>
+                        <p>Turns: <span id="player-turns"></span></p>
+                        <label for="player-name">To submit your score please type your name and press
+                            Enter</label>
+                        <input type="text" id="player-name" placeholder="Player Name">
+                        <button class="button modal-btn game" data-bs-dismiss="modal">
+                            Play Again
+                        </button>
+                        <button class="button modal-btn high" data-bs-dismiss="modal">
+                            High Scores
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--LOSE MODAL-->
+        <!--Modal Trigger-->
+        <button id="lose-btn" class="button" data-bs-toggle="modal" data-bs-target="#lose-modal">Lose</button>
+        <!--Modal Content-->
+        <div id="lose-modal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div id="lose-title" class="modal-title">
+                            <img src="assets/images/modal-banner.webp" class="modal-banner" alt="A wooden sign board">
+                            <h2 id="lose-heading" class="title">Time's Up</h2>
+                        </div>
+                        <img class="modal-image" src="assets/images/time-up.webp"
+                            alt="A purple hourglass with green sand">
+                        <p>Don't give up<br>Try again & help Hazel</p>
+                        <button class="button modal-btn game" data-bs-dismiss="modal">
+                            Play Again
+                        </button>
+                        <button class="button modal-btn high" data-bs-dismiss="modal">
+                            High Scores
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!--FOOTER-->
     <footer>
-      <div class="cauldron">
-        <img
-          id="slime"
-          src="assets/images/slime.webp"
-          alt="Green dripping slime"
-        >
-        <div class="rim-shadow"></div>
-      </div>
-      <div class="footer-content">
-        <div class="social-media">
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            aria-label="go to facebook website"
-          >
-            <i class="fa-brands fa-square-facebook"></i>
-          </a>
-          <a
-            href="https://www.youtube.com/"
-            target="_blank"
-            aria-label="go to youtube website"
-          >
-            <i class="fa-brands fa-square-youtube"></i>
-          </a>
-          <a
-            href="https://www.twitter.com/"
-            target="_blank"
-            aria-label="go to twitter website"
-          >
-            <i class="fa-brands fa-square-x-twitter"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            aria-label="go to instragram website"
-          >
-            <i class="fa-brands fa-square-instagram"></i>
-          </a>
+        <div class="cauldron">
+            <img id="slime" src="assets/images/slime.webp" alt="Green dripping slime">
+            <div class="rim-shadow"></div>
         </div>
-        <div class="copyright">
-          <p>
-            Copyright © 2023 Mystic Hazel's Memory Magic. All Rights Reserved.
-          </p>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="go to facebook website">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a href="https://www.youtube.com/" target="_blank" aria-label="go to youtube website">
+                    <i class="fa-brands fa-square-youtube"></i>
+                </a>
+                <a href="https://www.twitter.com/" target="_blank" aria-label="go to twitter website">
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="go to instragram website">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>
+                    Copyright © 2023 Mystic Hazel's Memory Magic. All Rights Reserved.
+                </p>
+            </div>
         </div>
-      </div>
     </footer>
 
     <!--external javascript file-->
     <script src="assets/js/script.js"></script>
 
     <!--bootstrap javascript-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

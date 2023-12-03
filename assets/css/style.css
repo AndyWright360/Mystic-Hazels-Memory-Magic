@@ -76,7 +76,8 @@ p {
     grid-column: 1 / -1;
 }
 
-.hazel {
+.hazel,
+.cottage {
     height: auto;
     width: 100%;
 }
@@ -288,7 +289,7 @@ ol li {
     color: #4a0b6e;
 }
 
-/*---------------------------------------------Home page*/
+/*---------------------------------------------Home/Error page*/
 
 .book-container {
     position: relative;
@@ -298,7 +299,8 @@ ol li {
     margin: 0 auto 45%;
 }
 
-#home-page1 {
+#home-page1,
+#error-page1 {
     position: relative;
     width: 95%;
     height: auto;
@@ -308,7 +310,8 @@ ol li {
     margin: 5% 8% 10% 5%;
 }
 
-#home-page2 {
+#home-page2,
+#error-page2 {
     width: 85%;
     height: auto;
     grid-row: 1;
@@ -317,13 +320,24 @@ ol li {
     margin: 5% 5% 10% 10%;
 }
 
-.top-page1 {
+.top-page1,
+.error-page-content {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 80%;
+}
+
+.top-page1 {
     overflow-y: scroll;
+}
+
+.error-page-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .btm-page1 {
@@ -334,11 +348,19 @@ ol li {
     height: 100%;
 }
 
-.top-page2 {
+.top-page2,
+.error-page2 {
     display: flex;
     align-items: center;
     width: 100%;
+}
+
+.top-page2 {
     height: 80%;
+}
+
+.error-page2 {
+    height: 100%;
 }
 
 .btm-page2 {
